@@ -1,0 +1,101 @@
+
+@@include('./_header-site.html', {
+    "title": "КППС"
+})
+@@include('./_header.html')
+<main class="siteContent">
+    <article class="mainBanner">
+        <div class="mainBanner__content">
+            <div class="site-container">
+                <div class="mainBanner__inner">
+                    <div class="mainBanner__info" id="banner-product-rel">
+                        <h2 class="mainBanner__title">Удалитель ржавчины</h2>
+                        <div class="mainBanner__logo">
+                            <svg viewBox="0 0 500 172">
+                                <defs>
+                                    <mask id='mask-kppc' x='0' y='0'>
+                                        <path fill="white" d="M0,0V172H500V0ZM94.2,146.6,68.4,98.7H54.5v47.9H25.2V25.4H54.5V72.3H65.8L89.2,25.4h35.5l-33.4,56,37.6,65.2Zm143.9,0H208.8V48H165.1v98.6H135.8V25.4H238.1Zm120.4,0H329.2V48H285.5v98.6H256.2V25.4H358.5Zm49.4-29.5c3.3,5.5,8.9,8.3,16.8,8.3,6.7,0,11.9-1.6,15.4-4.7,3.6-3.2,5.5-8.2,5.7-15.1H475a44.168,44.168,0,0,1-6.8,22.3,40.726,40.726,0,0,1-17.6,15,58.83,58.83,0,0,1-25.8,5.3c-16,0-28.6-5.2-37.7-15.6s-13.8-25-13.8-43.9v-6c0-11.9,2.1-22.3,6.2-31.2a46.524,46.524,0,0,1,17.9-20.6c7.8-4.9,16.8-7.3,27.1-7.3,14.7,0,26.6,3.9,35.6,11.6s14.1,18.4,15.3,32H446c-.2-7.4-2.1-12.7-5.6-15.9s-8.9-4.8-16-4.8c-7.3,0-12.6,2.7-16,8.2s-5.2,14.1-5.3,26.1v8.6c-.1,12.9,1.6,22.1,4.8,27.7Z"/>
+                                    </mask>
+                                </defs>
+                                <image xlink:href='./img/kppc.png' mask='url(#mask-kppc)' />
+                            </svg>
+                            <!-- <img src="./img/svg/kppc.svg" alt=""> -->
+                        </div>
+                        <div class="bannerProduct" id="banner-product">
+                            <div class="bannerProduct__inner">
+                                <div class="bannerProduct__img">
+                                    <a class="bannerProduct__link" href="">
+                                        <picture>
+                                            <source srcset="./img/banner-prod-1.webp, ./img/banner-prod-1@2x.webp 2x" type="image/webp">
+                                            <source srcset="./img/banner-prod-1.png, ./img/banner-prod-1@2x.png 2x">
+                                            <img src="./img/banner-prod-1.png" srcset="./img/banner-prod-1.png, ./img/banner-prod-1@2x.png 2x" alt="">
+                                        </picture>
+                                    </a>
+                                </div>
+                                <div class="bannerProduct__info" id="banner-info">
+                                    <a class="bannerProduct__title" href="">Паста антикоррозионная</a>
+                                    <div class="bannerProduct__price">
+                                        <span class="priceEL">699 ₽</span>
+                                    </div>
+                                    <div class="bannerProduct__btn" id="banner-btn">
+                                        <div class="bannerProduct__bi">
+                                            <button class="customBtn customBtn-light">
+                                                <span class="customBtn__inner">
+                                                    <span class="customBtn__text">Купить</span>
+                                                </span>
+                                            </button>
+                                        </div>
+                                        <div class="bannerProduct__bi">
+                                            <button class="customBtn">
+                                                <span class="customBtn__inner">
+                                                    <span class="customBtn__text">Вопросы - ответы</span>
+                                                </span>
+                                            </button>
+                                        </div>
+                                        <div class="bannerProduct__bi">
+                                            <button class="customBtn customBtn-dark">
+                                                <span class="customBtn__inner">
+                                                    <span class="customBtn__text">Получить консультацию</span>
+                                                </span>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mainBanner__img">
+                        <div class="bannerPicture" data-canvas-rel>
+                            <div class="control-area" data-canvas-area>
+                                <div class="bannerPicture__layer" id="under-canvas">
+                                    <div class="bannerPicture__activity">
+                                        <picture>
+                                            <source srcset="./img/car.webp" type="image/webp">
+                                            <img src="./img/car.png" alt="" data-img-src="../img/rust-car.png">
+                                        </picture>
+                                        <div class="aroundControl" data-canvas-control>
+                                            <div class="aroundControl__el">
+                                                <div class="aroundControl__rel">
+                                                    <div class="aroundControl__inner">
+                                                        <img class="aroundControl__text" src="./img/svg/round_text.svg" alt="">
+                                                        <img class="aroundControl__center" src="./img/svg/cursor.svg" alt="">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <canvas class="bannerPicture__canvas" id="car-canvas"></canvas>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="adaptProduct" id="adapt-product"></div>
+                <div class="adaptBtn" id="adapt-btn"></div>
+            </div>
+        </div>
+    </article>
+</main>
+@@include('./_footer.html')
+@@include('./_footer-site.html')
+    

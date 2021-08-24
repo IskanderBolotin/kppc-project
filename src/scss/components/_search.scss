@@ -1,0 +1,254 @@
+.searchMain {
+    position: relative;
+    .searchBtn {
+        display: block;
+        background-color: $light-c;
+        width: 100%;
+        font-weight: 500;
+        border: 1px solid $light-c;
+        transition: .25s background-color, .25s border;
+        &:hover {
+            background-color: $light-c-hov;
+            border: 1px solid $light-c-hov;
+        }
+        .searchBtn__inner {
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 42px;
+        }
+        .searchBtn__ico {
+            width: 18px;
+            height: 18px;
+            min-width: 18px;
+            margin-right: 12px;
+            svg {
+                display: block;
+                width: 100%;
+                height: 100%;
+                fill: $dark-c;
+            }
+        }
+    }
+    &:hover {
+        .searchInput {
+            border-color: $extra-dark-c;
+        }
+        .positonSearchBtn {
+            border-top: 1px solid $extra-dark-c;
+            border-bottom: 1px solid $extra-dark-c;
+            border-left: 1px solid $extra-dark-c;
+        }
+    }
+    &.__active {
+        .searchInput {
+            border-color: $light-c;
+        }
+        .positonSearchBtn {
+            border-top: 1px solid $light-c;
+            border-bottom: 1px solid $light-c;
+            border-left: 1px solid $light-c;
+        }
+        .searchMain__dd,
+        .searchMain__close {
+            display: block;
+        }
+    }
+}
+.searchMain__inner {
+    display: flex;
+}
+.searchMain__item.searchMain__item-grow {
+    flex-grow: 1;
+}
+.searchMain__item.searchMain__item-btn {
+    width: 150px;
+}
+.searchPosition {
+    position: relative;
+}
+.searchPosition__btn {
+    width: 100%;
+}
+.positonSearchBtn {
+    width: 100%;
+    display: block;
+    background-color: $extra-standart-c;
+    border: 1px solid $extra-light-c;
+    transition: .25s background-color, .25s border-color;
+    &:hover {
+        background-color: $extra-light-c;
+    }
+}
+.positonSearchBtn__inner {
+    width: 100%;
+    height: 42px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.positonSearchBtn__ico {
+    width: 9px;
+    height: 6px;
+    margin-left: 5px;
+    svg {
+        display: block;
+        width: 100%;
+        height: 100%;
+        fill: $dark-c;
+    }
+}
+.searchInput {
+    border: 1px solid $extra-light-c;
+    border-right: none;
+    display: block;
+    width: 100%;
+    padding: 13px 15px 12px;
+    line-height: 19px;
+    height: 44px;
+    border-left: none;
+    transition: .25s border-color;
+}
+.searchMain__close {
+    display: none;
+    position: absolute;
+    right: 150px;
+    top: 0;
+    height: 100%;
+}
+.searchClose {
+    padding: 0 12px;
+    height: 100%;
+    background-color: transparent;
+    border: none
+}
+.searchClose__inner {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    svg {
+        width: 12px;
+        height: 12px;
+        display: block;
+        fill: $dark-c;
+        transition: .25s fill;
+    }
+}
+.searchMain__dd {
+    display: none;
+    position: absolute;
+    padding-top: 5px;
+    width: 100%;
+    top: 100%;
+    left: 0;
+}
+.searchDrop {
+    background-color: #fff;
+    border: 2px solid $dark-c;
+}
+.searchDrop__inner {
+    padding: 5px 0;
+}
+.searchDropList {
+    list-style: none;
+}
+.searchScroll {
+    overflow: auto;
+    max-height: 320px;
+}
+
+.searchDropLink {
+    display: block;
+    width: 100%;
+    min-height: 80px;
+    padding: 0px 5px 0px 10px;
+    transition: .25s background-color;
+    &:hover {
+        background-color: #F6F6F6;
+        padding: 0px;
+        .prodLink__inner {
+            padding: 5px 5px 5px 10px;
+        }
+    }
+}
+
+.searchDrop__btn {
+    padding: 5px 5px 0;
+}
+@media (max-width: 1670px) {
+    .searchMain__item.searchMain__item-btn {
+        width: 100px;
+    }
+    .searchMain__item.searchMain__item-btn.searchMain__item-submit {
+        width: 44px;
+    }
+    .searchMain{
+        .searchBtn {
+            .searchBtn__ico {
+                margin-right: 0;
+            }
+            .searchBtn__text {
+                display: none;
+            }
+        }
+    } 
+    .searchMain__close {
+        right: 46px;
+    }
+}
+@media (max-width: 1300px) {
+    .searchInput {
+        padding: 11px 10px 10px;
+        height: 40px;
+        font-size: 14px;
+    }
+    .searchMain .searchBtn .searchBtn__inner,
+    .positonSearchBtn__inner {
+        height: 38px;
+    }
+    .searchMain__item.searchMain__item-btn.searchMain__item-submit {
+        width: 40px;
+    }
+    .searchMain__item.searchMain__item-btn {
+        width: 90px;
+    }
+}
+@media (max-width: 1230px) {
+    .searchMain__item.searchMain__item-popup {
+        display: none;
+    }
+    .searchInput {
+        border-left: 1px solid $extra-light-c;
+    }
+    .searchMain .searchBtn {
+        background-color: #fff;
+        border-color: $extra-light-c;
+        border-left: none;
+    }
+    .searchMain:hover .searchBtn {
+        background-color: #fff;
+        border-color: $extra-dark-c;
+    }
+    .searchMain .searchBtn:hover {
+        background-color: $light-c;
+        border-color: $light-c;
+        border-left: none;
+    }
+    .searchMain.__active .searchBtn {
+        background-color: $light-c;
+        border-color: $light-c;
+    }
+    .searchMain__close {
+        right: 40px;
+    }
+    .searchScroll {
+        max-height: 348px;
+    }
+    .searchMain__dd {
+        padding-top: 2px;
+    }
+}

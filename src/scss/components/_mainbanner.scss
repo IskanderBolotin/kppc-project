@@ -1,0 +1,440 @@
+.mainBanner__content {
+    min-height: 700px;
+    overflow: hidden;
+    background-position: center;
+    background-size: cover;
+    background-image: url(../img/mainBanner-bg.png);
+}
+.mainBanner__inner {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+.mainBanner__info {
+    width: 500px;
+    min-width: 500px;
+    padding: 72px 0;
+}
+.mainBanner__title {
+    display: block;
+    font-size: 38px;
+    line-height: 46px;
+    letter-spacing: 2.1px;
+    font-weight: 900;
+    text-transform: uppercase;
+    margin-bottom: 15px;
+}
+.mainBanner__logo {
+    width: 100%;
+    background-image: url(../img/svg/kppc.svg);
+    background-size: 100% 100%;
+    img, svg {
+        display: block;
+        width: 100%;
+    }
+    margin-bottom: 45px;
+    svg image {
+        width: 100%;
+        display: block;
+    }
+}
+
+.bannerProduct__inner {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.bannerProduct__img {
+    margin-right: 13px;
+    .bannerProduct__link {
+        display: block;
+        width: 231px;
+        min-height: 223px;
+        position: relative;
+    }
+    img {
+        display: block;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+}
+.bannerProduct__info {
+    width: 256px;
+    margin-left: auto;
+}
+.bannerProduct__price {
+    .priceEL {
+        font-size: 40px;
+        line-height: 48px;
+    }
+}
+.bannerProduct__title {
+    margin-bottom: 15px;
+    font-size: 20px;
+    line-height: 24px;
+    font-weight: 500;
+    display: block;
+    &:hover {
+        color: $light-c;
+    }
+}
+.bannerProduct__price {
+    margin-bottom: 20px;
+}
+.bannerProduct__bi {
+    .customBtn {
+        width: 100%;
+    }
+    .customBtn .customBtn__inner {
+        min-height: 48px;
+    }
+    &:not(:last-child) {
+        margin-bottom: 10px;
+    }
+}
+.mainBanner__img {
+    flex-grow: 1;
+}
+.bannerPicture {
+    position: relative;
+    width: 100%;
+    height: 700px;
+}
+.bannerPicture__layer {
+    position: absolute;
+    height: 100%;
+    top: 0;
+    left: 0;
+    img {
+        width: auto;
+        height: 100%;
+    }
+}
+.bannerPicture__canvas,
+.control-area {
+    position: absolute;
+    height: 100%;
+    top: 17px;
+    left: 34px;
+}
+.bannerPicture__canvas {
+    top: 0;
+    left: 0;
+}
+.aroundControl {
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: translate(-50%, -50%);
+    z-index: 5;
+    width: 175px;
+    height: 175px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    opacity: 0;
+    transition: .1s width, .1s height, .25s opacity;
+    cursor: pointer;
+    &:hover {
+        .aroundControl__el {
+            width: 100px;
+            height: 100px;
+        }
+    }
+}
+.aroundControl__el {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 5;
+    width: 175px;
+    height: 175px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    transition: .1s width, .1s height;
+}
+.aroundControl__inner {
+    width: 175px;
+    min-width: 175px;
+    height: 175px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.bannerPicture__activity {
+    position: relative;
+    width: 100%;
+    height: 700px;
+}
+.aroundControl__text {
+    animation: rotateAround 10s infinite forwards linear;
+    transition: .25s opacity;
+}
+@keyframes rotateAround {
+    0% {
+        transform: rotate(0);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+.aroundControl__rel:hover {
+    .aroundControl__text {
+        animation-play-state: paused;
+        opacity: 0;
+    }
+}
+.bannerPicture__layer img.aroundControl__text {
+    width: 155px;
+    height: 150px;
+}
+.bannerPicture__layer img.aroundControl__center {
+    position: absolute;
+    width: 39px;
+    height: 40px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.aroundControl__rel {
+    width: 175px;
+    min-width: 175px;
+    height: 175px;
+    position: relative;
+    border-radius: 50%;
+    background-color: rgba($color: #000000, $alpha: 0.75);
+}
+@media (max-width: 1670px) {
+    .mainBanner__content {
+        min-height: 648px;
+    }
+    .mainBanner__info {
+        width: 448px;
+        min-width: 448px;
+        padding: 72px 0;
+    }
+    .bannerProduct__info {
+        width: 220px;
+    }
+    .bannerProduct__img .bannerProduct__link {
+        width: 215px;
+        min-height: 193px;
+    }
+    .mainBanner__title {
+        font-size: 34px;
+        line-height: 41px;
+        letter-spacing: 1.8px;
+    }
+    .bannerProduct__price .priceEL {
+        font-size: 36px;
+        line-height: 43px;
+    }
+    .bannerProduct__title {
+        font-size: 18px;
+        line-height: 24px;
+        margin-bottom: 10px;
+    }
+    .bannerPicture,
+    .bannerPicture__activity {
+        height: 530px;
+    }
+    .mainBanner__logo {
+        margin-bottom: 35px;
+    }
+    .bannerProduct__price {
+        margin-bottom: 17px;
+    }
+    .bannerProduct__bi .customBtn .customBtn__inner {
+        min-height: 42px;
+    }
+    .control-area {
+        top: 12px;
+        left: -3px;
+    }
+}
+@media (max-width: 1230px) {
+    .mainBanner__info {
+        width: 316px;
+        min-width: 316px;
+        padding: 43px 0 20px;
+    }
+    .bannerProduct__price {
+        margin-bottom: 0;
+    }
+    .mainBanner__title {
+        font-size: 24px;
+        line-height: 29px;
+        letter-spacing: 1.2px;
+    }
+    .bannerProduct__info {
+        width: 167px;
+    }
+    .bannerProduct__img .bannerProduct__link {
+        width: 136px;
+        min-height: 133px;
+    }
+    .adaptBtn {
+       .bannerProduct__btn {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin: -10px -5px 0;
+        } 
+       .bannerProduct__bi {
+            width: 33.3%;
+            max-width: 230px;
+            padding: 10px 5px 0;
+            margin: 0;
+        }
+    }
+    .mainBanner__content {
+        min-height: 500px;
+        padding-bottom: 30px;
+    }
+    .bannerPicture, .bannerPicture__activity {
+        height: 411px;
+    }
+    .mainBanner__title {
+        margin-bottom: 7px;
+    }
+    .bannerProduct__price .priceEL {
+        font-size: 30px;
+        line-height: 37px;
+    }
+    .mainBanner__logo {
+        margin-bottom: 37px;
+    }
+    .control-area {
+        top: 10px;
+        left: 3px;
+    }
+    .adaptBtn {
+        padding-top: 14px;
+    }
+    .aroundControl__text {
+        display: none;
+    }
+    .aroundControl,
+    .aroundControl__inner,
+    .aroundControl__rel {
+        width: 60px;
+        min-width: 60px;
+        height: 60px;
+    }
+    .aroundControl:hover .aroundControl__el {
+        width: 60px;
+        height: 60px;
+    }
+    .bannerPicture__layer img.aroundControl__center {
+        width: 30px;
+        height: 31px;
+    }
+}
+@media (max-width: 875px) {
+    .mainBanner__inner {
+        flex-direction: column;
+        justify-content: center;
+    }
+    .bannerProduct__title {
+        font-size: 16px;
+        line-height: 20px;
+        margin-bottom: 3px;
+    }
+    .bannerProduct__price .priceEL {
+        font-size: 28px;
+        line-height: 34px;
+    }
+    .bannerProduct__img .bannerProduct__link {
+        width: 136px;
+        min-height: 107px;
+    }
+    .control-area,
+    .bannerPicture__layer {
+        position: static;
+    }
+    .bannerPicture, .bannerPicture__activity {
+        height: auto;
+    }
+    .bannerPicture__layer img {
+        display: block;
+        height: auto;
+        width: 100%;
+    }
+    .control-area {
+        width: 100% !important;
+    }
+    .mainBanner__content {
+        min-height: auto;
+        padding-bottom: 15px;
+    }
+    .mainBanner__title {
+        font-size: 20px;
+        line-height: 32px;
+        text-align: center;
+        margin-bottom: 11px;
+    }
+    .bannerProduct__inner {
+        justify-content: center;
+    }
+    .bannerProduct__info {
+        padding-top: 8px;
+        margin-left: 0;
+        width: auto;
+        max-width: calc(100% - 146px);
+    }
+    .bannerProduct__img {
+        margin-right: 10px;
+    }
+    .mainBanner__info {
+        width: 100%;
+        min-width: auto;
+    }
+    .mainBanner__logo {
+        width: 288px;
+        max-width: 100%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .mainBanner__info {
+        padding-top: 9px;
+    }
+    .mainBanner__logo {
+        margin-bottom: 0;
+    }
+    .mainBanner__img {
+        width: 100%;
+        margin-top: -13px;
+    }
+    .adaptBtn {
+        padding-top: 20px;
+    }
+}
+@media (max-width: 576px) {
+    .adaptBtn .bannerProduct__bi:first-child {
+        width: 100%;
+        max-width: 100%;
+    }
+    .bannerProduct__bi .customBtn .customBtn__inner {
+        padding: 10px 5px 11px;
+    }
+    .adaptBtn .bannerProduct__btn {
+        margin: -6px -3px 0;
+    }
+    .adaptBtn .bannerProduct__bi {
+        width: 50%;
+        max-width: 100%;
+        padding: 6px 3px 0;
+    }
+}
