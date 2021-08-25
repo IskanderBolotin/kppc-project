@@ -6,6 +6,8 @@
 @import "./components/_footer.scss";
 @import "./components/_search.scss";
 @import "./components/_mainbanner.scss";
+@import "./components/_advantages.scss";
+@import "./components/_products.scss";
 
 .site-container {
     width: 100%;
@@ -173,7 +175,7 @@
     font-weight: 500;
     transition: .25s color, .25s border-color, .25s background-color;
     .customBtn__inner {
-        min-height: 44px;
+        min-height: 42px;
         display: flex;
         align-items: center;
         justify-content: center;
@@ -213,6 +215,31 @@
             color: $light-c;
         }
     }
+    &.customBtn-basket {
+        .customBtn__inner {
+            padding: 3px;
+            justify-content: space-between;
+        }
+        .customBtn__text {
+            flex-grow: 1;
+            text-align: center;
+        }
+    }
+}
+.customBtn__basket {
+    width: 38px;
+    max-width: 38px;
+    height: 38px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 7px;
+    background-color: $light-c-hov;
+    transition: .25s background-color;
+    svg {
+        display: block;
+        transition: .25s fill;
+    }
 }
 .customLink {
     line-height: 20px;
@@ -228,15 +255,192 @@
     line-height: 1;
     font-weight: bold;
 }
+.siteSection {
+    margin: 63px 0 63px;
+    &.siteSection-small {
+        margin-top: 40px;
+    }
+}
+.sliderArrow {
+    display: block;
+    border: none;
+    background-color: transparent;
+    width: 50px;
+    min-width: 50px;
+    height: 50px;
+    cursor: pointer;
+    transition: .25s background-color, .25s border-color;
+    &:hover {
+        background-color: $extra-light-c;
+    }
+    svg {
+        width: 24px;
+        height: 11px;
+        display: block;
+        fill: $dark-c;
+        transition: .25s fill;
+    }
+    &.sliderArrow-prev {
+        svg {
+            transform: rotate(180deg);
+        }
+    }
+    &.slick-disabled {
+        svg {
+            fill: $extra-dark-c;
+        }
+    }
+}
+.sliderArrow__inner {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.slick-slider .slick-list {
+    flex-grow: 1;
+}
+.slick-slider .slick-track {
+    min-width: 100%;
+    display: flex;
+    .slick-slide {
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        & > * {
+            width: 100%;
+            flex-grow: 1;
+        }
+    }
+}
+.title-h2 {
+    font-size: 36px;
+    line-height: 44px;
+    font-weight: bold;
+}
+.titleBar {
+    margin-bottom: 15px;
+    &.titleBar-border {
+        padding-bottom: 7px;
+        border-bottom: 2px solid $extra-light-c;
+    }
+}
+.titleBar__inner {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    min-height: 50px;
+}
+.bannerList:not(.slick-slider) {
+    display: flex;
+    overflow: hidden;
+    .bannerList__item {
+        width: 50%;
+        min-width: 50%;
+    }
+}
+.bannerList {
+    margin: 0 -8px;
+}
+.bannerList__item {
+    padding: 0 8px;
+}
+.bannerMin {
+    display: block;
+    img {
+        width: 100%;
+        display: block;
+    }
+}
+.titleBar__arrow {
+    display: flex;
+    flex-wrap: wrap;
+}
+.titleBar__side {
+    min-width: 100px;
+}
+.miniBanner__nav {
+    display: none;
+}
+.miniBanner__nav .titleBar__arrow {
+    justify-content: center;
+    .sliderArrow {
+        margin-left: 2.5px;
+        margin-right: 2.5px;
+    }
+}
+.fastBtn {
+    font-size: 14px;
+    line-height: 22px;
+    background-color: transparent;
+    display: block;
+    max-width: 100%;
+    border: none;
+    font-weight: 500;
+    transition: .25s color;
+    cursor: pointer;
+    &:hover {
+        color: $light-c;
+    }
+}
+.activityBtn {
+    background-color: transparent;
+    width: 22px;
+    height: 22px;
+    border: none;
+    .activityBtn__inner {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        svg {
+            width: 100%;
+            height: 100%;
+            display: block;
+            transition: .25s fill;
+        }
+        img {
+            display: block;
+            max-width: 100%;
+            max-height: 100%;
+        }
+    }
+    &:hover {
+        .activityBtn__inner {
+            svg {
+                fill: $light-c;
+            }
+        }
+    }
+}
 @media (max-width: 1670px) {
     .plName {
         font-size: 15px;
         line-height: 18px;
     }
+    .siteSection {
+        margin: 43px 0;
+        &.siteSection-small {
+            margin-top: 29px;
+        }
+    }
+    .title-h2 {
+        font-size: 32px;
+        line-height: 38px
+    }
 }
 @media (max-width: 1300px) {
     .site-container {
         padding: 0 20px;
+    }
+    .sliderArrow {
+        width: 40px;
+        min-width: 40px;
+        height: 40px;
+        background-color: $extra-standart-c;
     }
 }
 @media (max-width: 1230px) {
@@ -256,6 +460,10 @@
             margin-bottom: 7px;
         }
     }
+    .title-h2 {
+        font-size: 30px;
+        line-height: 36px
+    }
 }
 @media (max-width: 1150px) {
     .catalog-overlay {
@@ -273,7 +481,38 @@
     .site-container {
         padding: 0 15px;
     }
+    .siteSection {
+        margin: 33px 0;
+        &.siteSection-small {
+            margin-top: 20px;
+        }
+    }
 }
 @media (max-width: 875px) {
-
+    .title-h2 {
+        font-size: 28px;
+        line-height: 34px;
+    }
+    .bannerList:not(.slick-slider) {
+        .bannerList__item {
+            width: 100%;
+            min-width: 100%;
+        }
+    }
+    .bannerList {
+        margin: 0px;
+    }
+    .bannerList__item {
+        padding: 0px;
+    }
+    .miniBanner__nav {
+        display: block;
+        margin-top: 15px;
+    }
+    .titleBar__inner {
+        min-height: auto;
+    }
+    .titleBar {
+        margin-bottom: 7px;
+    }
 }

@@ -2,3 +2,5 @@
 @@include('./_header.js')
 @@include('./_footer.js')
 @@include('./_mainbanner.js')
+@@include('./_advantages.js')
+@@include('./_products.js')
