@@ -332,6 +332,11 @@
     line-height: 44px;
     font-weight: bold;
 }
+.title-h1 {
+    font-size: 42px;
+    line-height: 50px;
+    font-weight: bold;
+}
 .titleBar {
     margin-bottom: 15px;
     &.titleBar-border {
@@ -850,6 +855,40 @@
         fill: $light-c;
         transform: rotate(-90deg);
     }
+}
+.crumbsList {
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+    margin: 0 -5px;
+}
+.crumbsList__item {
+    padding: 0 5px;
+    position: relative;
+    &:not(:last-child) {
+        &::after {
+            content: "—";
+            margin-left: 5px;
+            color: $extra-dark-c;
+        }
+    }
+}
+.crumbsItem {
+    font-size: 15px;
+    line-height: 18px;
+}
+a.crumbsItem {
+    color: $extra-dark-c;
+    &:hover {
+        color: $light-c;
+    }
+}
+.breadcrumbBox {
+    margin-top: 13px;
+    margin-bottom: 6px;
+}
+.breadcrumbBox + .siteSection {
+    margin-top: 0 !important;
 }
 @media (max-width: 1670px) {
     .plName {

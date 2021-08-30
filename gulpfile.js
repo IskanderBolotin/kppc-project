@@ -54,8 +54,9 @@ let cheerio = require('gulp-cheerio');
 function browserSync() {
     browsersync.init({
         server: {
-            baseDir: "./" + project_folder + "/"
+            baseDir: "./" + project_folder + "/",
         },
+        startPath: "/catalog.html",
         port: 3000,
         notify: false,
     })
