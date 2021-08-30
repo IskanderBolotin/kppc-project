@@ -6,9 +6,21 @@ window.onload = function() {
         let control = document.querySelector("[data-canvas-control]");
         let control_area = document.querySelector("[data-canvas-area]");
         let radius = 150;
+        let hover_radius = radius;
+
+        let arcCoord = {
+            x: width_pic/2 + 44, 
+            y: height_pic/2 - 42,
+        }
+
+        let currentCoord = {
+            x: width_pic/2 + 44, 
+            y: height_pic/2 - 42,
+        }
 
         if (window.innerWidth <= 1670) {
             radius = 125;
+            hover_radius = radius;
         }
     
         let x = (window.pageXOffset !== undefined)
@@ -41,7 +53,7 @@ window.onload = function() {
                 ctx.fill();
             }
             else {
-                ctx.arc(width_pic/2 + 44, height_pic/2 - 42, radius, 0, 2 * Math.PI, true);
+                ctx.arc(arcCoord.x, arcCoord.y, radius, 0, 2 * Math.PI, true);
                 ctx.fill();
             }
             ctx.globalCompositeOperation="source-in";
@@ -56,8 +68,8 @@ window.onload = function() {
             control.style.top = height_pic/2 + "px";
         }
         else {
-            control.style.left = (width_pic/2 + 44) + "px";
-            control.style.top = (height_pic/2 - 42)+ "px";
+            control.style.left = arcCoord.x + "px";
+            control.style.top = arcCoord.y + "px";
         }
         img.src = canvas.closest("[data-canvas-rel]").querySelector("[data-img-src]").getAttribute("data-img-src");
     
@@ -71,11 +83,11 @@ window.onload = function() {
             canvas_pos = canvas.getBoundingClientRect();
             canvas.width = canvas_width;
             canvas.height = canvas_height;
-
             control_area.style.width = width_pic + "px";
 
-            
-            
+            arcCoord.x = width_pic/2 + 44, 
+            arcCoord.y = height_pic/2 - 42,
+
             ctx.save();
             if (window.innerWidth <= 1230) {
                 control.style.left = width_pic/2 + "px";
@@ -84,9 +96,9 @@ window.onload = function() {
                 ctx.fill();
             }
             else {
-                control.style.left = (width_pic/2 + 44) + "px";
-                control.style.top = (height_pic/2 - 42)+ "px";
-                ctx.arc(width_pic/2 + 44, height_pic/2 - 42, radius, 0, 2 * Math.PI, true);
+                control.style.left = arcCoord.x + "px";
+                control.style.top = arcCoord.y + "px";
+                ctx.arc(arcCoord.x, arcCoord.y, radius, 0, 2 * Math.PI, true);
                 ctx.fill();
             }
             ctx.globalCompositeOperation="source-in";
@@ -94,6 +106,11 @@ window.onload = function() {
 
             if (window.innerWidth <= 1670) {
                 radius = 125;
+                hover_radius = radius;
+            }
+            else {
+                radius = 150;
+                hover_radius = radius;
             }
         })
         control.addEventListener("dragstart", function(e) {
@@ -143,9 +160,12 @@ window.onload = function() {
                 circle_y = +e.changedTouches[0].pageY - +canvas_y;
             }
             else {
-                circle_x = +e.pageX - +canvas_x;
+                circle_x = +e.pageX - +canvas_x; 
                 circle_y = +e.pageY - +canvas_y;
             }
+            currentCoord.x = circle_x;
+            currentCoord.y = circle_y;
+
             if (!supportsTouch) {
                 if (e.pageX >= canvas_x && e.pageX <= canvas_x + canvas.width && e.pageY >= canvas_y && e.pageY <= canvas_y + canvas.height) {
                     cursorInZone();
@@ -168,8 +188,8 @@ window.onload = function() {
                     control.style.top = height_pic/2 + "px";
                 }
                 else {
-                    control.style.left = circle_x + "px";
-                    control.style.top = circle_y + "px";
+                    control.style.left = currentCoord.x + "px";
+                    control.style.top = currentCoord.y + "px";
                 }
                 ctx.globalCompositeOperation="source-over";
                 ctx.clearRect(0, 0, canvas_width, canvas_height);
@@ -180,7 +200,7 @@ window.onload = function() {
                     ctx.fill();
                 }
                 else {
-                    ctx.arc(circle_x, circle_y, radius, 0, 2 * Math.PI, true);
+                    ctx.arc(currentCoord.x, currentCoord.y, radius, 0, 2 * Math.PI, true);
                     ctx.fill();
                 }
                 ctx.globalCompositeOperation="source-in";
@@ -189,7 +209,6 @@ window.onload = function() {
             }
             function cursorOutZone() {
                 
-        
                 ctx.globalCompositeOperation="source-over";
                 ctx.clearRect(0, 0, canvas_width, canvas_height);
         
@@ -201,9 +220,9 @@ window.onload = function() {
                     ctx.fill();
                 }
                 else {
-                    control.style.left = (width_pic/2 + 44) + "px";
-                    control.style.top = (height_pic/2 - 42)+ "px";
-                    ctx.arc(width_pic/2 + 44, height_pic/2 - 42, radius, 0, 2 * Math.PI, true);
+                    control.style.left = arcCoord.x + "px";
+                    control.style.top = arcCoord.y + "px";
+                    ctx.arc(arcCoord.x, arcCoord.y, radius, 0, 2 * Math.PI, true);
                     ctx.fill();
                 }
                 ctx.globalCompositeOperation="source-in";
@@ -212,6 +231,47 @@ window.onload = function() {
                 control_area.removeEventListener("mousemove", dragZone);
                 document.body.removeEventListener("mouseup", removeMouseMove);
             }
+        }
+        if ((window.innerWidth > 1230) && !supportsTouch) {
+            control.addEventListener("mouseenter", function() {
+                if ((window.innerWidth > 1230) && !supportsTouch) {
+                    let tmp = radius;
+                    hover_radius = radius + (radius * 0.2);
+                    for (let i = radius; i <= hover_radius; i++) {
+                        setTimeout(function(){
+                            ctx.globalCompositeOperation="source-over";
+                            ctx.clearRect(0, 0, canvas_width, canvas_height);
+                            ctx.beginPath();
+                            ctx.arc(currentCoord.x, currentCoord.y, i, 0, 2 * Math.PI, true);
+                            ctx.fill();
+                            ctx.globalCompositeOperation="source-in";
+                            ctx.drawImage(img, 0, 0, canvas_width, canvas_height);
+                            ctx.closePath();
+                        }, 100)
+                    }
+                    radius = hover_radius;
+                    hover_radius = tmp
+                }
+            });
+            control.addEventListener("mouseleave", function(){
+                if ((window.innerWidth > 1230) && !supportsTouch) {
+                    let tmp = radius;
+                    for (let i = radius; i > hover_radius; i--) {
+                        setTimeout(function(){
+                            ctx.globalCompositeOperation="source-over";
+                            ctx.clearRect(0, 0, canvas_width, canvas_height);
+                            ctx.beginPath();
+                            ctx.arc(currentCoord.x, currentCoord.y, i, 0, 2 * Math.PI, true);
+                            ctx.fill();
+                            ctx.globalCompositeOperation="source-in";
+                            ctx.drawImage(img, 0, 0, canvas_width, canvas_height);
+                            ctx.closePath();
+                        }, 100)
+                    }
+                    radius = hover_radius;
+                    hover_radius = tmp;
+                }
+            });
         }
     }
 }
