@@ -85,8 +85,19 @@ window.onload = function() {
             canvas.height = canvas_height;
             control_area.style.width = width_pic + "px";
 
-            arcCoord.x = width_pic/2 + 44, 
-            arcCoord.y = height_pic/2 - 42,
+            arcCoord.x = width_pic/2 + 44;
+            arcCoord.y = height_pic/2 - 42;
+            currentCoord.x = width_pic/2 + 44;
+            currentCoord.y = height_pic/2 - 42;
+
+            if (window.innerWidth <= 1670) {
+                radius = 125;
+                hover_radius = radius;
+            }
+            else {
+                radius = 150;
+                hover_radius = radius;
+            }
 
             ctx.save();
             if (window.innerWidth <= 1230) {
@@ -103,15 +114,6 @@ window.onload = function() {
             }
             ctx.globalCompositeOperation="source-in";
             ctx.drawImage(img, 0, 0, canvas_width, canvas_height);
-
-            if (window.innerWidth <= 1670) {
-                radius = 125;
-                hover_radius = radius;
-            }
-            else {
-                radius = 150;
-                hover_radius = radius;
-            }
         })
         control.addEventListener("dragstart", function(e) {
             e.preventDefault();

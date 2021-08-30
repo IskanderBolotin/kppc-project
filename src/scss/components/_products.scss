@@ -20,6 +20,20 @@
             visibility: visible;
         }
         .productActivity {
+            .activityBtn {
+                opacity: 1;
+                visibility: visible;
+                transform: translateY(0);
+            }
+            .fastBtn {
+                opacity: 1;
+                visibility: visible;
+                transform: translateY(0);
+            }
+        }
+    }
+    .productActivity {
+        .activityBtn.__active {
             opacity: 1;
             visibility: visible;
             transform: translateY(0);
@@ -311,10 +325,18 @@
     left: 0;
     width: 100%;
     z-index: 5;
-    transform: translateY(-40px);
-    opacity: 0;
-    visibility: hidden;
-    transition: .25s transform, .25s opacity, .25s visibility;
+    .activityBtn {
+        transform: translateY(-40px);
+        opacity: 0;
+        visibility: hidden;
+        transition: .25s transform, .25s opacity, .25s visibility;
+    }
+    .fastBtn {
+        transform: translateY(-40px);
+        opacity: 0;
+        visibility: hidden;
+        transition: .25s transform, .25s opacity, .25s visibility, .25s color;
+    }
 }
 .leadView {
     .productActivity {
@@ -364,9 +386,16 @@
             visibility: visible;
         }
         .productActivity {
-            opacity: 1;
-            visibility: visible;
-            transform: translateY(0);
+            .activityBtn {
+                opacity: 1;
+                visibility: visible;
+                transform: translateY(0);
+            }
+            .fastBtn {
+                opacity: 1;
+                visibility: visible;
+                transform: translateY(0);
+            }
         }
         .productCateg {
             opacity: 0;
@@ -383,6 +412,13 @@
         }
         .productEl__name {
             margin-top: -57px;
+        }
+    }
+    .productActivity {
+        .activityBtn.__active {
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0);
         }
     }
 }

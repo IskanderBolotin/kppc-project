@@ -90,4 +90,22 @@ $(document).ready(function(){
 		});
 	})
 	$(".customScrollBox").mCustomScrollbar({});
+	$("body").on("click", "[data-ct-btn]", function(){
+		let this_txt = $(this).find("[data-ct-txt]").text();
+		let new_text = $(this).find("[data-ct-txt]").attr("data-ct-txt");
+		$(this).find("[data-ct-txt]").text(new_text);
+		$(this).find("[data-ct-txt]").attr("data-ct-txt", this_txt)
+		if (!$(this).hasClass("__active")) {
+			$(this).addClass("__active");
+			$(this).parents("[data-ct-area]").find("[data-ct]").addClass("__active");
+		}
+		else {
+			$(this).removeClass("__active");
+			$(this).parents("[data-ct-area]").find("[data-ct]").removeClass("__active");
+		}
+	});
+	$("body").on("click", "[data-toggle-status]", function(){
+		$(this).toggleClass("__active");
+	});
+	
 });

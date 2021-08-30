@@ -425,7 +425,8 @@
             max-height: 100%;
         }
     }
-    &:hover {
+    &:hover,
+    &.__active {
         .activityBtn__inner {
             svg {
                 fill: $light-c;
@@ -591,7 +592,7 @@
 }
 .sLink__ico {
     width: 24px;
-    height: 17px;
+    height: 25px;
     margin-right: 10px;
     img {
         width: 100%;
@@ -824,6 +825,31 @@
 }
 .mCSB_inside>.mCSB_container {
     margin-right: 0;
+}
+.simpleBtn {
+    background-color: transparent;
+    border: none;
+    display: block;
+    font-weight: 500;
+    color: $light-c;
+    &:hover {
+        .simpleBtn__text {
+            text-decoration: underline;
+        }
+    }
+}
+.simpleBtn__inner {
+    display: flex;
+    align-items: center;
+}
+.simpleBtn__ico {
+    margin-left: 5px;
+    padding-top: 2px;
+    svg {
+        display: block;
+        fill: $light-c;
+        transform: rotate(-90deg);
+    }
 }
 @media (max-width: 1670px) {
     .plName {
@@ -1176,6 +1202,12 @@
     .titleBar {
         margin-bottom: 7px;
     }
+    .aboutBox__adapt {
+        display: none;
+        &.__active {
+            display: block;
+        }
+    } 
     .articleListItem:nth-child(n + 3) {
         display: none;
     }
