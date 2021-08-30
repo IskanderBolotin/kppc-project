@@ -210,10 +210,14 @@ window.onload = function() {
                 ctx.closePath();
             }
             function cursorOutZone() {
+                arcCoord.x = width_pic/2 + 44;
+                arcCoord.y = height_pic/2 - 42;
+                currentCoord.x = width_pic/2 + 44;
+                currentCoord.y = height_pic/2 - 42;
                 
                 ctx.globalCompositeOperation="source-over";
                 ctx.clearRect(0, 0, canvas_width, canvas_height);
-        
+                
                 ctx.beginPath();
                 if (window.innerWidth <= 1230) {
                     control.style.left = width_pic/2 + "px";
