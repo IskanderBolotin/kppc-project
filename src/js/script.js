@@ -4,3 +4,4 @@
 @@include('./_mainbanner.js')
 @@include('./_advantages.js')
 @@include('./_products.js')
+@@include('./_catalog.js')

@@ -75,7 +75,8 @@ $(document).ready(function(){
     
     
     if ($(window).outerWidth() >= 1230) {
-        $("body").on("mouseenter", "[data-product-hover]", function() {
+        $("body").on("mouseover", "[data-product-hover]", function() {
+            console.log('mouseenter', product__hover)
             if (product__hover) {
                 let _this = $(this);
                 let this_id = $(this).attr("data-product-id");
@@ -192,9 +193,11 @@ $(document).ready(function(){
         });
         $(this).on('beforeChange', function (event, slick, currentSlide, nextSlide) {
             product__hover = false;
+            console.log('beforeChange', product__hover)
         });
         $(this).on('afterChange', function (event, slick, currentSlide, nextSlide) {
             product__hover = true;
+            console.log('afterChange', product__hover)
         });
     });
     let labels_adapt = false;
