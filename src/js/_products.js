@@ -127,7 +127,13 @@ $(document).ready(function(){
         });
     }
     $("body").on("click", "[data-add-basket]", function() {
+        let this_id = $(this).parents("[data-id-chain]").attr("data-id-chain");
         $(this).parents("[data-product-fixed]").addClass("__in-cart");
+        $("[data-product-id]").each(function(){
+            if ($(this).attr("data-product-id") == this_id) {
+                $(this).addClass("__in-cart");
+            }
+        });
     });
     $(".product-slider").each(function(){
         let _this = $(this);

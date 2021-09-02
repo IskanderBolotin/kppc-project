@@ -91,6 +91,7 @@ $(document).ready(function(){
 	})
 	$(".customScrollBox").mCustomScrollbar({});
 	$("body").on("click", "[data-ct-btn]", function(){
+		let start_offset_top = (window.pageYOffset !== undefined) ? window.pageYOffset : (document.documentElement || document.body.parentNode || document.body).scrollTop;
 		let this_txt = $(this).find("[data-ct-txt]").text();
 		let new_text = $(this).find("[data-ct-txt]").attr("data-ct-txt");
 		$(this).find("[data-ct-txt]").text(new_text);
@@ -98,6 +99,7 @@ $(document).ready(function(){
 		if (!$(this).hasClass("__active")) {
 			$(this).addClass("__active");
 			$(this).parents("[data-ct-area]").find("[data-ct]").addClass("__active");
+			window.scrollTo(0, start_offset_top);
 		}
 		else {
 			$(this).removeClass("__active");
@@ -107,5 +109,13 @@ $(document).ready(function(){
 	$("body").on("click", "[data-toggle-status]", function(){
 		$(this).toggleClass("__active");
 	});
-	
+	$("body").on("focus", "[data-focus-inp]", function(){
+		$(this).parents("[data-focus-rel]").addClass("__active");
+	});
+	tippy('[data-tooltip]', {
+		trigger: 'click',
+	});
+	$("body").on("click", "[data-tooltip]", function(){
+		$(".tippy-content").mCustomScrollbar({})
+	});
 });

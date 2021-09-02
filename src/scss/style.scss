@@ -205,6 +205,11 @@
         background-color: $dark-c;
         border-color: $dark-c;
         color: $light-c;
+        .customBtn__ico-anim-rotation {
+            svg {
+                animation: aroundRotate .25s ease;
+            }
+        }
     }
     &.customBtn-del {
         .customBtn__ico {
@@ -295,7 +300,8 @@
         margin-top: 0px;
     }
 }
-.sliderArrow {
+.sliderArrow,
+.pagArrow {
     display: block;
     border: none;
     background-color: transparent;
@@ -314,7 +320,8 @@
         fill: $dark-c;
         transition: .25s fill;
     }
-    &.sliderArrow-prev {
+    &.sliderArrow-prev,
+    &.pagArrow-prev {
         svg {
             transform: rotate(180deg);
         }
@@ -326,7 +333,8 @@
     }
 }
 
-.sliderArrow__inner {
+.sliderArrow__inner,
+.pagArrow__inner {
     width: 100%;
     height: 100%;
     display: flex;
@@ -963,6 +971,51 @@ a.crumbsItem {
     padding: 0 6px;
     vertical-align: top;
     margin-top: 10px;
+}
+@keyframes aroundRotate {
+    0% {
+        transform: rotate(0);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+.tippy-box {
+    width: 300px;
+    background-color: $dark-c;
+    border-radius: 0;
+    border: 2px solid $light-c;
+    font-size: 15px;
+    color: #fff;
+    line-height: 20px;
+    padding: 12px 15px;
+}
+.tippy-box[data-placement^=top]>.tippy-arrow {
+    bottom: -3px;
+}
+.tippy-box[data-placement^=bottom]>.tippy-arrow {
+    top: -3px;
+}
+.tippy-arrow {
+    color: $light-c;
+}
+.tippy-content {
+   padding: 0;
+   max-height: 200px;
+   overflow: auto;
+   margin-right: -9px;
+   .mCSB_inside>.mCSB_container {
+        margin-right: 12px;
+    }
+    .mCSB_scrollTools {
+        width: 5px;
+    }
+    .mCSB_scrollTools .mCSB_draggerContainer::before {
+        right: 0;
+    }
+}
+[data-tippy-root] {
+    pointer-events: visible !important;
 }
 @media (max-width: 1670px) {
     .plName {
