@@ -75,7 +75,7 @@ $(document).ready(function(){
     
     
     if ($(window).outerWidth() >= 1230) {
-        $("body").on("mouseover", "[data-product-hover]", function() {
+        $("body").on("mouseenter", "[data-product-hover]", function() {
             console.log('mouseenter', product__hover)
             if (product__hover) {
                 let _this = $(this);

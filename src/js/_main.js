@@ -115,7 +115,43 @@ $(document).ready(function(){
 	tippy('[data-tooltip]', {
 		trigger: 'click',
 	});
-	$("body").on("click", "[data-tooltip]", function(){
+	$("body").on("click", "[data-tooltip]", function(e){
+		e.stopPropagation();
 		$(".tippy-content").mCustomScrollbar({})
 	});
+	$("body").on("click", "[data-cls-element]", function(e){
+		$(this).parents("[data-element]").removeClass("__active");
+		$("[data-overlay]").removeClass("__active");
+		$("body").removeClass("overflow-hidden");
+	});
+	$("body").on("mousedown touchend", "[data-overlay]", function(){
+		$(this).removeClass("__active");
+		$("[data-element]").removeClass("__active");
+		$("body").removeClass("overflow-hidden");
+	});
+	$("body").on("keydown", function(e) {
+		if ($("[data-overlay]").hasClass("__active")) {
+			if (e.code == "Escape") {
+				$("[data-overlay]").removeClass("__active");
+				$("[data-element]").removeClass("__active");
+				$("body").removeClass("overflow-hidden");
+			}
+		}
+	});
+	$("[data-rait]").each(function(){
+		let width_el = +$(this).find("[data-rait-point]").outerWidth();
+		let this_value = +$(this).attr("data-rait");
+		let fill_star = +Math.floor(this_value);
+		let part_star = this_value - fill_star;
+		let rect_val = (width_el * part_star).toFixed();
+		let rect = "rect(auto, " + rect_val + "px, auto, 0)";
+		$(this).find("[data-rait-point]").each(function(index) {
+			if (index <= fill_star) {
+				$(this).addClass("__fill-star")
+			}
+			if (index == fill_star) {
+				$(this).find("[data-rait-fill]").css("clip", rect);
+			}
+		})
+	})
 });

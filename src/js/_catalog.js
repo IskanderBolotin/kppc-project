@@ -98,7 +98,6 @@ $(document).ready(function(){
         let btn_pos_top = $(this).parents(".filterInputList__item").offset().top;
         let btn_pos_left = $(this).parents(".filterInputList__item").offset().left + $(this).parents(".filterInputList__item").outerWidth();
         $("#filter-fxied-btn").remove();
-        catalog_input_q = 0;
         if ($(this).prop("checked")) {
             $(this).parents("#catalog-filter").find("[data-filter-point]").each(function(){
                 if ($(this).prop("checked")) {
@@ -108,6 +107,13 @@ $(document).ready(function(){
             let _btn = $('<div id="filter-fxied-btn" class="filterFly"><a href="#" class="customBtn customBtn-dark"><span class="customBtn__inner">Применить <span class="quantBox">' + catalog_input_q + '</span></span></a></div>')
             _btn.css({"top": btn_pos_top + "px", "left": btn_pos_left + "px"});
             _btn.appendTo("body");
+        }
+        $("[data-f-quant]").find("[data-f-el]").text(catalog_input_q)
+        if (catalog_input_q == 0) {
+            $("[data-f-quant]").removeClass("__active");
+        }
+        else {
+            $("[data-f-quant]").addClass("__active");
         }
     });
     $("body").on("change", "[data-to-label-box]", function(){
@@ -143,5 +149,30 @@ $(document).ready(function(){
         $("#" + this_for).trigger("change");
     });
 
+    // открытие фильтра
+    $("body").on("click", "[data-open-filer]", function(){
+        $("#catalog-filter").addClass("__active");
+        $("[data-overlay^='site']").addClass("__active");
+        $("body").addClass("overflow-hidden");
+    });
 
+    // открытие сортировки адаптив
+    $("body").on("click", "[data-sort-open]", function(){
+        if ($(this).parents("[data-sort-el]").hasClass("__active")) {
+            $(this).parents("[data-sort-el]").removeClass("__active")
+        }
+        else {
+            $(this).parents("[data-sort-el]").addClass("__active")
+        }
+    });
+    $("body").on("click", function(e){
+        if (!e.target.closest("[data-sort-el]")) {
+            $("[data-sort-el]").removeClass("__active");
+        }
+    });
+    
+    $("body").on("click", "[data-sort-point]", function(){
+        let this_html = $(this).html();
+        $(this).parents("[data-sort-el]").find("[data-sort-text]").html(this_html);
+    });
 });

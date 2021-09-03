@@ -115,7 +115,8 @@
     text-decoration: line-through;
     font-weight: normal;
 }
-.catalog-overlay {
+.catalog-overlay,
+.site-overlay {
     position: fixed;
     top: 0;
     left: 0;
@@ -126,13 +127,18 @@
     visibility: hidden;
     transition: .25s visibility, .25s opacity;
     z-index: 100;
-    &.catalog-overlay-adapt {
-        z-index: 14;
-        display: none;
-    }
     &.__active {
         opacity: 1;
         visibility: visible;
+    }
+}
+.site-overlay {
+    z-index: 101;
+}
+.catalog-overlay {
+    &.catalog-overlay-adapt {
+        z-index: 14;
+        display: none;
     }
 }
 .socailList {
@@ -1017,6 +1023,115 @@ a.crumbsItem {
 [data-tippy-root] {
     pointer-events: visible !important;
 }
+.closeBtn {
+    width: 34px;
+    min-width: 34px;
+    height: 34px;
+    display: block;
+    background-color: $dark-c;
+    border: none;
+    padding: 7px;
+    transition: .25s background-color;
+    svg {
+        fill: #fff;
+        display: block;
+        width: 100%;
+        height: 100%;
+    }
+}
+.closeBtn__inner {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+}
+.h-l {
+    font-weight: 500;
+    color: $light-c;
+}
+a.h-l:hover {
+    text-decoration: underline;
+}
+.charList {
+    list-style: none;
+}
+.charList__item {
+    margin-bottom: 6px;
+    &:last-child {
+        margin-bottom: 6px;
+    }
+}
+.charList__inner {
+    font-size: 14px;
+    line-height: 17px;
+}
+.charList__prop {
+    color: $extra-dark-c;
+}
+.charList__value {
+    color: $dark-c;
+}
+.raitElement__inner {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+.raitMarks {
+    display: flex;
+    align-items: center;
+    margin-left: -3px;
+}
+.raitMarks__item {
+    width: 16px;
+    height: 15px;
+    margin-left: 3px;
+    .raitStar {
+        width: 100%;
+        height: 100%;
+        position: relative;
+    }
+    .raitStar__item {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+    }
+    .raitStar__gray {
+        svg {
+            fill: $extra-dark-c;
+        }
+    }
+    svg {
+        display: block;
+        width: 100%;
+        height: 100%;
+        fill: $extra-dark-c;
+    }
+    .raitStar__fill {
+        display: none;
+        svg {
+            fill: $light-c;
+        }
+    }
+}
+.raitStar.__fill-star .raitStar__fill {
+    display: block;
+}
+.raitElement__text {
+    margin-left: 7px;
+    margin-top: 2px;
+}
+.raitText {
+    font-size: 15px;
+    line-height: 20px;
+    color: $extra-dark-c;
+    &:hover {
+        color: $light-c;
+    }
+}
+
 @media (max-width: 1670px) {
     .plName {
         font-size: 15px;

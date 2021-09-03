@@ -166,578 +166,621 @@
                 </div>
                 <div class="catalogMain__body">
                     <div class="catalogMain__inner">
-                        <div class="catalogMain__item catalogMain__item-filter">
-                            <div class="catalogFilter" id="catalog-filter">
-                                <div class="catalogFilter__inner">
-                                    <div class="catalogFilter__section">
-                                        <div class="filterCollapsed __active" data-dd-rel>
-                                            <div class="filterCollapsed__header">
-                                                <button class="filterBarBtn __active" data-dd-btn>
-                                                    <span class="filterBarBtn__inner">
-                                                        <span class="filterBarBtn__text">
-                                                            Цена, ₽
-                                                        </span>
-                                                        <span class="filterBarBtn__ico">
-                                                            <svg width="9px" height="6px">
-                                                                <use xlink:href="./icons/stack/icons.svg#dropdown"></use>
-                                                            </svg>
-                                                        </span>
+                        <div class="catalogMain__item catalogMain__item-filter" id="catalog-filter" data-element>
+                            <div class="catalogFilter">
+                                <div class="catalogFilter__doc">
+                                    <div class="catalogFilter__head">
+                                        <div class="filterMobHead">
+                                            <div class="filterMobHead__inner">
+                                                <div class="filterMobHead__text">
+                                                    Фильтры
+                                                    <span data-f-quant>
+                                                        <span class="quantBox" data-f-el>563</span>
                                                     </span>
-                                                </button>
-                                            </div>
-                                            <div class="filterCollapsed__dropdown" data-dd>
-                                                <div class="filterCollapsed__body">
-                                                    <div class="sliderInput" data-slider-el>
-                                                        <div class="sliderInput__top">
-                                                            <div class="sliderInpEl">
-
-                                                            </div>
-                                                        </div>
-                                                        <div class="sliderInput__bottom">
-                                                            <div class="sliderInput__inputs">
-                                                                <div class="sliderInput__input">
-                                                                    <div class="sliderInputBox" data-focus-rel>
-                                                                        <input id="inp-1" class="sliderInput__num sliderInput__num-min" data-focus-inp type="number" min="0" max="10000" step="1">
-                                                                        <label class="sliderInput__label" for="inp-1">от</label>
-                                                                        <button class="sliderBtnClear" data-clear-inp>
-                                                                            <span class="sliderBtnClear__inner">
-                                                                                <svg>
-                                                                                    <use xlink:href="./icons/stack/icons.svg#close"></use>
-                                                                                </svg>
-                                                                            </span>
-                                                                        </button>
-                                                                    </div>
-                                                                </div>
-                                                                <div class="sliderInput__sep">-</div>
-                                                                <div class="sliderInput__input">
-                                                                    <div class="sliderInputBox" data-focus-rel>
-                                                                        <input id="inp-2" class="sliderInput__num sliderInput__num-max" data-focus-inp type="number" min="0" max="10000" step="1">
-                                                                        <label class="sliderInput__label" for="inp-2">до</label>
-                                                                        <button class="sliderBtnClear" data-clear-inp>
-                                                                            <span class="sliderBtnClear__inner">
-                                                                                <svg>
-                                                                                    <use xlink:href="./icons/stack/icons.svg#close"></use>
-                                                                                </svg>
-                                                                            </span>
-                                                                        </button>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
                                                 </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="catalogFilter__section">
-                                        <div class="filterCollapsed __active" data-dd-rel>
-                                            <div class="filterCollapsed__header">
-                                                <button class="filterBarBtn __active" data-dd-btn>
-                                                    <span class="filterBarBtn__inner">
-                                                        <span class="filterBarBtn__text">
-                                                            Страна производства
-                                                        </span>
-                                                        <span class="filterBarBtn__ico">
-                                                            <svg width="9px" height="6px">
-                                                                <use xlink:href="./icons/stack/icons.svg#dropdown"></use>
-                                                            </svg>
-                                                        </span>
-                                                    </span>
-                                                </button>
-                                            </div>
-                                            <div class="filterCollapsed__dropdown" data-dd>
-                                                <div class="filterCollapsed__body">
-                                                    <div class="filterCollapsed__content customScrollBox">
-                                                        <ul class="filterInputList">
-                                                            <li class="filterInputList__item">
-                                                                <label class="filterPoint">
-                                                                    <span class="filterPoint__ico">
-                                                                        <input class="customCb visually-hidden" data-filter-point data-to-label-box id="filter-1" type="checkbox">
-                                                                        <span class="customCb--item"></span>
-                                                                    </span>
-                                                                    <span class="filterPoint__text">
-                                                                        CARVER
-                                                                    </span>
-                                                                    <span class="filterPoint__extra">
-                                                                        <span class="quantBox">163</span>
-                                                                    </span>
-                                                                </label>
-                                                            </li>
-                                                            <li class="filterInputList__item">
-                                                                <label class="filterPoint">
-                                                                    <span class="filterPoint__ico">
-                                                                        <input class="customCb visually-hidden" data-filter-point data-to-label-box id="filter-2" type="checkbox">
-                                                                        <span class="customCb--item"></span>
-                                                                    </span>
-                                                                    <span class="filterPoint__text">
-                                                                        Daewoo
-                                                                    </span>
-                                                                    <span class="filterPoint__extra">
-                                                                        <span class="quantBox">125</span>
-                                                                    </span>
-                                                                </label>
-                                                            </li>
-                                                            <li class="filterInputList__item">
-                                                                <label class="filterPoint">
-                                                                    <span class="filterPoint__ico">
-                                                                        <input class="customCb visually-hidden" data-filter-point data-to-label-box id="filter-3" type="checkbox">
-                                                                        <span class="customCb--item"></span>
-                                                                    </span>
-                                                                    <span class="filterPoint__text">
-                                                                        ECHO
-                                                                    </span>
-                                                                    <span class="filterPoint__extra">
-                                                                        <span class="quantBox">96</span>
-                                                                    </span>
-                                                                </label>
-                                                            </li>
-                                                            <li class="filterInputList__item">
-                                                                <label class="filterPoint" aria-disabled="true">
-                                                                    <span class="filterPoint__ico">
-                                                                        <input class="customCb visually-hidden" data-filter-point data-to-label-box id="filter-4" type="checkbox" disabled>
-                                                                        <span class="customCb--item"></span>
-                                                                    </span>
-                                                                    <span class="filterPoint__text">
-                                                                        GreenWorks
-                                                                    </span>
-                                                                    <span class="filterPoint__extra">
-                                                                        <span class="quantBox">85</span>
-                                                                    </span>
-                                                                </label>
-                                                            </li>
-                                                            <li class="filterInputList__item">
-                                                                <label class="filterPoint">
-                                                                    <span class="filterPoint__ico">
-                                                                        <input class="customCb visually-hidden" data-filter-point data-to-label-box id="filter-5" type="checkbox">
-                                                                        <span class="customCb--item"></span>
-                                                                    </span>
-                                                                    <span class="filterPoint__text">
-                                                                        Husqvarna
-                                                                    </span>
-                                                                    <span class="filterPoint__extra">
-                                                                        <span class="quantBox">67</span>
-                                                                    </span>
-                                                                </label>
-                                                            </li>
-                                                            <li class="filterInputList__item">
-                                                                <label class="filterPoint">
-                                                                    <span class="filterPoint__ico">
-                                                                        <input class="customCb visually-hidden" data-filter-point data-to-label-box id="filter-6" type="checkbox">
-                                                                        <span class="customCb--item"></span>
-                                                                    </span>
-                                                                    <span class="filterPoint__text">
-                                                                        Champion
-                                                                    </span>
-                                                                    <span class="filterPoint__extra">
-                                                                        <span class="quantBox">58</span>
-                                                                    </span>
-                                                                </label>
-                                                            </li>
-                                                            <li class="filterInputList__item">
-                                                                <label class="filterPoint">
-                                                                    <span class="filterPoint__ico">
-                                                                        <input class="customCb visually-hidden" data-filter-point data-to-label-box id="filter-7" type="checkbox">
-                                                                        <span class="customCb--item"></span>
-                                                                    </span>
-                                                                    <span class="filterPoint__text">
-                                                                        Daewoo
-                                                                    </span>
-                                                                    <span class="filterPoint__extra">
-                                                                        <span class="quantBox">125</span>
-                                                                    </span>
-                                                                </label>
-                                                            </li>
-                                                        </ul>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="catalogFilter__section">
-                                        <div class="filterCollapsed" data-dd-rel>
-                                            <div class="filterCollapsed__header">
-                                                <button class="filterBarBtn" data-dd-btn>
-                                                    <span class="filterBarBtn__inner">
-                                                        <span class="filterBarBtn__text">
-                                                            Мощность (л.с.)
-                                                        </span>
-                                                        <span class="filterBarBtn__ico">
-                                                            <svg width="9px" height="6px">
-                                                                <use xlink:href="./icons/stack/icons.svg#dropdown"></use>
-                                                            </svg>
-                                                        </span>
-                                                    </span>
-                                                </button>
-                                            </div>
-                                            <div class="filterCollapsed__dropdown" data-dd>
-                                                <div class="filterCollapsed__body">
-                                                    <div class="filterCollapsed__content customScrollBox">
-                                                        <ul class="filterInputList">
-                                                            <li class="filterInputList__item">
-                                                                <label class="filterPoint">
-                                                                    <span class="filterPoint__ico">
-                                                                        <input class="customCb visually-hidden" data-filter-point data-to-label-box id="filter-21" type="checkbox">
-                                                                        <span class="customCb--item"></span>
-                                                                    </span>
-                                                                    <span class="filterPoint__text">
-                                                                        CARVER
-                                                                    </span>
-                                                                    <span class="filterPoint__extra">
-                                                                        <span class="quantBox">163</span>
-                                                                    </span>
-                                                                </label>
-                                                            </li>
-                                                            <li class="filterInputList__item">
-                                                                <label class="filterPoint">
-                                                                    <span class="filterPoint__ico">
-                                                                        <input class="customCb visually-hidden" data-filter-point data-to-label-box id="filter-22" type="checkbox">
-                                                                        <span class="customCb--item"></span>
-                                                                    </span>
-                                                                    <span class="filterPoint__text">
-                                                                        Daewoo
-                                                                    </span>
-                                                                    <span class="filterPoint__extra">
-                                                                        <span class="quantBox">125</span>
-                                                                    </span>
-                                                                </label>
-                                                            </li>
-                                                            <li class="filterInputList__item">
-                                                                <label class="filterPoint">
-                                                                    <span class="filterPoint__ico">
-                                                                        <input class="customCb visually-hidden" data-filter-point data-to-label-box id="filter-23" type="checkbox">
-                                                                        <span class="customCb--item"></span>
-                                                                    </span>
-                                                                    <span class="filterPoint__text">
-                                                                        ECHO
-                                                                    </span>
-                                                                    <span class="filterPoint__extra">
-                                                                        <span class="quantBox">96</span>
-                                                                    </span>
-                                                                </label>
-                                                            </li>
-                                                            <li class="filterInputList__item">
-                                                                <label class="filterPoint" aria-disabled="true">
-                                                                    <span class="filterPoint__ico">
-                                                                        <input class="customCb visually-hidden" data-filter-point data-to-label-box id="filter-24" type="checkbox" disabled>
-                                                                        <span class="customCb--item"></span>
-                                                                    </span>
-                                                                    <span class="filterPoint__text">
-                                                                        GreenWorks
-                                                                    </span>
-                                                                    <span class="filterPoint__extra">
-                                                                        <span class="quantBox">85</span>
-                                                                    </span>
-                                                                </label>
-                                                            </li>
-                                                            <li class="filterInputList__item">
-                                                                <label class="filterPoint">
-                                                                    <span class="filterPoint__ico">
-                                                                        <input class="customCb visually-hidden" data-filter-point data-to-label-box id="filter-25" type="checkbox">
-                                                                        <span class="customCb--item"></span>
-                                                                    </span>
-                                                                    <span class="filterPoint__text">
-                                                                        Husqvarna
-                                                                    </span>
-                                                                    <span class="filterPoint__extra">
-                                                                        <span class="quantBox">67</span>
-                                                                    </span>
-                                                                </label>
-                                                            </li>
-                                                            <li class="filterInputList__item">
-                                                                <label class="filterPoint">
-                                                                    <span class="filterPoint__ico">
-                                                                        <input class="customCb visually-hidden" data-filter-point data-to-label-box id="filter-26" type="checkbox">
-                                                                        <span class="customCb--item"></span>
-                                                                    </span>
-                                                                    <span class="filterPoint__text">
-                                                                        Champion
-                                                                    </span>
-                                                                    <span class="filterPoint__extra">
-                                                                        <span class="quantBox">58</span>
-                                                                    </span>
-                                                                </label>
-                                                            </li>
-                                                            <li class="filterInputList__item">
-                                                                <label class="filterPoint">
-                                                                    <span class="filterPoint__ico">
-                                                                        <input class="customCb visually-hidden" data-filter-point data-to-label-box id="filter-27" type="checkbox">
-                                                                        <span class="customCb--item"></span>
-                                                                    </span>
-                                                                    <span class="filterPoint__text">
-                                                                        Daewoo
-                                                                    </span>
-                                                                    <span class="filterPoint__extra">
-                                                                        <span class="quantBox">125</span>
-                                                                    </span>
-                                                                </label>
-                                                            </li>
-                                                        </ul>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="catalogFilter__section">
-                                        <div class="filterCollapsed" data-dd-rel>
-                                            <div class="filterCollapsed__header">
-                                                <button class="filterBarBtn" data-dd-btn>
-                                                    <span class="filterBarBtn__inner">
-                                                        <span class="filterBarBtn__text">
-                                                            Тип двигателя <span class="helpBtn" data-tooltip data-tippy-content="Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo."><span class="helpBtn__inner"><svg><use xlink:href="./icons/stack/icons.svg#help"></use></svg></span></span>
-                                                        </span>
-                                                        <span class="filterBarBtn__ico">
-                                                            <svg width="9px" height="6px">
-                                                                <use xlink:href="./icons/stack/icons.svg#dropdown"></use>
-                                                            </svg>
-                                                        </span>
-                                                    </span>
-                                                </button>
-                                            </div>
-                                            <div class="filterCollapsed__dropdown" data-dd>
-                                                <div class="filterCollapsed__body">
-                                                    <div class="filterCollapsed__content customScrollBox">
-                                                        <ul class="filterInputList">
-                                                            <li class="filterInputList__item">
-                                                                <label class="filterPoint">
-                                                                    <span class="filterPoint__ico">
-                                                                        <input class="customCb visually-hidden" data-filter-point data-to-label-box id="filter-51" type="checkbox">
-                                                                        <span class="customCb--item"></span>
-                                                                    </span>
-                                                                    <span class="filterPoint__text">
-                                                                        Тип двигателя 1
-                                                                    </span>
-                                                                    <span class="filterPoint__extra">
-                                                                        <span class="quantBox">163</span>
-                                                                    </span>
-                                                                </label>
-                                                            </li>
-                                                            <li class="filterInputList__item">
-                                                                <label class="filterPoint">
-                                                                    <span class="filterPoint__ico">
-                                                                        <input class="customCb visually-hidden" data-filter-point data-to-label-box id="filter-52" type="checkbox">
-                                                                        <span class="customCb--item"></span>
-                                                                    </span>
-                                                                    <span class="filterPoint__text">
-                                                                        Тип двигателя 2
-                                                                    </span>
-                                                                    <span class="filterPoint__extra">
-                                                                        <span class="quantBox">125</span>
-                                                                    </span>
-                                                                </label>
-                                                            </li>
-                                                        </ul>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="catalogFilter__section">
-                                        <div class="filterCollapsed __active" data-dd-rel>
-                                            <div class="filterCollapsed__header">
-                                                <button class="filterBarBtn __active" data-dd-btn>
-                                                    <span class="filterBarBtn__inner">
-                                                        <span class="filterBarBtn__text">
-                                                            Страна производства
-                                                        </span>
-                                                        <span class="filterBarBtn__ico">
-                                                            <svg width="9px" height="6px">
-                                                                <use xlink:href="./icons/stack/icons.svg#dropdown"></use>
-                                                            </svg>
-                                                        </span>
-                                                    </span>
-                                                </button>
-                                            </div>
-                                            <div class="filterCollapsed__dropdown" data-dd>
-                                                <div class="filterCollapsed__body">
-                                                    <div class="filterCollapsed__content customScrollBox">
-                                                        <ul class="filterInputList">
-                                                            <li class="filterInputList__item">
-                                                                <label class="filterPoint">
-                                                                    <span class="filterPoint__ico">
-                                                                        <input class="customCb visually-hidden" data-filter-point data-to-label-box id="filter-8" type="checkbox">
-                                                                        <span class="customCb--item"></span>
-                                                                    </span>
-                                                                    <span class="filterPoint__text">
-                                                                        Германия
-                                                                    </span>
-                                                                    <span class="filterPoint__extra">
-                                                                        <span class="quantBox">163</span>
-                                                                    </span>
-                                                                </label>
-                                                            </li>
-                                                            <li class="filterInputList__item">
-                                                                <label class="filterPoint">
-                                                                    <span class="filterPoint__ico">
-                                                                        <input class="customCb visually-hidden" data-filter-point data-to-label-box id="filter-9" type="checkbox">
-                                                                        <span class="customCb--item"></span>
-                                                                    </span>
-                                                                    <span class="filterPoint__text">
-                                                                        Италия
-                                                                    </span>
-                                                                    <span class="filterPoint__extra">
-                                                                        <span class="quantBox">125</span>
-                                                                    </span>
-                                                                </label>
-                                                            </li>
-                                                            <li class="filterInputList__item">
-                                                                <label class="filterPoint">
-                                                                    <span class="filterPoint__ico">
-                                                                        <input class="customCb visually-hidden" data-filter-point data-to-label-box id="filter-10" type="checkbox">
-                                                                        <span class="customCb--item"></span>
-                                                                    </span>
-                                                                    <span class="filterPoint__text">
-                                                                        Китай
-                                                                    </span>
-                                                                    <span class="filterPoint__extra">
-                                                                        <span class="quantBox">96</span>
-                                                                    </span>
-                                                                </label>
-                                                            </li>
-                                                            <li class="filterInputList__item">
-                                                                <label class="filterPoint">
-                                                                    <span class="filterPoint__ico">
-                                                                        <input class="customCb visually-hidden" data-filter-point data-to-label-box id="filter-11" type="checkbox">
-                                                                        <span class="customCb--item"></span>
-                                                                    </span>
-                                                                    <span class="filterPoint__text">
-                                                                        Россия
-                                                                    </span>
-                                                                    <span class="filterPoint__extra">
-                                                                        <span class="quantBox">85</span>
-                                                                    </span>
-                                                                </label>
-                                                            </li>
-                                                        </ul>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="catalogFilter__section">
-                                        <div class="filterCollapsed __active" data-dd-rel>
-                                            <div class="filterCollapsed__header">
-                                                <button class="filterBarBtn __active" data-dd-btn>
-                                                    <span class="filterBarBtn__inner">
-                                                        <span class="filterBarBtn__text">
-                                                            Наличие в магазинах
-                                                        </span>
-                                                        <span class="filterBarBtn__ico">
-                                                            <svg width="9px" height="6px">
-                                                                <use xlink:href="./icons/stack/icons.svg#dropdown"></use>
-                                                            </svg>
-                                                        </span>
-                                                    </span>
-                                                </button>
-                                            </div>
-                                            <div class="filterCollapsed__dropdown" data-dd>
-                                                <div class="filterCollapsed__body">
-                                                    <div class="filterCollapsed__content customScrollBox">
-                                                        <ul class="filterInputList">
-                                                            <li class="filterInputList__item">
-                                                                <label class="filterPoint">
-                                                                    <span class="filterPoint__ico">
-                                                                        <input class="customCb customCb-radio visually-hidden" data-filter-point data-to-label-box id="filter-12" type="radio" name="radio-1">
-                                                                        <span class="customCb--item"></span>
-                                                                    </span>
-                                                                    <span class="filterPoint__text">
-                                                                        Есть в наличии
-                                                                    </span>
-                                                                    <span class="filterPoint__extra">
-                                                                        <span class="quantBox">163</span>
-                                                                    </span>
-                                                                </label>
-                                                            </li>
-                                                            <li class="filterInputList__item">
-                                                                <label class="filterPoint">
-                                                                    <span class="filterPoint__ico">
-                                                                        <input class="customCb customCb-radio visually-hidden" data-filter-point data-to-label-box id="filter-13" type="radio" name="radio-1">
-                                                                        <span class="customCb--item"></span>
-                                                                    </span>
-                                                                    <span class="filterPoint__text">
-                                                                        Нет в наличии
-                                                                    </span>
-                                                                    <span class="filterPoint__extra">
-                                                                        <span class="quantBox">125</span>
-                                                                    </span>
-                                                                </label>
-                                                            </li>
-                                                        </ul>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="catalogFilter__static">
-                                        <div class="filterCollapsed__body">
-                                            <ul class="filterInputList">
-                                                <li class="filterInputList__item">
-                                                    <label class="filterPoint">
-                                                        <span class="filterPoint__ico">
-                                                            <input class="customCb visually-hidden" data-filter-point data-to-label-box id="filter-14" type="checkbox">
-                                                            <span class="customCb--item"></span>
-                                                        </span>
-                                                        <span class="filterPoint__text">
-                                                            <div class="productLabel">Новинка</div>
-                                                        </span>
-                                                        <span class="filterPoint__extra">
-                                                            <span class="quantBox">163</span>
-                                                        </span>
-                                                    </label>
-                                                </li>
-                                                <li class="filterInputList__item">
-                                                    <label class="filterPoint">
-                                                        <span class="filterPoint__ico">
-                                                            <input class="customCb visually-hidden" data-filter-point data-to-label-box id="filter-15" type="checkbox" >
-                                                            <span class="customCb--item"></span>
-                                                        </span>
-                                                        <span class="filterPoint__text">
-                                                            <div class="productLabel productLabel-lead">Лидер продаж</div>
-                                                        </span>
-                                                        <span class="filterPoint__extra">
-                                                            <span class="quantBox">125</span>
-                                                        </span>
-                                                    </label>
-                                                </li>
-                                                <li class="filterInputList__item">
-                                                    <label class="filterPoint">
-                                                        <span class="filterPoint__ico">
-                                                            <input class="customCb visually-hidden" data-filter-point data-to-label-box id="filter-16" type="checkbox" >
-                                                            <span class="customCb--item"></span>
-                                                        </span>
-                                                        <span class="filterPoint__text">
-                                                            Со скидкой
-                                                        </span>
-                                                        <span class="filterPoint__extra">
-                                                            <span class="quantBox">125</span>
-                                                        </span>
-                                                    </label>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                    <div class="catalogFilter__btn">
-                                        <div class="filterBtnList">
-                                            <div class="filterBtnList__item">
-                                                <button class="customBtn customBtn-dark">
-                                                    <span class="customBtn__inner">
-                                                        <span class="customBtn__text">Применить</span>
-                                                        <span class="customBtn__pane">
-                                                            <span class="quantBox">58</span>
-                                                        </span>
-                                                    </span>
-                                                </button>
-                                            </div>
-                                            <div class="filterBtnList__item">
-                                                <button class="customBtn customBtn-del">
-                                                    <span class="customBtn__inner">
-                                                        <div class="customBtn__ico customBtn__ico-big">
+                                                <div class="filterMobHead__cls">
+                                                    <button class="closeBtn" data-cls-element>
+                                                        <span class="closeBtn__inner">
                                                             <svg>
-                                                                <use xlink:href="./icons/stack/icons.svg#delete"></use>
+                                                                <use xlink:href="./icons/stack/icons.svg#close"></use>
                                                             </svg>
+                                                        </span>
+                                                    </button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="catalogFilter__inner">
+                                        <div class="catalogFilter__labels">
+                                            <div class="catalogChoice" data-label-box="">
+                                                <div class="choiceFilters"> 
+                                                    <div class="choiceFilters__inner">
+                                                        <div class="choiceFilters__item choiceFilters__del">
+                                                            <button class="choiceLabel choiceLabel-del" data-choice-del="">
+                                                                <span class="choiceLabel__inner">
+                                                                    Очистить фильтры
+                                                                    <span class="choiceLabel__ico">
+                                                                        <svg>
+                                                                            <use xlink:href="./icons/stack/icons.svg#close"></use>
+                                                                        </svg>
+                                                                    </span>
+                                                                </span>
+                                                            </button>
                                                         </div>
-                                                        <span class="customBtn__text">Очистить</span>
-                                                    </span>
-                                                </button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="catalogFilter__section">
+                                            <div class="filterCollapsed __active" data-dd-rel>
+                                                <div class="filterCollapsed__header">
+                                                    <button class="filterBarBtn __active" data-dd-btn>
+                                                        <span class="filterBarBtn__inner">
+                                                            <span class="filterBarBtn__text">
+                                                                Цена, ₽
+                                                            </span>
+                                                            <span class="filterBarBtn__ico">
+                                                                <svg width="9px" height="6px">
+                                                                    <use xlink:href="./icons/stack/icons.svg#dropdown"></use>
+                                                                </svg>
+                                                            </span>
+                                                        </span>
+                                                    </button>
+                                                </div>
+                                                <div class="filterCollapsed__dropdown" data-dd>
+                                                    <div class="filterCollapsed__body">
+                                                        <div class="sliderInput" data-slider-el>
+                                                            <div class="sliderInput__top">
+                                                                <div class="sliderInpEl">
+
+                                                                </div>
+                                                            </div>
+                                                            <div class="sliderInput__bottom">
+                                                                <div class="sliderInput__inputs">
+                                                                    <div class="sliderInput__input">
+                                                                        <div class="sliderInputBox" data-focus-rel>
+                                                                            <input id="inp-1" class="sliderInput__num sliderInput__num-min" data-focus-inp type="number" min="0" max="10000" step="1">
+                                                                            <label class="sliderInput__label" for="inp-1">от</label>
+                                                                            <button class="sliderBtnClear" data-clear-inp>
+                                                                                <span class="sliderBtnClear__inner">
+                                                                                    <svg>
+                                                                                        <use xlink:href="./icons/stack/icons.svg#close"></use>
+                                                                                    </svg>
+                                                                                </span>
+                                                                            </button>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="sliderInput__sep">-</div>
+                                                                    <div class="sliderInput__input">
+                                                                        <div class="sliderInputBox" data-focus-rel>
+                                                                            <input id="inp-2" class="sliderInput__num sliderInput__num-max" data-focus-inp type="number" min="0" max="10000" step="1">
+                                                                            <label class="sliderInput__label" for="inp-2">до</label>
+                                                                            <button class="sliderBtnClear" data-clear-inp>
+                                                                                <span class="sliderBtnClear__inner">
+                                                                                    <svg>
+                                                                                        <use xlink:href="./icons/stack/icons.svg#close"></use>
+                                                                                    </svg>
+                                                                                </span>
+                                                                            </button>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="catalogFilter__section">
+                                            <div class="filterCollapsed __active" data-dd-rel>
+                                                <div class="filterCollapsed__header">
+                                                    <button class="filterBarBtn __active" data-dd-btn>
+                                                        <span class="filterBarBtn__inner">
+                                                            <span class="filterBarBtn__text">
+                                                                Страна производства
+                                                            </span>
+                                                            <span class="filterBarBtn__ico">
+                                                                <svg width="9px" height="6px">
+                                                                    <use xlink:href="./icons/stack/icons.svg#dropdown"></use>
+                                                                </svg>
+                                                            </span>
+                                                        </span>
+                                                    </button>
+                                                </div>
+                                                <div class="filterCollapsed__dropdown" data-dd>
+                                                    <div class="filterCollapsed__body">
+                                                        <div class="filterCollapsed__content customScrollBox">
+                                                            <ul class="filterInputList">
+                                                                <li class="filterInputList__item">
+                                                                    <label class="filterPoint">
+                                                                        <span class="filterPoint__ico">
+                                                                            <input class="customCb visually-hidden" data-filter-point data-to-label-box id="filter-1" type="checkbox">
+                                                                            <span class="customCb--item"></span>
+                                                                        </span>
+                                                                        <span class="filterPoint__text">
+                                                                            CARVER
+                                                                        </span>
+                                                                        <span class="filterPoint__extra">
+                                                                            <span class="quantBox">163</span>
+                                                                        </span>
+                                                                    </label>
+                                                                </li>
+                                                                <li class="filterInputList__item">
+                                                                    <label class="filterPoint">
+                                                                        <span class="filterPoint__ico">
+                                                                            <input class="customCb visually-hidden" data-filter-point data-to-label-box id="filter-2" type="checkbox">
+                                                                            <span class="customCb--item"></span>
+                                                                        </span>
+                                                                        <span class="filterPoint__text">
+                                                                            Daewoo
+                                                                        </span>
+                                                                        <span class="filterPoint__extra">
+                                                                            <span class="quantBox">125</span>
+                                                                        </span>
+                                                                    </label>
+                                                                </li>
+                                                                <li class="filterInputList__item">
+                                                                    <label class="filterPoint">
+                                                                        <span class="filterPoint__ico">
+                                                                            <input class="customCb visually-hidden" data-filter-point data-to-label-box id="filter-3" type="checkbox">
+                                                                            <span class="customCb--item"></span>
+                                                                        </span>
+                                                                        <span class="filterPoint__text">
+                                                                            ECHO
+                                                                        </span>
+                                                                        <span class="filterPoint__extra">
+                                                                            <span class="quantBox">96</span>
+                                                                        </span>
+                                                                    </label>
+                                                                </li>
+                                                                <li class="filterInputList__item">
+                                                                    <label class="filterPoint" aria-disabled="true">
+                                                                        <span class="filterPoint__ico">
+                                                                            <input class="customCb visually-hidden" data-filter-point data-to-label-box id="filter-4" type="checkbox" disabled>
+                                                                            <span class="customCb--item"></span>
+                                                                        </span>
+                                                                        <span class="filterPoint__text">
+                                                                            GreenWorks
+                                                                        </span>
+                                                                        <span class="filterPoint__extra">
+                                                                            <span class="quantBox">85</span>
+                                                                        </span>
+                                                                    </label>
+                                                                </li>
+                                                                <li class="filterInputList__item">
+                                                                    <label class="filterPoint">
+                                                                        <span class="filterPoint__ico">
+                                                                            <input class="customCb visually-hidden" data-filter-point data-to-label-box id="filter-5" type="checkbox">
+                                                                            <span class="customCb--item"></span>
+                                                                        </span>
+                                                                        <span class="filterPoint__text">
+                                                                            Husqvarna
+                                                                        </span>
+                                                                        <span class="filterPoint__extra">
+                                                                            <span class="quantBox">67</span>
+                                                                        </span>
+                                                                    </label>
+                                                                </li>
+                                                                <li class="filterInputList__item">
+                                                                    <label class="filterPoint">
+                                                                        <span class="filterPoint__ico">
+                                                                            <input class="customCb visually-hidden" data-filter-point data-to-label-box id="filter-6" type="checkbox">
+                                                                            <span class="customCb--item"></span>
+                                                                        </span>
+                                                                        <span class="filterPoint__text">
+                                                                            Champion
+                                                                        </span>
+                                                                        <span class="filterPoint__extra">
+                                                                            <span class="quantBox">58</span>
+                                                                        </span>
+                                                                    </label>
+                                                                </li>
+                                                                <li class="filterInputList__item">
+                                                                    <label class="filterPoint">
+                                                                        <span class="filterPoint__ico">
+                                                                            <input class="customCb visually-hidden" data-filter-point data-to-label-box id="filter-7" type="checkbox">
+                                                                            <span class="customCb--item"></span>
+                                                                        </span>
+                                                                        <span class="filterPoint__text">
+                                                                            Daewoo
+                                                                        </span>
+                                                                        <span class="filterPoint__extra">
+                                                                            <span class="quantBox">125</span>
+                                                                        </span>
+                                                                    </label>
+                                                                </li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="catalogFilter__section">
+                                            <div class="filterCollapsed" data-dd-rel>
+                                                <div class="filterCollapsed__header">
+                                                    <button class="filterBarBtn" data-dd-btn>
+                                                        <span class="filterBarBtn__inner">
+                                                            <span class="filterBarBtn__text">
+                                                                Мощность (л.с.)
+                                                            </span>
+                                                            <span class="filterBarBtn__ico">
+                                                                <svg width="9px" height="6px">
+                                                                    <use xlink:href="./icons/stack/icons.svg#dropdown"></use>
+                                                                </svg>
+                                                            </span>
+                                                        </span>
+                                                    </button>
+                                                </div>
+                                                <div class="filterCollapsed__dropdown" data-dd>
+                                                    <div class="filterCollapsed__body">
+                                                        <div class="filterCollapsed__content customScrollBox">
+                                                            <ul class="filterInputList">
+                                                                <li class="filterInputList__item">
+                                                                    <label class="filterPoint">
+                                                                        <span class="filterPoint__ico">
+                                                                            <input class="customCb visually-hidden" data-filter-point data-to-label-box id="filter-21" type="checkbox">
+                                                                            <span class="customCb--item"></span>
+                                                                        </span>
+                                                                        <span class="filterPoint__text">
+                                                                            CARVER
+                                                                        </span>
+                                                                        <span class="filterPoint__extra">
+                                                                            <span class="quantBox">163</span>
+                                                                        </span>
+                                                                    </label>
+                                                                </li>
+                                                                <li class="filterInputList__item">
+                                                                    <label class="filterPoint">
+                                                                        <span class="filterPoint__ico">
+                                                                            <input class="customCb visually-hidden" data-filter-point data-to-label-box id="filter-22" type="checkbox">
+                                                                            <span class="customCb--item"></span>
+                                                                        </span>
+                                                                        <span class="filterPoint__text">
+                                                                            Daewoo
+                                                                        </span>
+                                                                        <span class="filterPoint__extra">
+                                                                            <span class="quantBox">125</span>
+                                                                        </span>
+                                                                    </label>
+                                                                </li>
+                                                                <li class="filterInputList__item">
+                                                                    <label class="filterPoint">
+                                                                        <span class="filterPoint__ico">
+                                                                            <input class="customCb visually-hidden" data-filter-point data-to-label-box id="filter-23" type="checkbox">
+                                                                            <span class="customCb--item"></span>
+                                                                        </span>
+                                                                        <span class="filterPoint__text">
+                                                                            ECHO
+                                                                        </span>
+                                                                        <span class="filterPoint__extra">
+                                                                            <span class="quantBox">96</span>
+                                                                        </span>
+                                                                    </label>
+                                                                </li>
+                                                                <li class="filterInputList__item">
+                                                                    <label class="filterPoint" aria-disabled="true">
+                                                                        <span class="filterPoint__ico">
+                                                                            <input class="customCb visually-hidden" data-filter-point data-to-label-box id="filter-24" type="checkbox" disabled>
+                                                                            <span class="customCb--item"></span>
+                                                                        </span>
+                                                                        <span class="filterPoint__text">
+                                                                            GreenWorks
+                                                                        </span>
+                                                                        <span class="filterPoint__extra">
+                                                                            <span class="quantBox">85</span>
+                                                                        </span>
+                                                                    </label>
+                                                                </li>
+                                                                <li class="filterInputList__item">
+                                                                    <label class="filterPoint">
+                                                                        <span class="filterPoint__ico">
+                                                                            <input class="customCb visually-hidden" data-filter-point data-to-label-box id="filter-25" type="checkbox">
+                                                                            <span class="customCb--item"></span>
+                                                                        </span>
+                                                                        <span class="filterPoint__text">
+                                                                            Husqvarna
+                                                                        </span>
+                                                                        <span class="filterPoint__extra">
+                                                                            <span class="quantBox">67</span>
+                                                                        </span>
+                                                                    </label>
+                                                                </li>
+                                                                <li class="filterInputList__item">
+                                                                    <label class="filterPoint">
+                                                                        <span class="filterPoint__ico">
+                                                                            <input class="customCb visually-hidden" data-filter-point data-to-label-box id="filter-26" type="checkbox">
+                                                                            <span class="customCb--item"></span>
+                                                                        </span>
+                                                                        <span class="filterPoint__text">
+                                                                            Champion
+                                                                        </span>
+                                                                        <span class="filterPoint__extra">
+                                                                            <span class="quantBox">58</span>
+                                                                        </span>
+                                                                    </label>
+                                                                </li>
+                                                                <li class="filterInputList__item">
+                                                                    <label class="filterPoint">
+                                                                        <span class="filterPoint__ico">
+                                                                            <input class="customCb visually-hidden" data-filter-point data-to-label-box id="filter-27" type="checkbox">
+                                                                            <span class="customCb--item"></span>
+                                                                        </span>
+                                                                        <span class="filterPoint__text">
+                                                                            Daewoo
+                                                                        </span>
+                                                                        <span class="filterPoint__extra">
+                                                                            <span class="quantBox">125</span>
+                                                                        </span>
+                                                                    </label>
+                                                                </li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="catalogFilter__section">
+                                            <div class="filterCollapsed" data-dd-rel>
+                                                <div class="filterCollapsed__header">
+                                                    <button class="filterBarBtn" data-dd-btn>
+                                                        <span class="filterBarBtn__inner">
+                                                            <span class="filterBarBtn__text">
+                                                                Тип двигателя <span class="helpBtn" data-tooltip data-tippy-content="Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo."><span class="helpBtn__inner"><svg><use xlink:href="./icons/stack/icons.svg#help"></use></svg></span></span>
+                                                            </span>
+                                                            <span class="filterBarBtn__ico">
+                                                                <svg width="9px" height="6px">
+                                                                    <use xlink:href="./icons/stack/icons.svg#dropdown"></use>
+                                                                </svg>
+                                                            </span>
+                                                        </span>
+                                                    </button>
+                                                </div>
+                                                <div class="filterCollapsed__dropdown" data-dd>
+                                                    <div class="filterCollapsed__body">
+                                                        <div class="filterCollapsed__content customScrollBox">
+                                                            <ul class="filterInputList">
+                                                                <li class="filterInputList__item">
+                                                                    <label class="filterPoint">
+                                                                        <span class="filterPoint__ico">
+                                                                            <input class="customCb visually-hidden" data-filter-point data-to-label-box id="filter-51" type="checkbox">
+                                                                            <span class="customCb--item"></span>
+                                                                        </span>
+                                                                        <span class="filterPoint__text">
+                                                                            Тип двигателя 1
+                                                                        </span>
+                                                                        <span class="filterPoint__extra">
+                                                                            <span class="quantBox">163</span>
+                                                                        </span>
+                                                                    </label>
+                                                                </li>
+                                                                <li class="filterInputList__item">
+                                                                    <label class="filterPoint">
+                                                                        <span class="filterPoint__ico">
+                                                                            <input class="customCb visually-hidden" data-filter-point data-to-label-box id="filter-52" type="checkbox">
+                                                                            <span class="customCb--item"></span>
+                                                                        </span>
+                                                                        <span class="filterPoint__text">
+                                                                            Тип двигателя 2
+                                                                        </span>
+                                                                        <span class="filterPoint__extra">
+                                                                            <span class="quantBox">125</span>
+                                                                        </span>
+                                                                    </label>
+                                                                </li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="catalogFilter__section">
+                                            <div class="filterCollapsed __active" data-dd-rel>
+                                                <div class="filterCollapsed__header">
+                                                    <button class="filterBarBtn __active" data-dd-btn>
+                                                        <span class="filterBarBtn__inner">
+                                                            <span class="filterBarBtn__text">
+                                                                Страна производства
+                                                            </span>
+                                                            <span class="filterBarBtn__ico">
+                                                                <svg width="9px" height="6px">
+                                                                    <use xlink:href="./icons/stack/icons.svg#dropdown"></use>
+                                                                </svg>
+                                                            </span>
+                                                        </span>
+                                                    </button>
+                                                </div>
+                                                <div class="filterCollapsed__dropdown" data-dd>
+                                                    <div class="filterCollapsed__body">
+                                                        <div class="filterCollapsed__content customScrollBox">
+                                                            <ul class="filterInputList">
+                                                                <li class="filterInputList__item">
+                                                                    <label class="filterPoint">
+                                                                        <span class="filterPoint__ico">
+                                                                            <input class="customCb visually-hidden" data-filter-point data-to-label-box id="filter-8" type="checkbox">
+                                                                            <span class="customCb--item"></span>
+                                                                        </span>
+                                                                        <span class="filterPoint__text">
+                                                                            Германия
+                                                                        </span>
+                                                                        <span class="filterPoint__extra">
+                                                                            <span class="quantBox">163</span>
+                                                                        </span>
+                                                                    </label>
+                                                                </li>
+                                                                <li class="filterInputList__item">
+                                                                    <label class="filterPoint">
+                                                                        <span class="filterPoint__ico">
+                                                                            <input class="customCb visually-hidden" data-filter-point data-to-label-box id="filter-9" type="checkbox">
+                                                                            <span class="customCb--item"></span>
+                                                                        </span>
+                                                                        <span class="filterPoint__text">
+                                                                            Италия
+                                                                        </span>
+                                                                        <span class="filterPoint__extra">
+                                                                            <span class="quantBox">125</span>
+                                                                        </span>
+                                                                    </label>
+                                                                </li>
+                                                                <li class="filterInputList__item">
+                                                                    <label class="filterPoint">
+                                                                        <span class="filterPoint__ico">
+                                                                            <input class="customCb visually-hidden" data-filter-point data-to-label-box id="filter-10" type="checkbox">
+                                                                            <span class="customCb--item"></span>
+                                                                        </span>
+                                                                        <span class="filterPoint__text">
+                                                                            Китай
+                                                                        </span>
+                                                                        <span class="filterPoint__extra">
+                                                                            <span class="quantBox">96</span>
+                                                                        </span>
+                                                                    </label>
+                                                                </li>
+                                                                <li class="filterInputList__item">
+                                                                    <label class="filterPoint">
+                                                                        <span class="filterPoint__ico">
+                                                                            <input class="customCb visually-hidden" data-filter-point data-to-label-box id="filter-11" type="checkbox">
+                                                                            <span class="customCb--item"></span>
+                                                                        </span>
+                                                                        <span class="filterPoint__text">
+                                                                            Россия
+                                                                        </span>
+                                                                        <span class="filterPoint__extra">
+                                                                            <span class="quantBox">85</span>
+                                                                        </span>
+                                                                    </label>
+                                                                </li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="catalogFilter__section">
+                                            <div class="filterCollapsed __active" data-dd-rel>
+                                                <div class="filterCollapsed__header">
+                                                    <button class="filterBarBtn __active" data-dd-btn>
+                                                        <span class="filterBarBtn__inner">
+                                                            <span class="filterBarBtn__text">
+                                                                Наличие в магазинах
+                                                            </span>
+                                                            <span class="filterBarBtn__ico">
+                                                                <svg width="9px" height="6px">
+                                                                    <use xlink:href="./icons/stack/icons.svg#dropdown"></use>
+                                                                </svg>
+                                                            </span>
+                                                        </span>
+                                                    </button>
+                                                </div>
+                                                <div class="filterCollapsed__dropdown" data-dd>
+                                                    <div class="filterCollapsed__body">
+                                                        <div class="filterCollapsed__content customScrollBox">
+                                                            <ul class="filterInputList">
+                                                                <li class="filterInputList__item">
+                                                                    <label class="filterPoint">
+                                                                        <span class="filterPoint__ico">
+                                                                            <input class="customCb customCb-radio visually-hidden" data-filter-point data-to-label-box id="filter-12" type="radio" name="radio-1">
+                                                                            <span class="customCb--item"></span>
+                                                                        </span>
+                                                                        <span class="filterPoint__text">
+                                                                            Есть в наличии
+                                                                        </span>
+                                                                        <span class="filterPoint__extra">
+                                                                            <span class="quantBox">163</span>
+                                                                        </span>
+                                                                    </label>
+                                                                </li>
+                                                                <li class="filterInputList__item">
+                                                                    <label class="filterPoint">
+                                                                        <span class="filterPoint__ico">
+                                                                            <input class="customCb customCb-radio visually-hidden" data-filter-point data-to-label-box id="filter-13" type="radio" name="radio-1">
+                                                                            <span class="customCb--item"></span>
+                                                                        </span>
+                                                                        <span class="filterPoint__text">
+                                                                            Нет в наличии
+                                                                        </span>
+                                                                        <span class="filterPoint__extra">
+                                                                            <span class="quantBox">125</span>
+                                                                        </span>
+                                                                    </label>
+                                                                </li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="catalogFilter__static">
+                                            <div class="filterCollapsed__body">
+                                                <ul class="filterInputList">
+                                                    <li class="filterInputList__item">
+                                                        <label class="filterPoint">
+                                                            <span class="filterPoint__ico">
+                                                                <input class="customCb visually-hidden" data-filter-point data-to-label-box id="filter-14" type="checkbox">
+                                                                <span class="customCb--item"></span>
+                                                            </span>
+                                                            <span class="filterPoint__text">
+                                                                <div class="productLabel">Новинка</div>
+                                                            </span>
+                                                            <span class="filterPoint__extra">
+                                                                <span class="quantBox">163</span>
+                                                            </span>
+                                                        </label>
+                                                    </li>
+                                                    <li class="filterInputList__item">
+                                                        <label class="filterPoint">
+                                                            <span class="filterPoint__ico">
+                                                                <input class="customCb visually-hidden" data-filter-point data-to-label-box id="filter-15" type="checkbox" >
+                                                                <span class="customCb--item"></span>
+                                                            </span>
+                                                            <span class="filterPoint__text">
+                                                                <div class="productLabel productLabel-lead">Лидер продаж</div>
+                                                            </span>
+                                                            <span class="filterPoint__extra">
+                                                                <span class="quantBox">125</span>
+                                                            </span>
+                                                        </label>
+                                                    </li>
+                                                    <li class="filterInputList__item">
+                                                        <label class="filterPoint">
+                                                            <span class="filterPoint__ico">
+                                                                <input class="customCb visually-hidden" data-filter-point data-to-label-box id="filter-16" type="checkbox" >
+                                                                <span class="customCb--item"></span>
+                                                            </span>
+                                                            <span class="filterPoint__text">
+                                                                Со скидкой
+                                                            </span>
+                                                            <span class="filterPoint__extra">
+                                                                <span class="quantBox">125</span>
+                                                            </span>
+                                                        </label>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        <div class="catalogFilter__btn">
+                                            <div class="filterBtnList">
+                                                <div class="filterBtnList__item">
+                                                    <button class="customBtn customBtn-dark">
+                                                        <span class="customBtn__inner">
+                                                            <span class="customBtn__text">Применить</span>
+                                                            <span class="customBtn__pane" data-f-quant>
+                                                                <span class="quantBox" data-f-el>58</span>
+                                                            </span>
+                                                        </span>
+                                                    </button>
+                                                </div>
+                                                <div class="filterBtnList__item">
+                                                    <button class="customBtn customBtn-del">
+                                                        <span class="customBtn__inner">
+                                                            <div class="customBtn__ico customBtn__ico-big">
+                                                                <svg>
+                                                                    <use xlink:href="./icons/stack/icons.svg#delete"></use>
+                                                                </svg>
+                                                            </div>
+                                                            <span class="customBtn__text">Очистить</span>
+                                                        </span>
+                                                    </button>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
@@ -748,9 +791,25 @@
                             <div class="catalogSorting">
                                 <div class="sortingBar">
                                     <div class="sortingBar__inner">
-                                        <div class="sortingBar__item">
-                                            <div class="sortingElement">
-                                                <div class="sortingElement__top"></div>
+                                        <div class="sortingBar__item sortingBar__item-sort">
+                                            <div class="sortingElement" data-sort-el>
+                                                <div class="sortingElement__top" data-sort-open>
+                                                    <div class="sortingElement__head">
+                                                        <div class="sortingElement__txt" data-sort-text>
+                                                            Цене
+                                                            <div class="sortingList__ico">
+                                                                <svg width="18px" height="18px">
+                                                                    <use xlink:href="./icons/stack/icons.svg#sort"></use>
+                                                                </svg>
+                                                            </div>
+                                                        </div>
+                                                        <div class="sortingElement__ico">
+                                                            <svg width="9px" height="6px">
+                                                                <use xlink:href="./icons/stack/icons.svg#dropdown"></use>
+                                                            </svg>
+                                                        </div>
+                                                    </div>
+                                                </div>
                                                 <div class="sortingElement__list">
                                                     <div class="sortingElement__bar">
                                                         <label class="sortingElement__label" for="">
@@ -758,18 +817,18 @@
                                                         </label>
                                                         <div class="sortingList">
                                                             <div class="sortingList__item">
-                                                                <a class="sortingList__link" href="">
+                                                                <a class="sortingList__link" data-sort-point href="">
                                                                     Популярности
-                                                                    <div class="sortingList__ico">
-                                                                        <svg width="18px" height="18px">
-                                                                            <use xlink:href="./icons/stack/icons.svg#sort"></use>
-                                                                        </svg>
-                                                                    </div>
                                                                 </a>
                                                             </div>
                                                             <div class="sortingList__item">
-                                                                <a class="sortingList__link" href="">
+                                                                <a class="sortingList__link" data-sort-point href="">
                                                                     Рейтингу
+                                                                </a>
+                                                            </div>
+                                                            <div class="sortingList__item">
+                                                                <a class="sortingList__link __active" data-sort-point href="">
+                                                                    Цене
                                                                     <div class="sortingList__ico">
                                                                         <svg width="18px" height="18px">
                                                                             <use xlink:href="./icons/stack/icons.svg#sort"></use>
@@ -777,8 +836,8 @@
                                                                     </div>
                                                                 </a>
                                                             </div>
-                                                            <div class="sortingList__item">
-                                                                <a class="sortingList__link __active" href="">
+                                                            <div class="sortingList__item sortingList__item-price">
+                                                                <a class="sortingList__link sortingList__link-down" data-sort-point href="">
                                                                     Цене
                                                                     <div class="sortingList__ico">
                                                                         <svg width="18px" height="18px">
@@ -814,9 +873,29 @@
                                                 </div>
                                             </div>
                                         </div>
+                                        <div class="sortingBar__item sortingBar__item-filter">
+                                            <div class="adaptFilter">
+                                                <button class="fileterOpen" data-open-filer>
+                                                    <span class="fileterOpen__span">
+                                                        <span class="fileterOpen__ico">
+                                                            <svg>
+                                                                <use xlink:href="./icons/stack/icons.svg#filter"></use>
+                                                            </svg>
+                                                        </span>
+                                                        <span class="fileterOpen__text">
+                                                            Фильтры
+                                                            <span data-f-quant>
+                                                                <span class="quantBox" data-f-el>563</span>
+                                                            </span>
+                                                        </span>
+                                                    </span>
+                                                </button>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
+                            
                             <div class="catalogChoice" data-label-box>
                                 <div class="choiceFilters"> 
                                     <div class="choiceFilters__inner">
@@ -3567,7 +3646,7 @@
                                         </button>
                                     </div>
                                     <div class="mainCatalog__pag">
-                                        <div class="sitePagination">
+                                        <div class="sitePagination sitePagination-desktop">
                                             <div class="sitePagination__inner">
                                                 <div class="sitePagination__arrow sitePagination__arrow-prev">
                                                     <a class="pagArrow pagArrow-prev" href="">
@@ -3603,6 +3682,47 @@
                                                     </li>
                                                     <li class="paginationList__item">
                                                         <span class="paginationPoint">...</span>
+                                                    </li>
+                                                    <li class="paginationList__item">
+                                                        <a class="paginationPoint" href="">24</a>
+                                                    </li>
+                                                </ul>
+                                                <div class="sitePagination__arrow sitePagination__arrow-next">
+                                                    <a class="pagArrow pagArrow-next" href="">
+                                                        <span class="pagArrow__inner">
+                                                            <svg viewBox="0 0 24 11.4"><path d="M18.3,11.4,16.9,10l3.3-3.3H0v-2H20.2L16.9,1.4,18.3,0,24,5.7Z"></path></svg>
+                                                        </span>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="sitePagination sitePagination-mobile">
+                                            <div class="sitePagination__inner">
+                                                <div class="sitePagination__arrow sitePagination__arrow-prev">
+                                                    <a class="pagArrow pagArrow-prev" href="">
+                                                        <span class="pagArrow__inner">
+                                                            <svg viewBox="0 0 24 11.4"><path d="M18.3,11.4,16.9,10l3.3-3.3H0v-2H20.2L16.9,1.4,18.3,0,24,5.7Z"></path></svg>
+                                                        </span>
+                                                    </a>
+                                                </div>
+                                                <ul class="paginationList">
+                                                    <li class="paginationList__item">
+                                                        <a class="paginationPoint" href="">1</a>
+                                                    </li>
+                                                    <li class="paginationList__item">
+                                                        <span class="paginationPoint paginationPoint-dots">...</span>
+                                                    </li>
+                                                    <li class="paginationList__item">
+                                                        <a class="paginationPoint" href="">6</a>
+                                                    </li>
+                                                    <li class="paginationList__item">
+                                                        <a class="paginationPoint __active" href="">7</a>
+                                                    </li>
+                                                    <li class="paginationList__item">
+                                                        <a class="paginationPoint" href="">8</a>
+                                                    </li>
+                                                    <li class="paginationList__item">
+                                                        <span class="paginationPoint paginationPoint-dots">...</span>
                                                     </li>
                                                     <li class="paginationList__item">
                                                         <a class="paginationPoint" href="">24</a>

@@ -54,12 +54,12 @@ $(document).ready(function() {
         }
     }
     if ($(window).outerWidth() <= 1150) {
-        $("body").on("click, touchend", "[data-catalog-point]", function(e) {
+        $("body").on("click touchend", "[data-catalog-point]", function(e) {
             if (+$(this).closest("[data-catalog-deep]").attr("data-catalog-deep") != 3) {
                 e.preventDefault();
             }
         });
-        $("body").on("click, touchend", "[data-catalog-point]", openCatalogMenu);
+        $("body").on("click touchend", "[data-catalog-point]", openCatalogMenu);
     }
     $("body").on("click", "[data-catalog-back]", function() {
         let this_id = $(this).closest("[data-catalog-deep]").attr("data-catalog-id");
