@@ -95,6 +95,7 @@ $(document).ready(function(){
     });
     
     $("body").on("change", "[data-filter-point]", function(){
+        catalog_input_q = 0;
         let btn_pos_top = $(this).parents(".filterInputList__item").offset().top;
         let btn_pos_left = $(this).parents(".filterInputList__item").offset().left + $(this).parents(".filterInputList__item").outerWidth();
         $("#filter-fxied-btn").remove();

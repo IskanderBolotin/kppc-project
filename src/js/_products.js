@@ -212,8 +212,10 @@ $(document).ready(function(){
             let labels = $(this).find(".productLabels__inner");
             $(this).find(".productCateg").appendTo(labels);
             $(this).find(".productLabels__inner").children().each(function() {
-                if (!$(this).hasClass("productLabels__item-btn") && !$(this).hasClass("productLabels__item-new")) {
-                    $(this).hide();
+                if (labels.children().length > 1) {
+                    if (!$(this).hasClass("productLabels__item-btn") && !$(this).hasClass("productLabels__item-new")) {
+                        $(this).hide();
+                    }
                 }
             });
             labels_adapt = true
@@ -225,8 +227,10 @@ $(document).ready(function(){
                 let labels = $(this).find(".productLabels__inner");
                 $(this).find(".productCateg").appendTo(labels);
                 $(this).find(".productLabels__inner").children().each(function() {
-                    if (!$(this).hasClass("productLabels__item-btn") && !$(this).hasClass("productLabels__item-new")) {
-                        $(this).hide();
+                    if (labels.children().length > 1) {
+                        if (!$(this).hasClass("productLabels__item-btn") && !$(this).hasClass("productLabels__item-new")) {
+                            $(this).hide();
+                        }
                     }
                 });
             });
