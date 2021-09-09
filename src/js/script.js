@@ -6,3 +6,4 @@
 @@include('./_products.js')
 @@include('./_catalog.js')
 @@include('./_product-card.js')
+@@include('./_cart.js')

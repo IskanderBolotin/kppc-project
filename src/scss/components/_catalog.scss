@@ -961,6 +961,9 @@ span.paginationPoint {
         border-top: 1px solid $extra-light-c;
     }
 }
+.productEl__mobi {
+    display: none;
+}
 @media (max-width: 1670px) {
     .categoryNext__inner {
         .catalogMenuList__item {
@@ -1198,6 +1201,29 @@ span.paginationPoint {
 @media (max-width: 576px) {
     .catalogGrid__item {
         width: 50%;
+    }
+    .productEl__layout {
+        .charList__inner {
+            font-size: 13px;
+            line-height: 16px;
+        }
+        .charList__item {
+            margin-bottom: 6px;
+        }
+    }
+    .productEl__mobi {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        .raitElement__text {
+            margin-left: 0;
+        }
+    }
+    .productMobRev {
+        margin-bottom: 10px;
+    }
+    .productMobStar {
+        margin-bottom: 7px;
     }
     .sortingBar__item.sortingBar__item-filter {
         order: 1;

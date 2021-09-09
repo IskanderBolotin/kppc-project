@@ -56,7 +56,7 @@ function browserSync() {
         server: {
             baseDir: "./" + project_folder + "/",
         },
-        startPath: "/product-card.html",
+        startPath: "/cart.html",
         port: 3000,
         notify: false,
     })

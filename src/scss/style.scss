@@ -10,6 +10,7 @@
 @import "./components/_products.scss";
 @import "./components/_catalog.scss";
 @import "./components/_product-card.scss";
+@import "./components/_cart.scss";
 
 .site-container {
     width: 100%;
@@ -206,6 +207,18 @@
             transition: .25s transform, .25s fill;
         }
     }
+    .customBtn__arrow {
+        display: block;
+        margin-right: 8px;
+        svg {
+            display: block;
+            width: 8px;
+            height: 6px;
+            fill: $dark-c;
+            transform: rotate(90deg);
+            transition: .25s fill;
+        }
+    }
     .customBtn__pane {
         margin-left: 8px;
     }
@@ -216,6 +229,11 @@
         .customBtn__ico-anim-rotation {
             svg {
                 animation: aroundRotate .25s ease;
+            }
+        }
+        .customBtn__arrow {
+            svg {
+                fill: $light-c;
             }
         }
     }
@@ -1015,10 +1033,12 @@ a.crumbsItem {
     font-size: 13px;
     line-height: 19px;
     font-weight: 500;
+    min-width: 36px;
     display: inline-block;
     padding: 0 6px;
     vertical-align: top;
     margin-top: 10px;
+    text-align: center;
 }
 @keyframes aroundRotate {
     0% {
@@ -1219,6 +1239,10 @@ a.h-l:hover {
     list-style: none;
     display: flex;
     justify-content: center;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 10px;
     li {
         padding: 0 5px;
         button {
@@ -1235,6 +1259,131 @@ a.h-l:hover {
             }
         }
     }
+}
+.promoCode__inner {
+    display: flex;
+    margin: 0 -5px;
+}
+.promoCode__item {
+    padding: 0 5px;
+}
+.promoCode__item.promoCode__input {
+    width: calc(100% - 54px);
+}
+.promoCode__item.promoCode__btn {
+    width: 54px;
+}
+.promoCodeBtn {
+    width: 44px;
+    height: 44px;
+    background-color: $extra-standart-c;
+    border: 1px solid $extra-light-c;
+}
+.promoCodeBtn__inner {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.promoCodeBtn__inner svg {
+    width: 9px;
+    height: 6px;
+    display: block;
+    transform: rotate(-90deg);
+}
+.promoCodeInput {
+    width: 100%;
+    display: block;
+    height: 44px;
+    background-color: #fff;
+    border: 1px solid $extra-light-c;
+    padding: 14px 13px 12px;
+    line-height: 19px;
+}
+.basketSide__main {
+    padding-bottom: 17px;
+    border-bottom: 1px solid $extra-light-c;
+    margin-bottom: 23px;
+}
+.lineInner {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+}
+.lineInner__label {
+    font-size: 15px;
+}
+.lineInner__value {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1;
+}
+.basketSide__total .lineInner__label {
+    font-size: 20px;
+    line-height: 24px;
+    font-weight: 500;
+}
+.basketSide__total .lineInner__value {
+    font-size: 40px;
+    line-height: 1;
+    font-weight: bold;
+}
+.basketSide__line {
+    margin-bottom: 13px;
+    &:last-child {
+        margin-bottom: 0;
+    }
+}
+.basketSide__total {
+    margin-bottom: 24px;
+}
+.boxEmpty {
+    background-color: $extra-standart-c;
+}
+.boxEmpty__inner {
+    min-height: 387px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+}
+.flexBtns {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: -10px -10px 0;
+}
+.flexBtns__item {
+    max-width: 240px;
+    width: 50%;
+    padding: 10px 10px 0;
+}
+.boxEmpty__img {
+    width: 116px;
+    height: 108px;
+    margin-bottom: 29px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    img {
+        display: block;
+        max-width: 100%;
+        max-height: 100%;
+    }
+}
+.boxEmpty__title {
+    font-size: 24px;
+    line-height: 32px;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 16px;
+}
+.boxEmpty__text {
+    line-height: 20px;
+    margin-bottom: 20px;
+    text-align: center;
 }
 @media (max-width: 1670px) {
     .plName {
@@ -1499,6 +1648,37 @@ a.h-l:hover {
         width: 100%;
         padding: 34px 0 0;
     }
+    .boxEmpty__img {
+        width: 100px;
+        height: 93px;
+        margin-bottom: 28px;
+    }
+    .boxEmpty__title {
+        font-size: 18px;
+        line-height: 25px;
+        margin-bottom: 8px;
+    }
+    .boxEmpty__inner {
+        min-height: 328px;
+    }
+    .flexBtns {
+        margin-left: -5px;
+        margin-right: -5px;
+    }
+    .flexBtns__item {
+        padding-left: 5px;
+        padding-right: 5px;
+    }
+    .boxEmpty__text {
+        font-size: 15px;
+        margin-bottom: 15px;
+    }
+    .customText h3, .customText h4, .customText h5, .customText h6 {
+        font-size: 16px;
+        line-height: 20px;
+        margin-top: 16px;
+        margin-bottom: 12px;
+    }
     .doubleColumnBox.customText {
         margin-top: 0;
     }
@@ -1616,10 +1796,19 @@ a.h-l:hover {
     .articleEl__info {
         max-height: 88px;
     }
+    .customText table td {
+        padding: 9px 10px 7px
+    }
+    .customText table {
+        margin-bottom: 15px;
+    }
 }
 @media (max-width: 576px) {
     .titleBar__sup {
         margin-top: 0;
+    }
+    .productCard__view {
+        margin-bottom: 10px;
     }
     .titleBar {
         margin-bottom: 7px;
