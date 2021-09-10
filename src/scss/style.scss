@@ -1326,7 +1326,8 @@ fieldset {
     }
 }
 
-.customInput {
+.customInput,
+.customTextArea {
     width: 100%;
     display: block;
     background-color: #fff;
@@ -1344,6 +1345,10 @@ fieldset {
         border-color: #FF3821;
         box-shadow: rgba($color: $dark-c, $alpha: .8) 0 0 0 3px;
     }
+}
+.customTextArea {
+    resize: none;
+    min-height: 100px;
 }
 .errorBox {
     position: absolute;
@@ -1514,6 +1519,9 @@ fieldset {
             padding: 16px 15px 0;
         }
     }
+    & + .fieldList {
+        margin-top: 0px;
+    }
 }
 .fieldList__item {
     display: flex;
@@ -1523,9 +1531,50 @@ fieldset {
     &.fieldList__item-small {
         width: 16.66%;
     }
+    &.fieldList__item-mid {
+        width: 25%;
+    }
     .labelBox {
         flex-grow: 1;
     }
+    &.fieldList__item-big {
+        width: 100%;
+    }
+}
+.ps-text__inf {
+    font-size: 14px;
+    line-height: 18px;
+    color: $extra-dark-c;
+    a {
+        text-decoration: underline;
+        &:hover {
+            color: $light-c;
+        }
+    }
+}
+.warningMessage__inner {
+    display: flex;
+}
+.warningMessage {
+    padding-top: 8px;
+}
+.warningMessage__ico {
+    width: 14px;
+    min-width: 14px;
+    height: 13px;
+    margin-right: 7px;
+    margin-top: 1px;
+    svg {
+        display: block;
+        width: 100%;
+        height: 100%;
+        fill: $light-c;
+    }
+}
+.warningMessage__text {
+    font-size: 14px;
+    line-height: 18px;
+    color: $extra-dark-c;
 }
 .labelBox__main {
     display: flex;
@@ -1543,9 +1592,13 @@ fieldset {
 .labelBox__subtext {
     font-size: 15px;
     line-height: 20px;
-    display: block;
+    display: flex;
+    align-items: center;
     margin-top: 10px;
     color: $extra-dark-c;
+}
+.labelBox__img {
+    margin-left: auto;
 }
 .labelBox {
     &:hover {
@@ -1560,6 +1613,9 @@ fieldset {
             }
         }
     }
+}
+.legend-hidden {
+    display: none;
 }
 @media (max-width: 1670px) {
     .plName {

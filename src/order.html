@@ -199,7 +199,7 @@
                                                                     <label class="custom-label" for="f-1">
                                                                         Город / населённый пункт <span>*</span>
                                                                     </label>
-                                                                    <input class="customInput" type="text" placeholder="Москва" id="f-1">
+                                                                    <input class="customInput" data-error data-error-text="Ошибка" type="text" placeholder="Москва" id="f-1">
                                                                 </div>
                                                                 <div class="fieldList__item">
                                                                     <label class="custom-label" for="f-2">
@@ -324,7 +324,9 @@
                                                         </fieldset>
                                                     </div>
                                                 </div>
-                                                <div class="checkGrub__content" data-check-content="2"></div>
+                                                <div class="checkGrub__content" data-check-content="2">
+
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
@@ -344,6 +346,217 @@
                                             </div>
                                         </div>
                                     </div>
+                                    <div class="orderArea__content">
+                                        <div class="checkGrub"  data-check-main>
+                                            <div class="checkGrub__header">
+                                                <div class="fieldList">
+                                                    <div class="fieldList__item">
+                                                        <label class="labelBox">
+                                                            <span class="labelBox__inner">
+                                                                <span class="labelBox__main">
+                                                                    <span class="labelBox__text">
+                                                                        <span class="labelBox__title">
+                                                                            Физическое лицо
+                                                                        </span>
+                                                                    </span>
+                                                                    <span class="labelBox__input">
+                                                                        <span class="labelBox__ico">
+                                                                            <input class="customCb customCb-radio visually-hidden"  data-check-grub="1" type="radio" name="radio-3">
+                                                                            <span class="customCb--item"></span>
+                                                                        </span>
+                                                                    </span>
+                                                                </span>
+                                                            </span>
+                                                        </label>
+                                                    </div>
+                                                    <div class="fieldList__item">
+                                                        <label class="labelBox">
+                                                            <span class="labelBox__inner">
+                                                                <span class="labelBox__main">
+                                                                    <span class="labelBox__text">
+                                                                        <span class="labelBox__title">
+                                                                            Юридическое лицо
+                                                                        </span>
+                                                                    </span>
+                                                                    <span class="labelBox__input">
+                                                                        <span class="labelBox__ico">
+                                                                            <input class="customCb customCb-radio visually-hidden"  data-check-grub="2" type="radio" name="radio-3">
+                                                                            <span class="customCb--item"></span>
+                                                                        </span>
+                                                                    </span>
+                                                                </span>
+                                                            </span>
+                                                        </label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="checkGrub__body">
+                                                <div class="checkGrub__content __active" data-check-content="1">
+                                                    <div class="checkGrub__section">
+                                                        <fieldset>
+                                                            <legend class="legend-hidden">
+                                                                <h3>
+                                                                    Физическое лицо
+                                                                </h3>
+                                                            </legend>
+                                                            <div class="fieldList fieldList-big">
+                                                                <div class="fieldList__item fieldList__item-mid">
+                                                                    <label class="custom-label" for="d-1">
+                                                                        Имя <span>*</span>
+                                                                    </label>
+                                                                    <input class="customInput" type="text" placeholder="Евгений" id="d-1">
+                                                                </div>
+                                                                <div class="fieldList__item fieldList__item-mid">
+                                                                    <label class="custom-label" for="d-2">
+                                                                        Фамилия <span>*</span>
+                                                                    </label>
+                                                                    <input class="customInput" type="text" placeholder="Бодров" id="d-2">
+                                                                </div>
+                                                                <div class="fieldList__item fieldList__item-mid">
+                                                                    <label class="custom-label" for="d-3">
+                                                                        Телефон <span>*</span>
+                                                                    </label>
+                                                                    <input class="customInput" type="tel" id="d-3">
+                                                                </div>
+                                                                <div class="fieldList__item fieldList__item-mid">
+                                                                    <label class="custom-label" for="d-4">
+                                                                        Email <span>*</span>
+                                                                    </label>
+                                                                    <input class="customInput" type="email" placeholder="evginiybodrov@gmail.com" id="d-4">
+                                                                </div>
+                                                                <div class="fieldList__item fieldList__item-big">
+                                                                    <div class="warningMessage">
+                                                                        <div class="warningMessage__inner">
+                                                                            <div class="warningMessage__ico">
+                                                                                <svg>
+                                                                                    <use xlink:href="./icons/stack/icons.svg#warning"></use>
+                                                                                </svg>
+                                                                            </div>
+                                                                            <div class="warningMessage__text">
+                                                                                При оплате покупки на сайте, пожалуйста укажите данные получателя. Если товар будет забирать другой человек (не заказчик) – укажите его данные. Заказы выдаются при предъявлении любого документа, удостоверяющего личность.
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </fieldset>
+                                                    </div>
+                                                </div>
+                                                <div class="checkGrub__content __active" data-check-content="2">
+                                                    <div class="checkGrub__section">
+                                                        <fieldset>
+                                                            <legend class="legend-hidden">
+                                                                <h3>
+                                                                    Юридическое лицо
+                                                                </h3>
+                                                            </legend>
+                                                            <div class="fieldList fieldList-big">
+                                                                <div class="fieldList__item fieldList__item-mid">
+                                                                    <label class="custom-label" for="e-1">
+                                                                        Имя <span>*</span>
+                                                                    </label>
+                                                                    <input class="customInput" type="text" placeholder="Евгений" id="e-1">
+                                                                </div>
+                                                                <div class="fieldList__item fieldList__item-mid">
+                                                                    <label class="custom-label" for="e-2">
+                                                                        Фамилия <span>*</span>
+                                                                    </label>
+                                                                    <input class="customInput" type="text" placeholder="Бодров" id="e-2">
+                                                                </div>
+                                                                <div class="fieldList__item fieldList__item-mid">
+                                                                    <label class="custom-label" for="e-3">
+                                                                        Телефон <span>*</span>
+                                                                    </label>
+                                                                    <input class="customInput" type="tel" id="e-3">
+                                                                </div>
+                                                                <div class="fieldList__item fieldList__item-mid">
+                                                                    <label class="custom-label" for="e-4">
+                                                                        Email <span>*</span>
+                                                                    </label>
+                                                                    <input class="customInput" type="email" placeholder="evginiybodrov@gmail.com" id="e-4">
+                                                                </div>
+                                                                <div class="fieldList__item fieldList__item-big">
+                                                                    <div class="warningMessage">
+                                                                        <div class="warningMessage__inner">
+                                                                            <div class="warningMessage__ico">
+                                                                                <svg>
+                                                                                    <use xlink:href="./icons/stack/icons.svg#warning"></use>
+                                                                                </svg>
+                                                                            </div>
+                                                                            <div class="warningMessage__text">
+                                                                                При оплате покупки на сайте, пожалуйста укажите данные получателя. Если товар будет забирать другой человек (не заказчик) – укажите его данные. Заказы выдаются при предъявлении любого документа, удостоверяющего личность.
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </fieldset>
+                                                    </div>
+                                                    <div class="checkGrub__section">
+                                                        <fieldset>
+                                                            <legend>
+                                                                <h3 class="orderArea__h3">
+                                                                    Реквизиты
+                                                                </h3>
+                                                            </legend>
+                                                            <div class="fieldList fieldList-big">
+                                                                <div class="fieldList__item fieldList__item-mid">
+                                                                    <label class="custom-label" for="r-1">
+                                                                        ИНН <span>*</span>
+                                                                    </label>
+                                                                    <input class="customInput" type="text" placeholder="35658758" id="r-1">
+                                                                </div>
+                                                                <div class="fieldList__item fieldList__item-mid">
+                                                                    <label class="custom-label" for="r-2">
+                                                                        КПП <span>*</span>
+                                                                    </label>
+                                                                    <input class="customInput" type="text" placeholder="55458" id="r-2">
+                                                                </div>
+                                                                <div class="fieldList__item fieldList__item-mid">
+                                                                    <label class="custom-label" for="r-3">
+                                                                        Расчетный счет <span>*</span>
+                                                                    </label>
+                                                                    <input class="customInput" type="text" placeholder="98522895" id="r-3">
+                                                                </div>
+                                                                <div class="fieldList__item fieldList__item-mid">
+                                                                    <label class="custom-label" for="r-4">
+                                                                        Корреспондентский счет <span>*</span>
+                                                                    </label>
+                                                                    <input class="customInput" type="text" placeholder="5656598" id="r-4">
+                                                                </div>
+                                                                <div class="fieldList__item fieldList__item-mid">
+                                                                    <label class="custom-label" for="r-5">
+                                                                        Название банка <span>*</span>
+                                                                    </label>
+                                                                    <input class="customInput" type="text" placeholder="ООО Сбер" id="r-5">
+                                                                </div>
+                                                                <div class="fieldList__item fieldList__item-mid">
+                                                                    <label class="custom-label" for="r-6">
+                                                                        БИК <span>*</span>
+                                                                    </label>
+                                                                    <input class="customInput" type="text" placeholder="55458" id="r-6">
+                                                                </div>
+                                                            </div>
+                                                            <div class="fieldList fieldList-big">
+                                                                <div class="fieldList__item">
+                                                                    <label class="custom-label" for="r-7">
+                                                                        Юридический адрес <span>*</span>
+                                                                    </label>
+                                                                    <input class="customInput" type="text" placeholder="г. Москва, ул. Пролетарская, д.117, стр.2" id="r-7">
+                                                                </div>
+                                                                <div class="fieldList__item">
+                                                                    <label class="custom-label" for="r-8">
+                                                                        Фактический адрес <span>*</span>
+                                                                    </label>
+                                                                    <input class="customInput" type="text" placeholder="г. Москва, ул. Пролетарская, д.117, стр.2" id="r-8">
+                                                                </div>
+                                                            </div>
+                                                        </fieldset>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
                                 <div class="orderArea__section">
                                     <div class="orderArea__title">
@@ -360,6 +573,71 @@
                                             </div>
                                         </div>
                                     </div>
+                                    <div class="orderArea__content">
+                                        <div class="checkGrub"  data-check-main>
+                                            <div class="checkGrub__header">
+                                                <div class="fieldList">
+                                                    <div class="fieldList__item">
+                                                        <label class="labelBox labelBox-big">
+                                                            <span class="labelBox__inner">
+                                                                <span class="labelBox__main">
+                                                                    <span class="labelBox__text">
+                                                                        <span class="labelBox__title">
+                                                                            Онлайн
+                                                                        </span>
+                                                                    </span>
+                                                                    <span class="labelBox__input">
+                                                                        <span class="labelBox__ico">
+                                                                            <input class="customCb customCb-radio visually-hidden"  data-check-grub="1" type="radio" name="radio-11">
+                                                                            <span class="customCb--item"></span>
+                                                                        </span>
+                                                                    </span>
+                                                                </span>
+                                                                <span class="labelBox__subtext">
+                                                                    Картами Visa, MasterCard, Мир
+                                                                    <div class="labelBox__img">
+                                                                        <div class="payIcons">
+                                                                            <div class="payIcons__item">
+                                                                                <img src="./img/svg/visa.svg" alt="">
+                                                                            </div>
+                                                                            <div class="payIcons__item">
+                                                                                <img src="./img/svg/MasterCard.svg" alt="">
+                                                                            </div>
+                                                                            <div class="payIcons__item">
+                                                                                <img src="./img/svg/mir.svg" alt="">
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </span>
+                                                            </span>
+                                                        </label>
+                                                    </div>
+                                                    <div class="fieldList__item">
+                                                        <label class="labelBox labelBox-big">
+                                                            <span class="labelBox__inner">
+                                                                <span class="labelBox__main">
+                                                                    <span class="labelBox__text">
+                                                                        <span class="labelBox__title">
+                                                                            Курьеру при получении
+                                                                        </span>
+                                                                    </span>
+                                                                    <span class="labelBox__input">
+                                                                        <span class="labelBox__ico">
+                                                                            <input class="customCb customCb-radio visually-hidden" data-check-grub="2" type="radio" name="radio-11">
+                                                                            <span class="customCb--item"></span>
+                                                                        </span>
+                                                                    </span>
+                                                                </span>
+                                                                <span class="labelBox__subtext">
+                                                                    Наличными или картой при получении заказа
+                                                                </span>
+                                                            </span>
+                                                        </label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
                                 <div class="orderArea__section">
                                     <div class="orderArea__title">
@@ -373,6 +651,22 @@
                                                 <h2 class="orderTitle_h">
                                                     Комментарий к заказу
                                                 </h2> 
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="orderArea__content">
+                                        <div class="fieldList">
+                                            <div class="fieldList__item fieldList__item-big">
+                                                <textarea class="customTextArea" placeholder="Введите комментарий"></textarea>
+                                            </div>
+                                            <div class="fieldList__item fieldList__item-big">
+                                                <div class="ps-text">
+                                                    <div class="ps-text__inner">
+                                                        <div class="ps-text__inf">
+                                                            Нажимая кнопку «Подтвердить заказ», я принимаю условия политики конфиденциальности и пользовательского соглашения
+                                                        </div>
+                                                    </div>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>

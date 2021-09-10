@@ -157,13 +157,14 @@ $(document).ready(function(){
 
 	// добавление ошибки
 	$("[data-error]").each(function(index, el, array){
+		let text = $(this).attr("data-error-text") ? $(this).attr("data-error-text") : "Сообщение об ошибке выводится здесь";
 		let pos_top = +$(this).offset().top - 3;
 		let pos_left = +$(this).offset().left - 3;
 		let el_width = +$(this).outerWidth() + 6;
 		let error = document.createElement('div');
 		error.className = "errorBox";
 		error.setAttribute("data-error-id", index);
-		error.innerHTML = "<div class='errorBox__text'>Сообщение об ошибке выводится здесь</div>";
+		error.innerHTML = "<div class='errorBox__text'>" + text +"</div>";
 		error.style.width = el_width + "px";
 		error.style.top = pos_top + "px";
 		error.style.left = pos_left + "px";
