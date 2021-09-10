@@ -181,10 +181,20 @@
     .cartIco {
         width: 36px;
         height: 36px;
+        transition: .25s color, .25s background-color, .25s border-color;
+        &:hover {
+            background-color: $dark-c;
+            border-color: $dark-c;
+            color: $light-c;
+            .cartIco__inner svg {
+                fill: $light-c;
+            }
+        }
     }
     .cartIco__inner svg {
         width: 18px;
         height: 18px;
+        transition: .25s fill;
     }
     .prodLink__info {
         flex-grow: 1;

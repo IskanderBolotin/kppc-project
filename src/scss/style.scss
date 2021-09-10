@@ -11,6 +11,7 @@
 @import "./components/_catalog.scss";
 @import "./components/_product-card.scss";
 @import "./components/_cart.scss";
+@import "./components/_order.scss";
 
 .site-container {
     width: 100%;
@@ -83,6 +84,7 @@
     height: 70px;
 }
 .plImg {
+    display: block;
     width: 100%;
     height: 100%;
     img {
@@ -96,9 +98,15 @@
     max-width: calc(100% - 70px);
 }
 .plName {
+    display: block;
     margin-bottom: 5px;
     font-size: 18px;
     line-height: 22px;
+}
+a.plName {
+    &:hover {
+        color: $light-c;
+    }
 }
 .plPrice {
     font-size: 16px;
@@ -1278,6 +1286,16 @@ a.h-l:hover {
     height: 44px;
     background-color: $extra-standart-c;
     border: 1px solid $extra-light-c;
+    transition: .25s color, .25s border-color, .25s background-color;
+    &:hover {
+        background-color: $dark-c;
+        border-color: $dark-c;
+        color: $light-c;
+        svg {
+            fill: $light-c;
+        }
+    }
+    
 }
 .promoCodeBtn__inner {
     width: 100%;
@@ -1290,16 +1308,67 @@ a.h-l:hover {
     width: 9px;
     height: 6px;
     display: block;
+    fill: $dark-c;
     transform: rotate(-90deg);
+    transition: .25s fill;
 }
-.promoCodeInput {
+fieldset {
+    border: none;
+}
+.custom-label {
+    font-size: 16px;
+    line-height: 19px;
+    margin-bottom: 6px;
+    display: block;
+    cursor: pointer;
+    span {
+        color: $light-c;
+    }
+}
+
+.customInput {
     width: 100%;
     display: block;
-    height: 44px;
     background-color: #fff;
     border: 1px solid $extra-light-c;
-    padding: 14px 13px 12px;
+    padding: 12px 13px 11px;
     line-height: 19px;
+    transition: .25s border-color;
+    &:hover {
+        border-color: $extra-dark-c;
+    }
+    &:focus {
+        border-color: $light-c;
+    }
+    &.__error {
+        border-color: #FF3821;
+        box-shadow: rgba($color: $dark-c, $alpha: .8) 0 0 0 3px;
+    }
+}
+.errorBox {
+    position: absolute;
+    transform: translateY(-100%);
+    background-color: rgba($color: $dark-c, $alpha: .8);
+    color: #fff;
+    font-size: 14px;
+    line-height: 18px;
+    padding: 12px 10px 8px;
+}
+.errorBox__text {
+    padding-left: 20px;
+    position: relative;
+    &::before {
+        content: "";
+        position: absolute;
+        top: 1px;
+        left: 0;
+        width: 14px;
+        height: 13px;
+        background-image: url(../img/svg/warning.svg);
+        background-size: 100% 100%;
+        background-repeat: no-repeat;
+        background-position: center;
+    }
 }
 .basketSide__main {
     padding-bottom: 17px;
@@ -1384,6 +1453,113 @@ a.h-l:hover {
     line-height: 20px;
     margin-bottom: 20px;
     text-align: center;
+}
+.basketSide__btn {
+    .customBtn + .customBtn {
+        margin-top: 10px;
+    }
+}
+.labelBox {
+    border: 1px solid #CECECE;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    transition: .25s border-color;
+    cursor: pointer;
+    &:hover {
+        border-color: $extra-dark-c;
+        .labelBox__inner {
+            border-color: $extra-dark-c;
+        }
+    }
+    &.__active {
+        border-color: $light-c;
+        .labelBox__inner {
+            border-color: $light-c;
+        }
+    }
+    &.labelBox-big {
+        .labelBox__inner {
+            min-height: 118px;
+        }
+    }
+}
+.labelBox__price {
+    margin-left: auto;
+    padding: 0 22px;
+    color: $extra-dark-c;
+    & + .labelBox__input {
+        margin-left: 0;
+    }
+}
+.labelBox__name {
+    font-size: 16px;
+    line-height: 20px;
+    font-weight: 500;
+}
+.labelBox__inner {
+    flex-grow: 1;
+    display: block;
+    border: 1px solid transparent;
+    transition: .25s border-color;
+    padding: 17px 18px;
+}
+.fieldList {
+    display: flex;
+    flex-wrap: wrap;
+    margin: -10px -15px 0;
+    &.fieldList-big {
+        margin: -16px -15px 0;
+        .fieldList__item {
+            padding: 16px 15px 0;
+        }
+    }
+}
+.fieldList__item {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    padding: 10px 15px 0;
+    &.fieldList__item-small {
+        width: 16.66%;
+    }
+    .labelBox {
+        flex-grow: 1;
+    }
+}
+.labelBox__main {
+    display: flex;
+    align-items: center;
+    min-height: 22px;
+}
+.labelBox__input {
+    margin-left: auto;
+}
+.labelBox__title {
+    line-height: 22px;
+    font-size: 18px;
+    font-weight: 500;
+}
+.labelBox__subtext {
+    font-size: 15px;
+    line-height: 20px;
+    display: block;
+    margin-top: 10px;
+    color: $extra-dark-c;
+}
+.labelBox {
+    &:hover {
+        .customCb.customCb-radio {
+            & + .customCb--item {
+                border-color: #CECECE;
+                background: radial-gradient(at center, $extra-light-c 5px, #fff 6px, #fff 7px, #CECECE 8px);
+            }
+            &:checked + .customCb--item {
+                border-color: $light-c;
+                background: radial-gradient(at center, $light-c 5px, #fff 6px, #fff 7px, $light-c 8px);
+            }
+        }
+    }
 }
 @media (max-width: 1670px) {
     .plName {

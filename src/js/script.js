@@ -7,3 +7,4 @@
 @@include('./_catalog.js')
 @@include('./_product-card.js')
 @@include('./_cart.js')
+@@include('./_order.js')

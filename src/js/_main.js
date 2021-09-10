@@ -153,5 +153,32 @@ $(document).ready(function(){
 				$(this).find("[data-rait-fill]").css("clip", rect);
 			}
 		})
-	})
+	});
+
+	// добавление ошибки
+	$("[data-error]").each(function(index, el, array){
+		let pos_top = +$(this).offset().top - 3;
+		let pos_left = +$(this).offset().left - 3;
+		let el_width = +$(this).outerWidth() + 6;
+		let error = document.createElement('div');
+		error.className = "errorBox";
+		error.setAttribute("data-error-id", index);
+		error.innerHTML = "<div class='errorBox__text'>Сообщение об ошибке выводится здесь</div>";
+		error.style.width = el_width + "px";
+		error.style.top = pos_top + "px";
+		error.style.left = pos_left + "px";
+		$(this).attr("data-error", index);
+		$(this).addClass("__error");
+		document.body.append(error);
+	});
+	// удаление ошибки
+	
+	$("body").on("input", "[data-error]", function(){
+		if ($(this).val() == "") {
+			let this_id = $(this).attr("data-error");
+			$(this).removeAttr("data-error");
+			$(this).removeClass("__error")
+			$("[data-error-id=" + this_id + "]").remove();
+		}
+	});
 });
