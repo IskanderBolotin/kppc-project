@@ -1491,8 +1491,9 @@ fieldset {
 }
 .labelBox__price {
     margin-left: auto;
-    padding: 0 22px;
+    padding-right: 22px;
     color: $extra-dark-c;
+    white-space: nowrap;
     & + .labelBox__input {
         margin-left: 0;
     }
@@ -1540,6 +1541,9 @@ fieldset {
     &.fieldList__item-big {
         width: 100%;
     }
+    .customInput {
+        margin-top: auto;
+    }
 }
 .ps-text__inf {
     font-size: 14px;
@@ -1575,6 +1579,13 @@ fieldset {
     font-size: 14px;
     line-height: 18px;
     color: $extra-dark-c;
+    a {
+        color: $light-c;
+        font-weight: 500;
+        &:hover {
+            text-decoration: underline;
+        }
+    }
 }
 .labelBox__main {
     display: flex;
@@ -1702,9 +1713,17 @@ fieldset {
     }
     
 }
+@media (max-width: 1500px){
+    .fieldList__item.fieldList__item-small {
+        width: 25%;
+    }
+}
 @media (max-width: 1300px) {
     .site-container {
         padding: 0 20px;
+    }
+    .orderMapInfo__img {
+        height: auto;
     }
     .aboutBox__text {
         margin-bottom: 22px;
@@ -1786,6 +1805,9 @@ fieldset {
             margin-left: 3px;
         }
     }
+    .labelBox__subtext {
+        flex-wrap: wrap;
+    }
     .title-h1 {
         font-size: 32px;
         line-height: 38px;
@@ -1860,6 +1882,13 @@ fieldset {
             }
         }
     }
+    .fieldList__item.fieldList__item-mid,
+    .fieldList__item.fieldList__item-small {
+        width: 50%;
+    }
+    .fieldList__item {
+        width: 100%;
+    }
 }
 @media (max-width: 1010px) {
     .site-container {
@@ -1876,6 +1905,25 @@ fieldset {
     }
 }
 @media (max-width: 998px) {
+    .fieldList.fieldList-big,
+    .fieldList {
+        margin-left: -10px;
+        margin-right: -10px;
+        padding-top: -11px;
+    }
+    .fieldList__item,
+    .fieldList.fieldList-big .fieldList__item {
+        padding-left: 10px;
+        padding-right: 10px;
+        padding-top: 11px;
+    }
+    .checkGrub__section {
+        margin-bottom: 20px;
+    }
+    .labelBox__img {
+        width: 100%;
+        margin-top: 5px;
+    }
     .sectionFlex__item {
         width: 100%;
         padding: 34px 0 0;
@@ -1943,6 +1991,9 @@ fieldset {
         margin-left: auto;
         margin-right: auto;
     }
+    .labelBox__lf {
+        flex-wrap: wrap;
+    }
 }
 @media (max-width: 875px) {
     .brandArrowAdapt {
@@ -1951,6 +2002,18 @@ fieldset {
             justify-content: center;
         }
     }
+    .labelBox__price {
+        margin-left: auto;
+        padding-left: 0;
+        width: 100%;
+        padding-top: 8px;
+        font-size: 14px;
+    }
+    .ddLabel__item .labelBox__price {
+        width: auto;
+        padding-top: 0;
+    }
+    
     .titleBar__sup {
         margin-top: 7px;
     }
@@ -2023,6 +2086,19 @@ fieldset {
     .titleBar.titleBar-border {
         margin-bottom: 15px;
     }
+    .labelBox__input {
+        margin-left: auto;
+        align-self: flex-start;
+        padding-top: 2px;
+    }
+}
+@media (max-width: 768px) {
+    .fieldList__item.fieldList__item-mid {
+        width: 100%;
+    }
+    .labelBox.labelBox-big .labelBox__inner {
+        min-height: auto;
+    }
 }
 @media (max-width: 670px) {
     .articleEl__info {
@@ -2033,6 +2109,9 @@ fieldset {
     }
     .customText table {
         margin-bottom: 15px;
+    }
+    .orderProducts__item {
+        width: 100%;
     }
 }
 @media (max-width: 576px) {

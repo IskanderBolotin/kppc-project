@@ -143,9 +143,11 @@
                                                         <label class="labelBox labelBox-big">
                                                             <span class="labelBox__inner">
                                                                 <span class="labelBox__main">
-                                                                    <span class="labelBox__text">
-                                                                        <span class="labelBox__title">
-                                                                            Доставка
+                                                                    <span class="labelBox__lf">
+                                                                        <span class="labelBox__text">
+                                                                            <span class="labelBox__title">
+                                                                                Доставка
+                                                                            </span>
                                                                         </span>
                                                                     </span>
                                                                     <span class="labelBox__input">
@@ -165,14 +167,16 @@
                                                         <label class="labelBox labelBox-big">
                                                             <span class="labelBox__inner">
                                                                 <span class="labelBox__main">
-                                                                    <span class="labelBox__text">
-                                                                        <span class="labelBox__title">
-                                                                            Самовывоз
+                                                                    <span class="labelBox__lf">
+                                                                        <span class="labelBox__text">
+                                                                            <span class="labelBox__title">
+                                                                                Самовывоз
+                                                                            </span>
                                                                         </span>
                                                                     </span>
                                                                     <span class="labelBox__input">
                                                                         <span class="labelBox__ico">
-                                                                            <input class="customCb customCb-radio visually-hidden" data-check-grub="2" type="radio" name="radio-1">
+                                                                            <input class="customCb customCb-radio visually-hidden" data-check-grub="2" type="radio" name="radio-1" checked>
                                                                             <span class="customCb--item"></span>
                                                                         </span>
                                                                     </span>
@@ -186,7 +190,7 @@
                                                 </div>
                                             </div>
                                             <div class="checkGrub__body">
-                                                <div class="checkGrub__content __active" data-check-content="1">
+                                                <div class="checkGrub__content" data-check-content="1">
                                                     <div class="checkGrub__section">
                                                         <fieldset>
                                                             <legend>
@@ -199,7 +203,7 @@
                                                                     <label class="custom-label" for="f-1">
                                                                         Город / населённый пункт <span>*</span>
                                                                     </label>
-                                                                    <input class="customInput" data-error data-error-text="Ошибка" type="text" placeholder="Москва" id="f-1">
+                                                                    <input class="customInput" type="text" placeholder="Москва" id="f-1">
                                                                 </div>
                                                                 <div class="fieldList__item">
                                                                     <label class="custom-label" for="f-2">
@@ -253,18 +257,20 @@
                                                                     Варианты доставки
                                                                 </h3>
                                                             </legend>
-                                                            <div class="fieldList">
+                                                            <div class="fieldList ">
                                                                 <div class="fieldList__item">
                                                                     <label class="labelBox">
                                                                         <span class="labelBox__inner">
                                                                             <span class="labelBox__main">
-                                                                                <span class="labelBox__text">
-                                                                                    <span class="labelBox__name">
-                                                                                        Курьером по Москве (в пределах МКАД)
+                                                                                <span class="labelBox__lf">
+                                                                                    <span class="labelBox__text">
+                                                                                        <span class="labelBox__name">
+                                                                                            Курьером по Москве (в пределах МКАД)
+                                                                                        </span>
                                                                                     </span>
-                                                                                </span>
-                                                                                <span class="labelBox__price">
-                                                                                    от 250 ₽
+                                                                                    <span class="labelBox__price">
+                                                                                        от 250 ₽
+                                                                                    </span>
                                                                                 </span>
                                                                                 <span class="labelBox__input">
                                                                                     <span class="labelBox__ico">
@@ -280,13 +286,15 @@
                                                                     <label class="labelBox">
                                                                         <span class="labelBox__inner">
                                                                             <span class="labelBox__main">
-                                                                                <span class="labelBox__text">
-                                                                                    <span class="labelBox__name">
-                                                                                        Курьером по Московской области (за МКАД)
+                                                                                <span class="labelBox__lf">
+                                                                                    <span class="labelBox__text">
+                                                                                        <span class="labelBox__name">
+                                                                                            Курьером по Московской области (за МКАД)
+                                                                                        </span>
                                                                                     </span>
-                                                                                </span>
-                                                                                <span class="labelBox__price">
-                                                                                    от 150 ₽/км
+                                                                                    <span class="labelBox__price">
+                                                                                        от 150 ₽/км
+                                                                                    </span>
                                                                                 </span>
                                                                                 <span class="labelBox__input">
                                                                                     <span class="labelBox__ico">
@@ -299,33 +307,351 @@
                                                                     </label>
                                                                 </div>
                                                                 <div class="fieldList__item">
-                                                                    <label class="labelBox">
-                                                                        <span class="labelBox__inner">
-                                                                            <span class="labelBox__main">
-                                                                                <span class="labelBox__text">
-                                                                                    <span class="labelBox__name">
-                                                                                        Транспортной компанией
+                                                                    <div class="collapsedLabel" data-label-dd-rel>
+                                                                        <label class="labelBox" data-label-dd-el>
+                                                                            <span class="labelBox__inner">
+                                                                                <span class="labelBox__main">
+                                                                                    <span class="labelBox__lf">
+                                                                                        <span class="labelBox__text">
+                                                                                            <span class="labelBox__name">
+                                                                                                Транспортной компанией
+                                                                                            </span>
+                                                                                        </span>
+                                                                                        <span class="labelBox__price">
+                                                                                            от 350 ₽
+                                                                                        </span>
                                                                                     </span>
-                                                                                </span>
-                                                                                <span class="labelBox__price">
-                                                                                    от 350 ₽
-                                                                                </span>
-                                                                                <span class="labelBox__input">
-                                                                                    <span class="labelBox__ico">
-                                                                                        <input class="customCb customCb-radio visually-hidden" type="radio" name="radio-2">
-                                                                                        <span class="customCb--item"></span>
+                                                                                    <span class="labelBox__input">
+                                                                                        <span class="labelBox__ico">
+                                                                                            <input class="customCb customCb-radio visually-hidden" data-label-dd-input type="radio" name="radio-2">
+                                                                                            <span class="customCb--item"></span>
+                                                                                        </span>
                                                                                     </span>
                                                                                 </span>
                                                                             </span>
-                                                                        </span>
-                                                                    </label>
+                                                                        </label>
+                                                                        <div class="collapsedLabel__dd" data-label-dd>
+                                                                            <div class="ddLabel">
+                                                                                <div class="ddLabel__list customScrollBox">
+                                                                                    <div class="ddLabel__item" data-order-point>
+                                                                                        <label class="labelBox">
+                                                                                            <span class="labelBox__inner">
+                                                                                                <span class="labelBox__main">
+                                                                                                    <span class="labelBox__lf">
+                                                                                                        <span class="labelBox__tk"></span>
+                                                                                                        <span class="labelBox__text">
+                                                                                                            <span class="labelBox__name">
+                                                                                                                Транспортная компания №1
+                                                                                                            </span>
+                                                                                                        </span>
+                                                                                                        <span class="labelBox__time">
+                                                                                                            3 - 4 дня
+                                                                                                        </span>
+                                                                                                        <span class="labelBox__price">
+                                                                                                            <span  class="labelBox__hl">350 ₽</span>
+                                                                                                        </span>
+                                                                                                    </span>
+                                                                                                    <span class="labelBox__input">
+                                                                                                        <span class="labelBox__ico">
+                                                                                                            <input class="customCb customCb-radio visually-hidden" type="radio" name="radio-r">
+                                                                                                            <span class="customCb--item"></span>
+                                                                                                        </span>
+                                                                                                    </span>
+                                                                                                </span>
+                                                                                            </span>
+                                                                                        </label>
+                                                                                    </div>
+                                                                                    <div class="ddLabel__item" data-order-point>
+                                                                                        <label class="labelBox">
+                                                                                            <span class="labelBox__inner">
+                                                                                                <span class="labelBox__main">
+                                                                                                    <span class="labelBox__lf">
+                                                                                                        <span class="labelBox__tk"></span>
+                                                                                                        <span class="labelBox__text">
+                                                                                                            <span class="labelBox__name">
+                                                                                                                Транспортная компания №2
+                                                                                                            </span>
+                                                                                                        </span>
+                                                                                                        <span class="labelBox__time">
+                                                                                                            2 - 7 дней
+                                                                                                        </span>
+                                                                                                        <span class="labelBox__price">
+                                                                                                            <span  class="labelBox__hl">420 ₽</span>
+                                                                                                        </span>
+                                                                                                    </span>
+                                                                                                    <span class="labelBox__input">
+                                                                                                        <span class="labelBox__ico">
+                                                                                                            <input class="customCb customCb-radio visually-hidden" type="radio" name="radio-r">
+                                                                                                            <span class="customCb--item"></span>
+                                                                                                        </span>
+                                                                                                    </span>
+                                                                                                </span>
+                                                                                            </span>
+                                                                                        </label>
+                                                                                    </div>
+                                                                                    <div class="ddLabel__item" data-order-point>
+                                                                                        <label class="labelBox">
+                                                                                            <span class="labelBox__inner">
+                                                                                                <span class="labelBox__main">
+                                                                                                    <span class="labelBox__lf">
+                                                                                                        <span class="labelBox__tk"></span>
+                                                                                                        <span class="labelBox__text">
+                                                                                                            <span class="labelBox__name">
+                                                                                                                Транспортная компания №3
+                                                                                                            </span>
+                                                                                                        </span>
+                                                                                                        <span class="labelBox__time">
+                                                                                                            1 - 2 дня
+                                                                                                        </span>
+                                                                                                        <span class="labelBox__price">
+                                                                                                            <span  class="labelBox__hl">1200 ₽</span>
+                                                                                                        </span>
+                                                                                                    </span>
+                                                                                                    <span class="labelBox__input">
+                                                                                                        <span class="labelBox__ico">
+                                                                                                            <input class="customCb customCb-radio visually-hidden" type="radio" name="radio-r">
+                                                                                                            <span class="customCb--item"></span>
+                                                                                                        </span>
+                                                                                                    </span>
+                                                                                                </span>
+                                                                                            </span>
+                                                                                        </label>
+                                                                                    </div>
+                                                                                    <div class="ddLabel__item" data-order-point>
+                                                                                        <label class="labelBox">
+                                                                                            <span class="labelBox__inner">
+                                                                                                <span class="labelBox__main">
+                                                                                                    <span class="labelBox__lf">
+                                                                                                        <span class="labelBox__tk"></span>
+                                                                                                        <span class="labelBox__text">
+                                                                                                            <span class="labelBox__name">
+                                                                                                                Транспортная компания №4
+                                                                                                            </span>
+                                                                                                        </span>
+                                                                                                        <span class="labelBox__time">
+                                                                                                            3 - 4 дня
+                                                                                                        </span>
+                                                                                                        <span class="labelBox__price">
+                                                                                                            <span  class="labelBox__hl">750₽</span>
+                                                                                                        </span>
+                                                                                                    </span>
+                                                                                                    <span class="labelBox__input">
+                                                                                                        <span class="labelBox__ico">
+                                                                                                            <input class="customCb customCb-radio visually-hidden" type="radio" name="radio-r">
+                                                                                                            <span class="customCb--item"></span>
+                                                                                                        </span>
+                                                                                                    </span>
+                                                                                                </span>
+                                                                                            </span>
+                                                                                        </label>
+                                                                                    </div>
+                                                                                    <div class="ddLabel__item" data-order-point>
+                                                                                        <label class="labelBox">
+                                                                                            <span class="labelBox__inner">
+                                                                                                <span class="labelBox__main">
+                                                                                                    <span class="labelBox__lf">
+                                                                                                        <span class="labelBox__tk"></span>
+                                                                                                        <span class="labelBox__text">
+                                                                                                            <span class="labelBox__name">
+                                                                                                                Транспортная компания №4
+                                                                                                            </span>
+                                                                                                        </span>
+                                                                                                        <span class="labelBox__time">
+                                                                                                            3 - 5 дня
+                                                                                                        </span>
+                                                                                                        <span class="labelBox__price">
+                                                                                                            <span  class="labelBox__hl">400₽</span>
+                                                                                                        </span>
+                                                                                                    </span>
+                                                                                                    <span class="labelBox__input">
+                                                                                                        <span class="labelBox__ico">
+                                                                                                            <input class="customCb customCb-radio visually-hidden" type="radio" name="radio-r">
+                                                                                                            <span class="customCb--item"></span>
+                                                                                                        </span>
+                                                                                                    </span>
+                                                                                                </span>
+                                                                                            </span>
+                                                                                        </label>
+                                                                                    </div>
+                                                                                    <div class="ddLabel__item" data-order-point>
+                                                                                        <label class="labelBox">
+                                                                                            <span class="labelBox__inner">
+                                                                                                <span class="labelBox__main">
+                                                                                                    <span class="labelBox__lf">
+                                                                                                        <span class="labelBox__tk"></span>
+                                                                                                        <span class="labelBox__text">
+                                                                                                            <span class="labelBox__name">
+                                                                                                                Транспортная компания №1
+                                                                                                            </span>
+                                                                                                        </span>
+                                                                                                        <span class="labelBox__time">
+                                                                                                            3 - 4 дня
+                                                                                                        </span>
+                                                                                                        <span class="labelBox__price">
+                                                                                                            <span  class="labelBox__hl">350 ₽</span>
+                                                                                                        </span>
+                                                                                                    </span>
+                                                                                                    <span class="labelBox__input">
+                                                                                                        <span class="labelBox__ico">
+                                                                                                            <input class="customCb customCb-radio visually-hidden" type="radio" name="radio-r">
+                                                                                                            <span class="customCb--item"></span>
+                                                                                                        </span>
+                                                                                                    </span>
+                                                                                                </span>
+                                                                                            </span>
+                                                                                        </label>
+                                                                                    </div>
+                                                                                    <div class="ddLabel__item" data-order-point>
+                                                                                        <label class="labelBox">
+                                                                                            <span class="labelBox__inner">
+                                                                                                <span class="labelBox__main">
+                                                                                                    <span class="labelBox__lf">
+                                                                                                        <span class="labelBox__tk"></span>
+                                                                                                        <span class="labelBox__text">
+                                                                                                            <span class="labelBox__name">
+                                                                                                                Транспортная компания №2
+                                                                                                            </span>
+                                                                                                        </span>
+                                                                                                        <span class="labelBox__time">
+                                                                                                            2 - 7 дней
+                                                                                                        </span>
+                                                                                                        <span class="labelBox__price">
+                                                                                                            <span  class="labelBox__hl">420 ₽</span>
+                                                                                                        </span>
+                                                                                                    </span>
+                                                                                                    <span class="labelBox__input">
+                                                                                                        <span class="labelBox__ico">
+                                                                                                            <input class="customCb customCb-radio visually-hidden" type="radio" name="radio-r">
+                                                                                                            <span class="customCb--item"></span>
+                                                                                                        </span>
+                                                                                                    </span>
+                                                                                                </span>
+                                                                                            </span>
+                                                                                        </label>
+                                                                                    </div>
+                                                                                    <div class="ddLabel__item" data-order-point>
+                                                                                        <label class="labelBox">
+                                                                                            <span class="labelBox__inner">
+                                                                                                <span class="labelBox__main">
+                                                                                                    <span class="labelBox__lf">
+                                                                                                        <span class="labelBox__tk"></span>
+                                                                                                        <span class="labelBox__text">
+                                                                                                            <span class="labelBox__name">
+                                                                                                                Транспортная компания №3
+                                                                                                            </span>
+                                                                                                        </span>
+                                                                                                        <span class="labelBox__time">
+                                                                                                            1 - 2 дня
+                                                                                                        </span>
+                                                                                                        <span class="labelBox__price">
+                                                                                                            <span  class="labelBox__hl">1200 ₽</span>
+                                                                                                        </span>
+                                                                                                    </span>
+                                                                                                    <span class="labelBox__input">
+                                                                                                        <span class="labelBox__ico">
+                                                                                                            <input class="customCb customCb-radio visually-hidden" type="radio" name="radio-r">
+                                                                                                            <span class="customCb--item"></span>
+                                                                                                        </span>
+                                                                                                    </span>
+                                                                                                </span>
+                                                                                            </span>
+                                                                                        </label>
+                                                                                    </div>
+                                                                                    <div class="ddLabel__item" data-order-point>
+                                                                                        <label class="labelBox">
+                                                                                            <span class="labelBox__inner">
+                                                                                                <span class="labelBox__main">
+                                                                                                    <span class="labelBox__lf">
+                                                                                                        <span class="labelBox__tk"></span>
+                                                                                                        <span class="labelBox__text">
+                                                                                                            <span class="labelBox__name">
+                                                                                                                Транспортная компания №4
+                                                                                                            </span>
+                                                                                                        </span>
+                                                                                                        <span class="labelBox__time">
+                                                                                                            3 - 4 дня
+                                                                                                        </span>
+                                                                                                        <span class="labelBox__price">
+                                                                                                            <span  class="labelBox__hl">750₽</span>
+                                                                                                        </span>
+                                                                                                    </span>
+                                                                                                    <span class="labelBox__input">
+                                                                                                        <span class="labelBox__ico">
+                                                                                                            <input class="customCb customCb-radio visually-hidden" type="radio" name="radio-r">
+                                                                                                            <span class="customCb--item"></span>
+                                                                                                        </span>
+                                                                                                    </span>
+                                                                                                </span>
+                                                                                            </span>
+                                                                                        </label>
+                                                                                    </div>
+                                                                                    <div class="ddLabel__item" data-order-point>
+                                                                                        <label class="labelBox">
+                                                                                            <span class="labelBox__inner">
+                                                                                                <span class="labelBox__main">
+                                                                                                    <span class="labelBox__lf">
+                                                                                                        <span class="labelBox__tk"></span>
+                                                                                                        <span class="labelBox__text">
+                                                                                                            <span class="labelBox__name">
+                                                                                                                Транспортная компания №4
+                                                                                                            </span>
+                                                                                                        </span>
+                                                                                                        <span class="labelBox__time">
+                                                                                                            3 - 5 дня
+                                                                                                        </span>
+                                                                                                        <span class="labelBox__price">
+                                                                                                            <span  class="labelBox__hl">400₽</span>
+                                                                                                        </span>
+                                                                                                    </span>
+                                                                                                    <span class="labelBox__input">
+                                                                                                        <span class="labelBox__ico">
+                                                                                                            <input class="customCb customCb-radio visually-hidden" type="radio" name="radio-r">
+                                                                                                            <span class="customCb--item"></span>
+                                                                                                        </span>
+                                                                                                    </span>
+                                                                                                </span>
+                                                                                            </span>
+                                                                                        </label>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
                                                                 </div>
                                                             </div>
                                                         </fieldset>
                                                     </div>
                                                 </div>
                                                 <div class="checkGrub__content" data-check-content="2">
-
+                                                    <div class="orderMapBox">
+                                                        <div class="orderMapBox__inner">
+                                                            <div class="orderMapBox__item orderMapBox__info">
+                                                                <div class="orderMapInfo">
+                                                                    <div class="orderMapInfo__title">
+                                                                        Адрес самовывоза
+                                                                    </div>
+                                                                    <div class="orderMapInfo__text">
+                                                                        Вы можете самостоятельно забрать товар из нашего офиса, расположенного по адресу: 
+                                                                    </div>
+                                                                    <div class="orderMapInfo__address">
+                                                                        г. Москва, Варшавское ш., д.26
+                                                                    </div>
+                                                                    <div class="orderMapInfo__img">
+                                                                        <picture>
+                                                                            <source srcset="./img/address.webp, ./img/address@2x.webp 2x" type="image/webp">
+                                                                            <source srcset="./img/address.png, ./img/address@2x.png 2x">
+                                                                            <img src="./img/address.png" srcset="./img/address.png, ./img/address@2x.png 2x" alt="">
+                                                                        </picture>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="orderMapBox__item orderMapBox__map">
+                                                                <div class="order-map" id="map">
+                                                                    <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3Ac1b493f67e2f2005def101a30fcf0dde61047ebbd5ec65568e13d62c0d49ec33&amp;width=810&amp;height=400&amp;lang=ru_RU&amp;scroll=true"></script>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
@@ -354,9 +680,11 @@
                                                         <label class="labelBox">
                                                             <span class="labelBox__inner">
                                                                 <span class="labelBox__main">
-                                                                    <span class="labelBox__text">
-                                                                        <span class="labelBox__title">
-                                                                            Физическое лицо
+                                                                    <span class="labelBox__lf">
+                                                                        <span class="labelBox__text">
+                                                                            <span class="labelBox__title">
+                                                                                Физическое лицо
+                                                                            </span>
                                                                         </span>
                                                                     </span>
                                                                     <span class="labelBox__input">
@@ -373,9 +701,11 @@
                                                         <label class="labelBox">
                                                             <span class="labelBox__inner">
                                                                 <span class="labelBox__main">
-                                                                    <span class="labelBox__text">
-                                                                        <span class="labelBox__title">
-                                                                            Юридическое лицо
+                                                                    <span class="labelBox__lf">
+                                                                        <span class="labelBox__text">
+                                                                            <span class="labelBox__title">
+                                                                                Юридическое лицо
+                                                                            </span>
                                                                         </span>
                                                                     </span>
                                                                     <span class="labelBox__input">
@@ -391,7 +721,7 @@
                                                 </div>
                                             </div>
                                             <div class="checkGrub__body">
-                                                <div class="checkGrub__content __active" data-check-content="1">
+                                                <div class="checkGrub__content" data-check-content="1">
                                                     <div class="checkGrub__section">
                                                         <fieldset>
                                                             <legend class="legend-hidden">
@@ -442,7 +772,7 @@
                                                         </fieldset>
                                                     </div>
                                                 </div>
-                                                <div class="checkGrub__content __active" data-check-content="2">
+                                                <div class="checkGrub__content" data-check-content="2">
                                                     <div class="checkGrub__section">
                                                         <fieldset>
                                                             <legend class="legend-hidden">
@@ -581,9 +911,11 @@
                                                         <label class="labelBox labelBox-big">
                                                             <span class="labelBox__inner">
                                                                 <span class="labelBox__main">
-                                                                    <span class="labelBox__text">
-                                                                        <span class="labelBox__title">
-                                                                            Онлайн
+                                                                    <span class="labelBox__lf">
+                                                                        <span class="labelBox__text">
+                                                                            <span class="labelBox__title">
+                                                                                Онлайн
+                                                                            </span>
                                                                         </span>
                                                                     </span>
                                                                     <span class="labelBox__input">
@@ -616,9 +948,11 @@
                                                         <label class="labelBox labelBox-big">
                                                             <span class="labelBox__inner">
                                                                 <span class="labelBox__main">
-                                                                    <span class="labelBox__text">
-                                                                        <span class="labelBox__title">
-                                                                            Курьеру при получении
+                                                                    <span class="labelBox__lf">
+                                                                        <span class="labelBox__text">
+                                                                            <span class="labelBox__title">
+                                                                                Курьеру при получении
+                                                                            </span>
                                                                         </span>
                                                                     </span>
                                                                     <span class="labelBox__input">
@@ -663,13 +997,34 @@
                                                 <div class="ps-text">
                                                     <div class="ps-text__inner">
                                                         <div class="ps-text__inf">
-                                                            Нажимая кнопку «Подтвердить заказ», я принимаю условия политики конфиденциальности и пользовательского соглашения
+                                                            Нажимая кнопку «Подтвердить заказ», я принимаю условия <a href="">политики конфиденциальности</a> и <a href="">пользовательского соглашения</a>
                                                         </div>
                                                     </div>
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="basketFixed">
+                            <div class="basketFixed__inner">
+                                <div class="basketFixed__item basketFixed__item-price">
+                                    <div class="lineInner">
+                                        <div class="lineInner__label">
+                                            Всего
+                                        </div>
+                                        <div class="lineInner__value">
+                                            1&nbsp;164 ₽
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="basketFixed__item basketFixed__item-btn">
+                                    <button class="customBtn customBtn-light">
+                                        <span class="customBtn__inner">
+                                            <span class="customBtn__text">Подтвердить заказ</span>
+                                        </span>
+                                    </button>
                                 </div>
                             </div>
                         </div>

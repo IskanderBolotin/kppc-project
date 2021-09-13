@@ -155,6 +155,9 @@ $(document).ready(function(){
 		})
 	});
 
+	
+});
+window.addEventListener("load", function() {
 	// добавление ошибки
 	$("[data-error]").each(function(index, el, array){
 		let text = $(this).attr("data-error-text") ? $(this).attr("data-error-text") : "Сообщение об ошибке выводится здесь";
@@ -182,4 +185,12 @@ $(document).ready(function(){
 			$("[data-error-id=" + this_id + "]").remove();
 		}
 	});
-});
+	$(window).on("resize", function() {
+		$("[data-error]").each(function(){
+			let this_id = $(this).attr("data-error");
+			$(this).removeAttr("data-error");
+			$(this).removeClass("__error")
+			$("[data-error-id=" + this_id + "]").remove();
+		})
+	})
+})

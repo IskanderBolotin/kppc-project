@@ -74,3 +74,408 @@
     line-height: 24px;
     margin-bottom: 16px;
 }
+.orderMapBox {
+    background-color: $extra-standart-c;
+    border: 1px solid $extra-light-c;
+}
+.orderMapBox__inner {
+    display: flex;
+    flex-wrap: wrap;
+}
+.orderMapBox__info {
+    width: 33.1%;
+}
+.orderMapBox__map {
+    width: 66.9%;
+}
+.orderMapBox__item {
+    display: flex;
+    flex-direction: column;
+}
+.orderMapInfo {
+    flex-grow: 1;
+    padding: 20px 25px 25px;
+}
+.order-map {
+    flex-grow: 1;
+    min-height: 200px;
+}
+.orderMapInfo__title {
+    font-size: 20px;
+    line-height: 25px;
+    font-weight: 500;
+    margin-bottom: 14px;
+}
+.orderMapInfo__text {
+    line-height: 22px;
+    margin-bottom: 10px;
+}
+.orderMapInfo__address {
+    font-weight: bold;
+    line-height: 22px;
+    margin-bottom: 14px;
+}
+.orderMapInfo__img {
+    height: 226px;
+    picture, img {
+        display: block;
+        width: 100%;
+        height: 100%;
+    }
+    img {
+        object-fit: cover;
+    }
+}
+.order-map {
+    & > ymaps,
+    & > ymaps > ymaps,
+    & > ymaps > ymaps > ymaps {
+        width: 100% !important;
+        height: 100% !important;
+    }
+}
+.labelBox__lf {
+    display: flex;
+    align-items: center;
+    flex-grow: 1;
+}
+.collapsedLabel {
+    position: relative;
+}
+.collapsedLabel__dd {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    z-index: 2;
+    display: none;
+    &.__active {
+        display: block;
+    }
+}
+.ddLabel {
+    border-bottom: 2px solid $light-c;
+    border-left: 2px solid $light-c;
+    border-right: 2px solid $light-c;
+    background-color: #fff;
+    padding: 5px 0;
+}
+.labelBox__time {
+    min-width: 100px;
+    padding-right: 10px;
+    margin-left: auto;
+}
+.labelBox__time + .labelBox__price {
+    margin-left: 0;
+}
+.ddLabel__item {
+    .labelBox__lf {
+        align-items: baseline;
+    }
+    .labelBox__inner {
+        border: none;
+        padding: 14px 8px;
+    }
+    .labelBox {
+        border: none;
+    }
+    .labelBox__price {
+        color: $light-c;
+        font-weight: 500;
+        padding-right: 15px;
+        min-width: 67px;
+        text-align: right;
+        .labelBox__hl {
+            color: $light-c;
+            font-weight: 500;
+        }
+    }
+}
+.labelBox__tk {
+    width: 90px;
+    height: 20px;
+    margin-right: 10px;
+    background-color: $extra-dark-c;
+    align-self: center;
+    img {
+        display: block;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+}
+.ddLabel__list {
+    max-height: 250px;
+    overflow: auto;
+    .mCSB_inside>.mCSB_container {
+        margin-right: 25px;
+    }
+    .mCSB_scrollTools {
+        width: 25px;
+    }
+    .mCSB_scrollTools .mCSB_draggerContainer::before {
+        right: 10px;
+    }
+}
+.ddLabel__item {
+    border-bottom: 1px solid $extra-light-c;
+}
+.labelBox__hl {
+    color: $extra-dark-c;
+    font-weight: 400;
+}
+.labelBox.__active .labelBox__hl {
+    font-weight: 500;
+    color: $light-c;
+}
+.orderDone {
+    background-color: $extra-warm-c;
+    padding: 9px 10px 10px;
+    margin-bottom: 30px;
+}
+.orderDone__inner {
+    display: flex;
+    align-items: center;
+}
+.orderDone__ico {
+    width: 51px;
+    min-width: 51px;
+    height: 51px;
+    margin-right: 16px;
+    svg {
+        display: block;
+        width: 100%;
+        height: 100%;
+    }
+}
+.orderDone__text {
+    font-size: 18px;
+    line-height: 25px;
+    font-weight: 500;
+}
+.orderDoneList__inner {
+    display: flex;
+    flex-wrap: wrap;
+    margin: -36px -15px 0;
+}
+.orderDoneList__item {
+    width: 50%;
+    padding: 36px 15px 0;
+}
+.odItem__title {
+    display: flex;
+    align-items: center;
+    padding-bottom: 19px;
+    border-bottom: 1px solid $extra-light-c;
+    margin-bottom: 17px;
+}
+.odItem__ico {
+    margin-right: 15px;
+    svg {
+        display: block;
+        fill: $light-c;
+    }
+}
+.odItem__text {
+    font-size: 20px;
+    line-height: 25px;
+    font-weight: 500;
+}
+.orderDoneList {
+    .charList__inner {
+        font-size: 16px;
+    }
+    .charList__item {
+        margin-bottom: 10px;
+    }
+}
+.orderDone__ps {
+    margin-top: 32px;
+}
+@media (max-width: 1300px) {
+    .orderTitle_h {
+        font-size: 28px;
+        line-height: 36px;
+    }
+    .orderArea__section {
+        margin-bottom: 40px;
+    }
+}
+@media (max-width: 1100px) {
+    .orderDoneList__item {
+        width: 100%;
+    }
+    .orderDone {
+        margin-bottom: 20px;
+        padding: 9px 12px 10px 10px;
+    }
+    .orderDone__ps {
+        margin-top: 11px;
+        margin-bottom: 20px;
+    }
+    .orderDoneList .charList__item {
+        margin-bottom: 7px;
+    }
+    .odItem__ico {
+        margin-right: 11px;
+    }
+    .orderDoneList .charList__inner {
+        line-height: 20px;
+    }
+    .odItem__text {
+        font-size: 16px;
+        line-height: 22px;
+    }
+    .odItem__title {
+        padding-bottom: 16px;
+        margin-bottom: 12px;
+    }
+    .orderDone__text {
+        font-size: 16px;
+        line-height: 22px
+    }
+    .orderDoneList__inner {
+        margin-top: -22px;
+    }
+    .orderDoneList__item {
+        padding-top: 22px;
+    }
+}
+@media (max-width: 998px) {
+    .orderMapInfo__title {
+        font-size: 16px;
+        line-height: 22px;
+    }
+    .orderArea__h3 {
+        font-size: 16px;
+        margin-bottom: 9px;
+    }
+    .checkGrub__content {
+        margin-top: 19px;
+    }
+    .orderArea__section {
+        margin-bottom: 30px;
+    }
+    .orderTitle_h {
+        font-size: 26px;
+        line-height: 34px;
+    }
+    .orderMapInfo {
+        padding: 20px 15px 15px;
+    }
+    .orderMapBox__map {
+        order: -1;
+        width: 100%;
+    }
+    .orderMapBox__info {
+        width: 100%;
+    }
+    .orderMapInfo__img {
+        width: 118px;
+        height: 79px;
+    }
+}
+@media (max-width: 600px) {
+    .ddLabel__item {
+        .labelBox__text {
+            display: none;
+        }
+        .labelBox__tk {
+            margin-right: 15px;
+            position: relative;
+            top: 7px;
+        }
+        .labelBox__input {
+            position: relative;
+            top: 7px;
+        }
+        .labelBox__time {
+            margin-left: 0;
+        }
+        .labelBox__time,
+        .labelBox__price {
+            font-size: 15px;
+            line-height: 18px;
+        }
+        .labelBox__price {
+            text-align: left;
+            margin-left: 105px;
+        }
+    }
+}
+@media (max-width: 576px) {
+    .orderTitle_h {
+        font-size: 24px;
+        line-height: 30px;
+    }
+    .orderTitle__ico {
+        display: none;
+    }
+    .orderArea__title {
+        margin-left: -15px;
+        margin-right: -15px;
+        padding: 9px 15px;
+        margin-bottom: 20px;
+    }
+    .orderTitle {
+        min-height: 32px;
+    }
+    .labelBox__title {
+        font-size: 16px;
+    }
+    
+    .orderProducts {
+        margin: 0 -5px;
+    }
+    .orderProducts__item {
+        padding: 0px;
+        width: auto;
+    }
+    .orderProductItem {
+        margin-top: 0px;
+        border-top: none;
+        border-bottom: none;
+        border-left: 1px solid #e6e6e6;
+        padding: 0 5px;
+        .prodLink__img {
+            width: 64px;
+            min-width: 64px;
+            height: 64px;
+            margin-bottom: 15px;
+        }
+        .prodLink__inner {
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 0;
+        }
+        .prodLink__info {
+            padding: 0;
+            max-width: 100%;
+        }
+    }
+    .labelBox__inner {
+        padding: 12px 14px 11px;
+    }
+    .labelBox.labelBox-big .labelBox__inner {
+        padding: 9px 14px 10px;
+    }
+    .labelBox__subtext {
+        margin-top: 7px;
+    }
+    .warningMessage {
+        padding-top: 10px;
+    }
+    .orderProducts__item:first-child {
+        .orderProductItem {
+            border-left: none;
+        }
+    }
+    .orderProductItem .plName {
+        display: none;
+    }
+    .orderMapInfo__img {
+        width: 100px;
+        height: 64px;
+    }
+}
