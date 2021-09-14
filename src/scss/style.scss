@@ -12,6 +12,8 @@
 @import "./components/_product-card.scss";
 @import "./components/_cart.scss";
 @import "./components/_order.scss";
+@import "./components/_personal.scss";
+
 
 .site-container {
     width: 100%;
@@ -1321,6 +1323,8 @@ fieldset {
     margin-bottom: 6px;
     display: block;
     cursor: pointer;
+    word-break: break-all;
+    margin-top: auto;
     span {
         color: $light-c;
     }
@@ -1541,9 +1545,6 @@ fieldset {
     &.fieldList__item-big {
         width: 100%;
     }
-    .customInput {
-        margin-top: auto;
-    }
 }
 .ps-text__inf {
     font-size: 14px;
@@ -1627,6 +1628,11 @@ fieldset {
 }
 .legend-hidden {
     display: none;
+}
+.inputWrap {
+    position: relative;
+    width: 100%;
+    display: block;
 }
 @media (max-width: 1670px) {
     .plName {

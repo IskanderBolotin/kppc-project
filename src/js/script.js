@@ -8,3 +8,4 @@
 @@include('./_product-card.js')
 @@include('./_cart.js')
 @@include('./_order.js')
+@@include('./_personal.js')
