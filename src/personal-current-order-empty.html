@@ -1,0 +1,122 @@
+@@include('./_header-site.html', {
+    "title": "Текущие заказы - пустая"
+})
+@@include('./_header.html')
+<main class="siteContent">
+    <div class="breadcrumbBox">
+        <div class="site-container">
+            <ul class="crumbsList">
+                <li class="crumbsList__item">
+                    <a href="" class="crumbsItem">Главная</a>
+                </li>
+                <li class="crumbsList__item">
+                    <a href="" class="crumbsItem">Личный кабинет</a>
+                </li>
+                <li class="crumbsList__item">
+                    <span class="crumbsItem">Текущие заказы</span>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <section class="siteSection siteSection-small">
+        <div class="site-container">
+            <div class="titleBar titleBar-big">
+                <div class="titleBar__inner">
+                    <div class="titleBar__title">
+                        <h1 class="title-h1">
+                            Текущие заказы
+                        </h1>
+                    </div>
+                </div>
+            </div>
+            <div class="personalBx">
+                <div class="personalBx__inner">
+                    <div class="personalBx__item personalBx__item-side">
+                        <div class="personalSide">
+                            <div class="personalDD">
+                                <div class="personalDD__header">
+                                    <div class="personalDD__name">
+                                        <div class="personalDD__ico">
+                                            <svg width="22px" height="22px">
+                                                <use xlink:href="./icons/stack/icons.svg#login"></use>
+                                            </svg>
+                                        </div>
+                                        <div class="personalDD__text">ИП Бодров Е.А.</div>
+                                    </div>
+                                </div>
+                                <div class="personalDD__body">
+                                    <ul class="personalDDlist">
+                                        <li class="personalDDlist__item">
+                                            <a class="personalDDlist__link borderlink" href="">
+                                                <span class="personalDDlist__text">Личные данные</span>
+                                            </a>
+                                        </li>
+                                        <li class="personalDDlist__item">
+                                            <a class="personalDDlist__link borderlink __active" href="">
+                                                <span class="personalDDlist__text">Текущие заказы</span>
+                                                <span class="quantBox">2</span>
+                                            </a>
+                                        </li>
+                                        <li class="personalDDlist__item">
+                                            <a class="personalDDlist__link borderlink" href="">
+                                                <span class="personalDDlist__text">История заказов</span>
+                                                <span class="quantBox">0</span>
+                                            </a>
+                                        </li>
+                                        <li class="personalDDlist__item">
+                                            <a class="personalDDlist__link borderlink" href="">
+                                                <span class="personalDDlist__text">Выйти</span>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="personalBx__item personalBx__item-main">
+                        <div class="personalMain">
+                            <div class="boxEmpty">
+                                <div class="boxEmpty__inner">
+                                    <div class="boxEmpty__img">
+                                        <img src="./img/svg/empty_cart.svg" alt="">
+                                    </div>
+                                    <div class="boxEmpty__title">
+                                        К сожалению, у вас пока нет заказов
+                                    </div>
+                                    <div class="boxEmpty__text">
+                                        Перейдите в каталог, чтобы добавить товары и оформить покупку
+                                    </div>
+                                    <div class="boxEmpty__btn">
+                                        <div class="flexBtns">
+                                            <div class="flexBtns__item">
+                                                <a class="customBtn customBtn-light">
+                                                    <span class="customBtn__inner">
+                                                        <span class="customBtn__text">В каталог</span>
+                                                    </span>
+                                                </a>
+                                            </div>
+                                            <div class="flexBtns__item">
+                                                <a class="customBtn" href="">
+                                                    <span class="customBtn__inner">
+                                                        <span class="customBtn__arrow">
+                                                            <svg>
+                                                                <use xlink:href="./icons/stack/icons.svg#dropdown"></use>
+                                                            </svg>
+                                                        </span>
+                                                        <span class="customBtn__text">Назад</span>
+                                                    </span>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
+@@include('./_footer.html')
+@@include('./_footer-site.html')

@@ -192,5 +192,139 @@ window.addEventListener("load", function() {
 			$(this).removeClass("__error")
 			$("[data-error-id=" + this_id + "]").remove();
 		})
-	})
+	});
+	var Russian = {
+		weekdays: {
+			shorthand: ["Вс", "Пн", "Вт", "Ср", "Чт", "Пт", "Сб"],
+			longhand: [
+				"Воскресенье",
+				"Понедельник",
+				"Вторник",
+				"Среда",
+				"Четверг",
+				"Пятница",
+				"Суббота",
+			],
+		},
+		months: {
+			shorthand: [
+				"Янв",
+				"Фев",
+				"Март",
+				"Апр",
+				"Май",
+				"Июнь",
+				"Июль",
+				"Авг",
+				"Сен",
+				"Окт",
+				"Ноя",
+				"Дек",
+			],
+			longhand: [
+				"Январь",
+				"Февраль",
+				"Март",
+				"Апрель",
+				"Май",
+				"Июнь",
+				"Июль",
+				"Август",
+				"Сентябрь",
+				"Октябрь",
+				"Ноябрь",
+				"Декабрь",
+			],
+		},
+		firstDayOfWeek: 1,
+		ordinal: function () {
+			return "";
+		},
+		rangeSeparator: " — ",
+		weekAbbreviation: "Нед.",
+		scrollTitle: "Прокрутите для увеличения",
+		toggleTitle: "Нажмите для переключения",
+		amPM: ["ДП", "ПП"],
+		yearAriaLabel: "Год",
+		time_24hr: true,
+	};
+	let btn_next = `<button type="button" class="calendarBtn calendarBtn-next">
+                        <span class="calendarBtn__inner">
+							<svg><use xlink:href="../icons/stack/icons.svg#dropdown"></use></svg>
+                        </span>
+                    </button>`;
+
+    let btn_prev = `<button type="button" class="calendarBtn calendarBtn-prev">
+                        <span class="calendarBtn__inner">
+							<svg><use xlink:href="../icons/stack/icons.svg#dropdown"></use></svg>
+                        </span>
+                    </button>`;
+	if (document.querySelector("[data-personal-calendar]")) {
+		Array.prototype.forEach.call(document.querySelectorAll('[data-personal-calendar]'), function(el){
+			let parEl = el.closest('[data-calendar-wrap]').querySelector('[data-calendar-rel]');
+			let site_calendar = flatpickr(el, {
+				"locale": Russian,
+				mode: "range",
+				position: "below",
+				monthSelectorType: "static",
+				nextArrow: btn_next,
+				prevArrow: btn_prev,
+				altFormat: "d.m.Y",
+				dateFormat: "d.m.Y",
+				conjunction: " - ",
+				appendTo: parEl,
+				onOpen: function(selectedDates, dateStr, instance) {
+					this.input.closest("[data-calendar-wrap]").classList.add("__active");
+				},
+				onClose: function(selectedDates, dateStr, instance) {
+					this.input.closest("[data-calendar-wrap]").classList.remove("__active");
+				},
+			});
+		})
+	}
+	$("body").on("click", "[data-input-collapsed-open]", function(){
+		let this_rel = $(this).parents("[data-input-collapsed]");
+		let this_dd = $(this).parents("[data-input-collapsed-content]");
+		if ($(this).hasClass("__active")) {
+			this_rel.removeClass("__active");
+			this_rel.find("[data-input-collapsed-open]").removeClass("__active");
+		}
+		else {
+			this_rel.addClass("__active");
+			this_rel.find("[data-input-collapsed-open]").addClass("__active");
+		}
+	});
+	$("body").on("change", "[data-input-collapsed-point]", function(){
+		let this_rel = $(this).parents("[data-input-collapsed]");
+		let this_inp = this_rel.find("[data-input-collapsed-main]");
+		let this_cb_list = this_rel.find("[data-input-collapsed-point]");
+		let list_length = this_cb_list.length;
+		let last_checked_point;
+		let check_counter = 0;
+		let text = "Все"
+		this_cb_list.each(function(){
+			console.log($(this), $(this).prop("checked"))
+			if ($(this).prop("checked")) {
+				check_counter = check_counter + 1;
+				last_checked_point = $(this)
+			}
+		});
+		console.log(check_counter, list_length, text);
+
+		if ((check_counter == 0) || (list_length == check_counter)) {
+			text = "Все";
+		}
+		else if (check_counter == 1) {
+			console.log(last_checked_point.parents(".filterPoint").find(".filterPoint__text"));
+			text = last_checked_point.parents(".filterPoint").find(".filterPoint__text")[0].innerText;
+		}
+		else if (check_counter < 5) {
+			text = `Выбрано ${check_counter} статуса`;
+		}
+		else {
+			text = `Выбрано ${check_counter} статусов`;
+		}
+		this_inp.val(text);
+	});
+	
 })

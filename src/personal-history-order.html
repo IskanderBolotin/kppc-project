@@ -1,0 +1,341 @@
+@@include('./_header-site.html', {
+    "title": "История заказов"
+})
+@@include('./_header.html')
+<main class="siteContent">
+    <div class="breadcrumbBox">
+        <div class="site-container">
+            <ul class="crumbsList">
+                <li class="crumbsList__item">
+                    <a href="" class="crumbsItem">Главная</a>
+                </li>
+                <li class="crumbsList__item">
+                    <a href="" class="crumbsItem">Личный кабинет</a>
+                </li>
+                <li class="crumbsList__item">
+                    <span class="crumbsItem">История заказов</span>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <section class="siteSection siteSection-small">
+        <div class="site-container">
+            <div class="titleBar titleBar-big">
+                <div class="titleBar__inner">
+                    <div class="titleBar__title">
+                        <h1 class="title-h1">
+                            История заказов
+                        </h1>
+                    </div>
+                </div>
+            </div>
+            <div class="personalBx">
+                <div class="personalBx__inner">
+                    <div class="personalBx__item personalBx__item-side">
+                        <div class="personalSide">
+                            <div class="personalDD">
+                                <div class="personalDD__header">
+                                    <div class="personalDD__name">
+                                        <div class="personalDD__ico">
+                                            <svg width="22px" height="22px">
+                                                <use xlink:href="./icons/stack/icons.svg#login"></use>
+                                            </svg>
+                                        </div>
+                                        <div class="personalDD__text">ИП Бодров Е.А.</div>
+                                    </div>
+                                </div>
+                                <div class="personalDD__body">
+                                    <ul class="personalDDlist">
+                                        <li class="personalDDlist__item">
+                                            <a class="personalDDlist__link borderlink" href="">
+                                                <span class="personalDDlist__text">Личные данные</span>
+                                            </a>
+                                        </li>
+                                        <li class="personalDDlist__item">
+                                            <a class="personalDDlist__link borderlink " href="">
+                                                <span class="personalDDlist__text">Текущие заказы</span>
+                                                <span class="quantBox">2</span>
+                                            </a>
+                                        </li>
+                                        <li class="personalDDlist__item">
+                                            <a class="personalDDlist__link borderlink __active" href="">
+                                                <span class="personalDDlist__text">История заказов</span>
+                                                <span class="quantBox">15</span>
+                                            </a>
+                                        </li>
+                                        <li class="personalDDlist__item">
+                                            <a class="personalDDlist__link borderlink" href="">
+                                                <span class="personalDDlist__text">Выйти</span>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="personalBx__item personalBx__item-main">
+                        <div class="personalMain">
+                            <div class="personalTopBar">
+                                <div class="personalTopBar__inner">
+                                    <div class="personalTopBar__item">
+                                        <label class="custom-label" for="status">
+                                            Дата заказа
+                                        </label>
+                                        <div class="inputWrap" data-input-collapsed>
+                                            <input class="customInput" type="text" id="status" value="Все" data-input-collapsed-main data-input-collapsed-open readonly>
+                                            <div class="inputWrap__btn">
+                                                <button class="input--btn input--btn-arr input--btn-light" data-input-collapsed-open type="button">
+                                                    <span class="input--btn__inner">
+                                                        <svg width="9px" height="6px">
+                                                            <use xlink:href="./icons/stack/icons.svg#dropdown"></use>
+                                                        </svg>
+                                                    </span>
+                                                </button>
+                                            </div>
+                                            <div class="inputWrap__dd" data-input-collapsed-content>
+                                                <div class="ddInp">
+                                                    <div class="ddInp__list">
+                                                        <div class="ddInp__item">
+                                                            <label class="filterPoint">
+                                                                <span class="filterPoint__ico">
+                                                                    <input class="customCb visually-hidden" type="checkbox" checked="" data-input-collapsed-point>
+                                                                    <span class="customCb--item"></span>
+                                                                </span>
+                                                                <span class="filterPoint__text">
+                                                                    Заказ сформирован
+                                                                </span>
+                                                            </label>
+                                                        </div>
+                                                        <div class="ddInp__item">
+                                                            <label class="filterPoint">
+                                                                <span class="filterPoint__ico">
+                                                                    <input class="customCb visually-hidden" type="checkbox" checked="" data-input-collapsed-point>
+                                                                    <span class="customCb--item"></span>
+                                                                </span>
+                                                                <span class="filterPoint__text">
+                                                                    Принят, ожидается оплата
+                                                                </span>
+                                                            </label>
+                                                        </div>
+                                                        <div class="ddInp__item">
+                                                            <label class="filterPoint">
+                                                                <span class="filterPoint__ico">
+                                                                    <input class="customCb visually-hidden" type="checkbox" checked="" data-input-collapsed-point>
+                                                                    <span class="customCb--item"></span>
+                                                                </span>
+                                                                <span class="filterPoint__text">
+                                                                    Оплачен, формируется доставка
+                                                                </span>
+                                                            </label>
+                                                        </div>
+                                                        <div class="ddInp__item">
+                                                            <label class="filterPoint">
+                                                                <span class="filterPoint__ico">
+                                                                    <input class="customCb visually-hidden" type="checkbox" checked="" data-input-collapsed-point>
+                                                                    <span class="customCb--item"></span>
+                                                                </span>
+                                                                <span class="filterPoint__text">
+                                                                    Принят, ожидается оплата
+                                                                </span>
+                                                            </label>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="personalTopBar__item">
+                                        <label class="custom-label" for="calendar">
+                                            Дата заказа
+                                        </label>
+                                        <div class="inputWrap" data-calendar-wrap>
+                                            <input class="customInput" type="text" id="calendar" data-personal-calendar value="Все">
+                                            <div class="inputWrap__btn">
+                                                <button class="input--btn input--btn-light"  type="button">
+                                                    <span class="input--btn__inner">
+                                                        <svg width="22px" height="22px">
+                                                            <use xlink:href="./icons/stack/icons.svg#calendar"></use>
+                                                        </svg>
+                                                    </span>
+                                                </button>
+                                            </div>
+                                            <div class="inputWrap__calendar" data-calendar-rel>
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="personalProduct">
+                                <div class="personalProduct__list">
+                                    <div class="personalProduct__item">
+                                        <div class="curOrder">
+                                            <a class="curOrder__header" href="">
+                                                <div class="curOrder__line">
+                                                    <div class="curOrder__title">
+                                                        Заказ №536
+                                                    </div>
+                                                    <div class="curOrder__lab">
+                                                        <div class="orderLabels">Заказ выполнен 23.06.2021</div>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                            <div class="curOrder__body">
+                                                <div class="curOrder__inner">
+                                                    <div class="curOrder__info">
+                                                        <ul class="charList">
+                                                            <li class="charList__item">
+                                                                <div class="charList__inner">
+                                                                    <span class="charList__prop">Дата:</span> <span class="charList__value">15.07.2021</span>
+                                                                </div>
+                                                            </li>
+                                                            <li class="charList__item">
+                                                                <div class="charList__inner">
+                                                                    <span class="charList__prop">Сумма:</span> <span class="charList__value">1 514 ₽</span>
+                                                                </div>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                    <div class="curOrder__product">
+                                                        <div class="curOrder__text">
+                                                            Товары
+                                                        </div>
+                                                        <div class="productCur">
+                                                            <div class="productCur__item">
+                                                                <a class="productCur__link" href="">
+                                                                    <picture>
+                                                                        <source srcset="./img/p-1.webp, ./img/p-1@2x.webp 2x" type="image/webp">
+                                                                        <source srcset="./img/p-1.png, ./img/p-1@2x.png 2x">
+                                                                        <img src="./img/p-1.png" srcset="./img/p-1.png, ./img/p-1@2x.png 2x" alt="" class="mCS_img_loaded">
+                                                                    </picture>
+                                                                </a>
+                                                            </div>
+                                                            <div class="productCur__item">
+                                                                <a class="productCur__link" href="">
+                                                                    <picture>
+                                                                        <source srcset="./img/p-2.webp, ./img/p-2@2x.webp 2x" type="image/webp">
+                                                                        <source srcset="./img/p-2.png, ./img/p-2@2x.png 2x">
+                                                                        <img src="./img/p-2.png" srcset="./img/p-2.png, ./img/p-2@2x.png 2x" alt="" class="mCS_img_loaded">
+                                                                    </picture>
+                                                                </a>
+                                                            </div>
+                                                            <div class="productCur__item">
+                                                                <a class="productCur__link" href="">
+                                                                    <picture>
+                                                                        <source srcset="./img/p-4.webp, ./img/p-4@2x.webp 2x" type="image/webp">
+                                                                        <source srcset="./img/p-4.png, ./img/p-4@2x.png 2x">
+                                                                        <img src="./img/p-4.png" srcset="./img/p-4.png, ./img/p-4@2x.png 2x" alt="">
+                                                                    </picture>
+                                                                </a>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="curOrder__activity">
+                                                        <div class="curActivity">
+                                                            <div class="curActivity__item">
+                                                                <button class="customBtn customBtn-del">
+                                                                    <span class="customBtn__inner">
+                                                                        <span class="customBtn__text">Подробнее</span>
+                                                                    </span>
+                                                                </button>
+                                                            </div>
+                                                            <div class="curActivity__item curActivity__item-min">
+                                                                <button class="customBtn customBtn-del customBtn-min">
+                                                                    <span class="customBtn__inner">
+                                                                        <div class="customBtn__ico customBtn__ico-big">
+                                                                            <svg>
+                                                                                <use xlink:href="./icons/stack/icons.svg#update"></use>
+                                                                            </svg>
+                                                                        </div>
+                                                                        <span class="customBtn__text">Повторить</span>
+                                                                    </span>
+                                                                </button>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="personalProduct__item">
+                                        <div class="curOrder">
+                                            <a class="curOrder__header" href="">
+                                                <div class="curOrder__line">
+                                                    <div class="curOrder__title">
+                                                        Заказ №492
+                                                    </div>
+                                                    <div class="curOrder__lab">
+                                                        <div class="orderLabels orderLabels-error">Заказ отменен 22.05.2020</div>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                            <div class="curOrder__body">
+                                                <div class="curOrder__inner">
+                                                    <div class="curOrder__info">
+                                                        <ul class="charList">
+                                                            <li class="charList__item">
+                                                                <div class="charList__inner">
+                                                                    <span class="charList__prop">Дата:</span> <span class="charList__value">15.07.2021</span>
+                                                                </div>
+                                                            </li>
+                                                            <li class="charList__item">
+                                                                <div class="charList__inner">
+                                                                    <span class="charList__prop">Сумма:</span> <span class="charList__value">1 514 ₽</span>
+                                                                </div>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                    <div class="curOrder__product">
+                                                        <div class="curOrder__text">
+                                                            Товары
+                                                        </div>
+                                                        <div class="productCur">
+                                                            <div class="productCur__item">
+                                                                <a class="productCur__link" href="">
+                                                                    <picture>
+                                                                        <source srcset="./img/p-4.webp, ./img/p-4@2x.webp 2x" type="image/webp">
+                                                                        <source srcset="./img/p-4.png, ./img/p-4@2x.png 2x">
+                                                                        <img src="./img/p-4.png" srcset="./img/p-4.png, ./img/p-4@2x.png 2x" alt="">
+                                                                    </picture>
+                                                                </a>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="curOrder__activity">
+                                                        <div class="curActivity">
+                                                            <div class="curActivity__item">
+                                                                <button class="customBtn customBtn-del">
+                                                                    <span class="customBtn__inner">
+                                                                        <span class="customBtn__text">Подробнее</span>
+                                                                    </span>
+                                                                </button>
+                                                            </div>
+                                                            <div class="curActivity__item curActivity__item-min">
+                                                                <button class="customBtn customBtn-del customBtn-min">
+                                                                    <span class="customBtn__inner">
+                                                                        <div class="customBtn__ico customBtn__ico-big">
+                                                                            <svg>
+                                                                                <use xlink:href="./icons/stack/icons.svg#update"></use>
+                                                                            </svg>
+                                                                        </div>
+                                                                        <span class="customBtn__text">Повторить</span>
+                                                                    </span>
+                                                                </button>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
+@@include('./_footer.html')
+@@include('./_footer-site.html')

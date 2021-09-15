@@ -76,13 +76,101 @@
                     <div class="personalBx__item personalBx__item-main">
                         <div class="personalMain">
                             <div class="personalTopBar">
+                                <div class="personalTopBar__inner">
+                                    <div class="personalTopBar__item">
+                                        <label class="custom-label" for="status">
+                                            Дата заказа
+                                        </label>
+                                        <div class="inputWrap" data-input-collapsed>
+                                            <input class="customInput" type="text" id="status" value="Все" data-input-collapsed-main data-input-collapsed-open readonly>
+                                            <div class="inputWrap__btn">
+                                                <button class="input--btn input--btn-arr input--btn-light" data-input-collapsed-open type="button">
+                                                    <span class="input--btn__inner">
+                                                        <svg width="9px" height="6px">
+                                                            <use xlink:href="./icons/stack/icons.svg#dropdown"></use>
+                                                        </svg>
+                                                    </span>
+                                                </button>
+                                            </div>
+                                            <div class="inputWrap__dd" data-input-collapsed-content>
+                                                <div class="ddInp">
+                                                    <div class="ddInp__list">
+                                                        <div class="ddInp__item">
+                                                            <label class="filterPoint">
+                                                                <span class="filterPoint__ico">
+                                                                    <input class="customCb visually-hidden" type="checkbox" checked="" data-input-collapsed-point>
+                                                                    <span class="customCb--item"></span>
+                                                                </span>
+                                                                <span class="filterPoint__text">
+                                                                    Заказ сформирован
+                                                                </span>
+                                                            </label>
+                                                        </div>
+                                                        <div class="ddInp__item">
+                                                            <label class="filterPoint">
+                                                                <span class="filterPoint__ico">
+                                                                    <input class="customCb visually-hidden" type="checkbox" checked="" data-input-collapsed-point>
+                                                                    <span class="customCb--item"></span>
+                                                                </span>
+                                                                <span class="filterPoint__text">
+                                                                    Принят, ожидается оплата
+                                                                </span>
+                                                            </label>
+                                                        </div>
+                                                        <div class="ddInp__item">
+                                                            <label class="filterPoint">
+                                                                <span class="filterPoint__ico">
+                                                                    <input class="customCb visually-hidden" type="checkbox" checked="" data-input-collapsed-point>
+                                                                    <span class="customCb--item"></span>
+                                                                </span>
+                                                                <span class="filterPoint__text">
+                                                                    Оплачен, формируется доставка
+                                                                </span>
+                                                            </label>
+                                                        </div>
+                                                        <div class="ddInp__item">
+                                                            <label class="filterPoint">
+                                                                <span class="filterPoint__ico">
+                                                                    <input class="customCb visually-hidden" type="checkbox" checked="" data-input-collapsed-point>
+                                                                    <span class="customCb--item"></span>
+                                                                </span>
+                                                                <span class="filterPoint__text">
+                                                                    Принят, ожидается оплата
+                                                                </span>
+                                                            </label>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="personalTopBar__item">
+                                        <label class="custom-label" for="calendar">
+                                            Дата заказа
+                                        </label>
+                                        <div class="inputWrap" data-calendar-wrap>
+                                            <input class="customInput" type="text" id="calendar" data-personal-calendar value="Все">
+                                            <div class="inputWrap__btn">
+                                                <button class="input--btn input--btn-light"  type="button">
+                                                    <span class="input--btn__inner">
+                                                        <svg width="22px" height="22px">
+                                                            <use xlink:href="./icons/stack/icons.svg#calendar"></use>
+                                                        </svg>
+                                                    </span>
+                                                </button>
+                                            </div>
+                                            <div class="inputWrap__calendar" data-calendar-rel>
 
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                             <div class="personalProduct">
                                 <div class="personalProduct__list">
                                     <div class="personalProduct__item">
                                         <div class="curOrder">
-                                            <div class="curOrder__header">
+                                            <a class="curOrder__header" href="">
                                                 <div class="curOrder__line">
                                                     <div class="curOrder__title">
                                                         Заказ №536
@@ -91,7 +179,7 @@
                                                         <div class="orderLabels">Оплачен, формируется к отправке</div>
                                                     </div>
                                                 </div>
-                                            </div>
+                                            </a>
                                             <div class="curOrder__body">
                                                 <div class="curOrder__inner">
                                                     <div class="curOrder__info">
@@ -183,7 +271,7 @@
                                     </div>
                                     <div class="personalProduct__item">
                                         <div class="curOrder">
-                                            <div class="curOrder__header">
+                                            <a class="curOrder__header" href="">
                                                 <div class="curOrder__line">
                                                     <div class="curOrder__title">
                                                         Заказ №492
@@ -192,7 +280,7 @@
                                                         <div class="orderLabels">Принят, ожидается оплата</div>
                                                     </div>
                                                 </div>
-                                            </div>
+                                            </a>
                                             <div class="curOrder__body">
                                                 <div class="curOrder__inner">
                                                     <div class="curOrder__info">
@@ -280,7 +368,7 @@
                                     </div>
                                     <div class="personalProduct__item">
                                         <div class="curOrder">
-                                            <div class="curOrder__header">
+                                            <a class="curOrder__header" href="">
                                                 <div class="curOrder__line">
                                                     <div class="curOrder__title">
                                                         Заказ №418
@@ -289,7 +377,7 @@
                                                         <div class="orderLabels">Заказ в пути</div>
                                                     </div>
                                                 </div>
-                                            </div>
+                                            </a>
                                             <div class="curOrder__body">
                                                 <div class="curOrder__inner">
                                                     <div class="curOrder__info">
@@ -372,7 +460,7 @@
                                     </div>
                                     <div class="personalProduct__item">
                                         <div class="curOrder">
-                                            <div class="curOrder__header">
+                                            <a class="curOrder__header" href="">
                                                 <div class="curOrder__line">
                                                     <div class="curOrder__title">
                                                         Заказ №536
@@ -381,7 +469,7 @@
                                                         <div class="orderLabels">Оплачен, формируется к отправке</div>
                                                     </div>
                                                 </div>
-                                            </div>
+                                            </a>
                                             <div class="curOrder__body">
                                                 <div class="curOrder__inner">
                                                     <div class="curOrder__info">
@@ -473,7 +561,7 @@
                                     </div>
                                     <div class="personalProduct__item">
                                         <div class="curOrder">
-                                            <div class="curOrder__header">
+                                            <a class="curOrder__header" href="">
                                                 <div class="curOrder__line">
                                                     <div class="curOrder__title">
                                                         Заказ №418
@@ -482,7 +570,7 @@
                                                         <div class="orderLabels">Заказ в пути</div>
                                                     </div>
                                                 </div>
-                                            </div>
+                                            </a>
                                             <div class="curOrder__body">
                                                 <div class="curOrder__inner">
                                                     <div class="curOrder__info">

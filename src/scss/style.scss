@@ -479,6 +479,7 @@ a.plName {
     }
 }
 .activityBtn {
+    display: block;
     background-color: transparent;
     width: 22px;
     height: 22px;
@@ -1633,11 +1634,94 @@ fieldset {
     position: relative;
     width: 100%;
     display: block;
+    &.__active {
+        .customInput, .customTextArea {
+            border-color: $light-c;
+        }
+    }
+}
+.inputWrap__dd {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    display: none;
+    z-index: 6;
+}
+.inputWrap {
+    &.__active {
+        .inputWrap__dd {
+            display: block;
+        }
+    }
+}
+.ddInp {
+    background-color: $extra-standart-c;
+    border: 1px solid $light-c;
+    border-top: 0;
+}
+.q-box {
+    color: $extra-dark-c;
+    font-size: 16px;
+    line-height: 22px;
+    white-space: nowrap;
+}
+.searchBarTop {
+    background-color: $extra-standart-c;
+    font-size: 15px;
+    line-height: 20px;
+    padding: 15px;
+    margin-bottom: 25px;
+    .strong {
+        font-weight: 500;
+    }
+}
+.searchBarLinks {
+    margin-bottom: 12px;
+}
+.boxEmpty.boxEmpty-404 {
+    flex-grow: 1;
+}
+.boxEmpty-404 .boxEmpty__img {
+    height: 150px;
+    width: 100%;
+}
+.boxEmpty-404 {
+    .boxEmpty__inner {
+        padding-top: 100px;
+        padding-bottom: 100px;
+    }
+}
+.siteContent.siteContent-404 {
+    display: flex;
+    flex-direction: column;
+}
+.newsGrid__top {
+    .articleList {
+        margin-top: -30px;
+    }
+    .articleListItem {
+        padding-top: 30px;
+    }
+    .articleListItem {
+        display: block !important;
+    }
+}
+.newsBox {
+    .mainCatalog__nav {
+        margin-top: 20px;
+    }
 }
 @media (max-width: 1670px) {
     .plName {
         font-size: 15px;
         line-height: 18px;
+    }
+    .newsGrid__top .articleList {
+        margin-top: -10px;
+    }
+    .newsGrid__top .articleListItem {
+        padding-top: 10px;
     }
     .customText h3, .customText h4, .customText h5, .customText h6 {
         font-size: 18px;
@@ -2123,6 +2207,13 @@ fieldset {
 @media (max-width: 576px) {
     .titleBar__sup {
         margin-top: 0;
+    }
+    .boxEmpty-404 .boxEmpty__inner {
+        padding-top: 40px;
+        padding-bottom: 40px;
+    }
+    .boxEmpty-404 .boxEmpty__img {
+        height: 102px;
     }
     .productCard__view {
         margin-bottom: 10px;
