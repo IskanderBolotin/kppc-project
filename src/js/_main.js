@@ -326,5 +326,5 @@ window.addEventListener("load", function() {
 		}
 		this_inp.val(text);
 	});
-	
+	$("[type='tel']").inputmask("+7 (999) 999 99 99");
 })

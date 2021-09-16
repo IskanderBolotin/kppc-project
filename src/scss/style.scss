@@ -13,7 +13,8 @@
 @import "./components/_cart.scss";
 @import "./components/_order.scss";
 @import "./components/_personal.scss";
-
+@import "./components/_compare.scss";
+@import "./components/_static.scss";
 
 .site-container {
     width: 100%;
@@ -129,7 +130,8 @@ a.plName {
     font-weight: normal;
 }
 .catalog-overlay,
-.site-overlay {
+.site-overlay,
+.static-overlay {
     position: fixed;
     top: 0;
     left: 0;
@@ -144,6 +146,11 @@ a.plName {
         opacity: 1;
         visibility: visible;
     }
+}
+.static-overlay {
+    height: auto;
+    bottom: 0;
+    z-index: 101;
 }
 .site-overlay {
     z-index: 101;
@@ -481,8 +488,9 @@ a.plName {
 .activityBtn {
     display: block;
     background-color: transparent;
-    width: 22px;
-    height: 22px;
+    width: 28px;
+    height: 28px;
+    padding: 3px;
     border: none;
     transition: .25s color;
     &.activityBtn-big {
@@ -511,14 +519,16 @@ a.plName {
             max-height: 100%;
         }
     }
-    &:hover,
-    &.__active {
+    &:hover {
         color: $light-c;
         .activityBtn__inner {
             svg {
                 fill: $light-c;
             }
         }
+    }
+    &.__active {
+        background-color: $extra-light-c;
     }
 }
 .activityBtn__ico {
@@ -1613,20 +1623,7 @@ fieldset {
 .labelBox__img {
     margin-left: auto;
 }
-.labelBox {
-    &:hover {
-        .customCb.customCb-radio {
-            & + .customCb--item {
-                border-color: #CECECE;
-                background: radial-gradient(at center, $extra-light-c 5px, #fff 6px, #fff 7px, #CECECE 8px);
-            }
-            &:checked + .customCb--item {
-                border-color: $light-c;
-                background: radial-gradient(at center, $light-c 5px, #fff 6px, #fff 7px, $light-c 8px);
-            }
-        }
-    }
-}
+
 .legend-hidden {
     display: none;
 }
@@ -2180,6 +2177,9 @@ fieldset {
         margin-left: auto;
         align-self: flex-start;
         padding-top: 2px;
+    }
+    .static-overlay {
+        bottom: 57px;
     }
 }
 @media (max-width: 768px) {

@@ -258,13 +258,14 @@
     & + .customCb--item {
         border-radius: 50%;
     }
+    
+    & + .customCb--item:hover {
+        border-color: #CECECE;
+        background: radial-gradient(at center, $extra-light-c 5px, #fff 6px, #fff 7px, #CECECE 8px);
+    }
     &:checked + .customCb--item {
         border-color: $light-c;
         background: radial-gradient(at center, $light-c 5px, #fff 6px, #fff 7px, $light-c 8px);
-    }
-    &+ .customCb--item:hover {
-        border-color: #CECECE;
-        background: radial-gradient(at center, $extra-light-c 5px, #fff 6px, #fff 7px, #CECECE 8px);
     }
 }
 .customCb[disabled] + .customCb--item,
@@ -300,6 +301,20 @@
     &:not([aria-disabled="true"]):hover {
         .customCb--item {
             border-color: $light-c;
+        }
+    }
+}
+.labelBox {
+    &:hover {
+        .customCb.customCb-radio {
+            & + .customCb--item {
+                border-color: #CECECE;
+                background: radial-gradient(at center, $extra-light-c 5px, #fff 6px, #fff 7px, #CECECE 8px);
+            }
+            &:checked + .customCb--item {
+                border-color: $light-c;
+                background: radial-gradient(at center, $light-c 5px, #fff 6px, #fff 7px, $light-c 8px);
+            }
         }
     }
 }

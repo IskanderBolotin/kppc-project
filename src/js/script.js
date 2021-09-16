@@ -9,3 +9,6 @@
 @@include('./_cart.js')
 @@include('./_order.js')
 @@include('./_personal.js')
+@@include('./_compare.js')
+@@include('./_static.js')
+

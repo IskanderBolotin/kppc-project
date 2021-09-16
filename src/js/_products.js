@@ -255,4 +255,51 @@ $(document).ready(function(){
             $(this).removeClass("__active");
         }
     });
+    $(".compareSlider").each(function() {
+        let _this = $(this);
+        $(this).slick({
+            slidesToShow: 4,
+            slidesToScroll: 1,
+            arrows: true,
+            swipe: false,
+            swipeToSlide: false,
+            prevArrow: arrow_prev,
+			nextArrow: arrow_next,
+            responsive: [
+                {
+                breakpoint: 1401,
+                settings: {
+                        slidesToShow: 3,
+                        slidesToScroll: 1,
+                    }
+                },
+                {
+                    breakpoint: 1231,
+                    settings: {
+                        swipe: true,
+                        swipeToSlide: true,
+                        slidesToShow: 3,
+                        slidesToScroll: 1,
+                    }
+                },
+                {
+                breakpoint: 999,
+                settings: {
+                        swipe: true,
+                        swipeToSlide: true,
+                        slidesToShow: 2,
+                        slidesToScroll: 1,
+                    }
+                },
+            ]
+        });
+        $(this).on('beforeChange', function (event, slick, currentSlide, nextSlide) {
+            product__hover = false;
+            console.log('beforeChange', product__hover)
+        });
+        $(this).on('afterChange', function (event, slick, currentSlide, nextSlide) {
+            product__hover = true;
+            console.log('afterChange', product__hover)
+        });
+    });
 });

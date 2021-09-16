@@ -259,6 +259,9 @@
 }
 .agreeBtn__item {
     padding: 15px 7.5px 0;
+    &.agreeBtn__txt {
+        width: calc(100% - 235px);
+    }
 }
 [data-content-edit] {
     display: none;
@@ -1084,6 +1087,9 @@ span.flatpickr-weekday {
     }
     .agreeBtn__item {
         width: 100%;
+        &.agreeBtn__txt {
+            width: 100%;
+        }
         .customBtn {
             width: 100%;
         }

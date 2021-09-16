@@ -48,6 +48,12 @@
     width: 40%;
     padding-right: 20px;
 }
+.productCartLine__price {
+    .prodPrice {
+        white-space: nowrap;
+        flex-wrap: nowrap;
+    }
+}
 .salesLeaders__main {
     width: 60%;
 }
@@ -1369,10 +1375,10 @@
     .adaptActivity {
         display: flex;
         justify-content: flex-end;
-        margin: 0 -5px;
+        margin: 0 -2px;
     }
     .adaptActivity__item {
-        padding: 0 5px;
+        padding: 0 2px;
         .activityBtn {
             display: block;
         }

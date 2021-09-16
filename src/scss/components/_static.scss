@@ -1,0 +1,503 @@
+.staticBox__inner {
+    display: flex;
+    flex-wrap: wrap;
+    margin: -20px -20px 0;
+}
+.staticBox__item {
+    padding: 20px 20px 0;
+    &.staticBox__item-side {
+        width: 410px;
+        max-width: 100%;
+    }
+    &.staticBox__item-main {
+        width: calc(100% - 410px);
+    }
+}
+.staticSide__header {
+    display: none;
+}
+.staticSide__body {
+    padding: 3px 0;
+    border: 2px solid $dark-c;
+}
+.staticLink {
+    display: block;
+    position: relative;
+    padding: 14px 8px 14px 18px;
+    transition: .25s color, .25s background-color;
+    &::before,
+    &::after {
+        content: "";
+        position: absolute;
+        left: 8px;
+        right: 8px;
+        background-color: $extra-light-c;
+        height: 1px;
+        top: 0;
+    }
+    &::after {
+        top: auto;
+        bottom: -1px;
+    }
+    &.__active,
+    &:hover {
+        .staticLink__ico {
+            svg {
+                fill: $light-c;
+            }
+        }
+        color: $light-c;
+        .quantBox {
+            color: #fff;
+            background-color: $light-c;
+        }
+        &::before,
+        &::after {
+            left: 0;
+            right: 0;
+        }
+    }
+    &:hover {
+        background-color: $extra-standart-c;
+        
+    }
+}
+.staticLink__inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.staticLink__title {
+    display: flex;
+    align-items: center;
+    font-size: 16px;
+    line-height: 20px;;
+}
+.staticLink__ico {
+    width: 22px;
+    height: 22px;
+    margin-right: 10px;
+    svg {
+        display: block;
+        width: 100%;
+        height: 100%;
+        fill: $dark-c;
+        transition: .25s fill;
+    }
+}
+.staticBtn {
+    display: block;
+    width: 100%;
+    background-color: $dark-c;
+    padding: 5px 5px 5px 17px;
+    border: none;
+    color: #fff;
+    font-size: 16px;
+    line-height: 20px;
+    font-weight: 500;
+}
+.staticBtn__inner {
+    display: flex;
+    align-items: center;
+}
+.staticBtn__arrow {
+    margin-left: auto;
+}
+.staticBtn__ico {
+    width: 22px;
+    height: 22px;
+    margin-right: 10px;
+    svg {
+        width: 100%;
+        height: 100%;
+        display: block;
+        fill: $light-c;
+    }
+}
+.staticBtn__arrow {
+    width: 34px;
+    height: 34px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #3D3D3D;
+    svg {
+        display: block;
+        fill: #fff;
+        width: 9px;
+        height: 6px;
+        transform: rotate(-90deg);
+    }
+}
+.staticBox {
+    margin-bottom: 50px;
+    &:last-child {
+        margin-bottom: 0;
+    }
+}
+.staticMenu__btn {
+    display: none;
+}
+.answerArea__item {
+    margin-bottom: 4px;
+    &:last-child {
+        margin-bottom: 0;
+    }
+}
+.answerBtn {
+    padding: 4px 4px;
+    border: 1px solid $extra-light-c;
+    background-color: #fff;
+    display: block;
+    width: 100%;
+    text-align: left;
+    transition: .25s background-color;
+    &:hover,
+    &.__active {
+        background-color: $extra-standart-c;
+        .answerBtn__inner {
+            border-color: $light-c;
+        }
+        .answerBtn__ico {
+            background-color: $light-c;
+        }
+    }
+    &.__active {
+        .answerBtn__ico {
+            svg {
+                transform: rotate(-180deg);
+            }
+        }
+    }
+}
+.answerBtn__inner {
+    border-left: 5px solid $extra-warm-c;
+    font-size: 16px;
+    line-height: 24px;
+    padding: 9px 10px 9px 15px;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    transition: .25s border-color;
+}
+.answerBtn__ico {
+    margin-left: auto;
+    width: 20px;
+    min-width: 20px;
+    height: 20px;
+    background-color: $extra-light-c;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: .25s background-color;
+    svg {
+        display: block;
+        width: 9px;
+        height: 6px;
+        fill: $dark-c;
+        transition: .25s fill, .25s transform;
+    }
+}
+.answerBtn__text {
+    margin-right: 5px;
+}
+.answerDropDown {
+    background-color: $extra-standart-c;
+    border: 1px solid $extra-light-c;
+    padding: 4px;
+    font-size: 16px;
+    line-height: 24px;
+    margin-top: -1px;
+    a {
+        color: $light-c;
+        font-weight: 500;
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+}
+.answerDropDown__inner {
+    border-left: 5px solid $light-c;
+    padding: 9px 31px 9px 15px;
+}
+.answerBox__collapsed {
+    display: none;
+}
+.answerBox {
+    &.__active {
+        .answerBox__collapsed {
+            display: block;
+        }
+    }
+}
+.formBottom__inner {
+    display: flex;
+    flex-wrap: wrap;
+}
+.formBottom__item {
+    &.formBottom__item-side {
+        width: 370px;
+    }
+    &.formBottom__item-main {
+        flex-grow: 1;
+        max-width: calc(100% - 370px);
+    }
+    display: flex;
+    flex-direction: column;
+}
+.formSide {
+    flex-grow: 1;
+    height: 100%;
+    width: 100%;
+    background-color: $light-c;
+    padding: 22px 25px 26px 80px;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+.formSide__img {
+    position: absolute;
+    top: 30px;
+    left: 10px;
+    width: 50px;
+    height: 50px;
+    background-color: $light-c;
+    z-index: 1;
+    svg {
+        display: block;
+        width: 100%;
+        height: 100%;
+        fill: $dark-c;
+    }
+    img {
+        display: block;
+        width: 100%;
+        height: 100%;
+    }
+}
+.formSide__title {
+    font-size: 30px;
+    line-height: 38px;
+    font-weight: bold;
+    margin-bottom: 9px;
+}
+.formSide__text {
+    line-height: 22px;
+    margin-top: auto;
+    max-width: 174px;
+}
+.bottomForm {
+    flex-grow: 1;
+    background-color: $extra-standart-c;
+    padding: 26px 25px 30px;
+}
+.bottomForm__inner {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 900px;
+}
+.extraForm__inner {
+    display: flex;
+    flex-wrap: wrap;
+    margin: -16px -15px 0;
+}
+.extraForm__item {
+    padding: 16px 15px 0;
+    width: 100%;
+    &.extraForm__item-min {
+        width: 33.3%;
+    }
+}
+.formSide__side {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    width: 60px;
+    padding-left: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.formSide__line {
+    width: 5px;
+    background-color: $dark-c;
+    flex-grow: 1;
+}
+.certArea__inner {
+    display: flex;
+    flex-wrap: wrap;
+    margin: -25px -25px 0;
+}
+.certArea__item {
+    width: 33.3%;
+    padding: 25px 25px 0;
+    display: flex;
+    flex-direction: column;
+}
+.certItem {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    padding: 10px 10px 13px;
+    background-color: $extra-standart-c;
+    border: 1px solid $extra-light-c;
+    transition: .25s background-color, .25s background-color;
+    position: relative;
+    &::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        opacity: 0;
+        border: 1px solid $dark-c;
+        transition: .25s opacity;
+        z-index: 1;
+    }
+    &::before {
+        opacity: 0;
+        content: "";
+        position: absolute;
+        z-index: 2;
+        top: 50%;
+        left: 50%;
+        border-radius: 50%;
+        width: 70px;
+        height: 70px;
+        background-color: $light-c;
+        transform: translate(-50%, -50%);
+        background-image: url(../img/svg/search.svg);
+        background-size: 30px 30px;
+        background-position: center;
+        background-repeat: no-repeat;
+        transition: .25s opacity;
+    }
+    &:hover {
+        background-color: $light-c;
+        border-color: $dark-c;
+        &::after {
+            opacity: 1;
+        }
+        &::before {
+            opacity: 1;
+        }
+    }
+}
+.certItem__text {
+    text-align: center;
+    font-size: 18px;
+    line-height: 25px;
+    font-weight: 500;
+    margin-top: auto;
+}
+.certItem__img {
+    margin-bottom: 16px;
+    img {
+        display: block;
+        width: 100%;
+    }
+}
+@media (max-width: 1150px) {
+    .staticBox__item {
+        padding-left: 0px;
+        padding-right: 0px;
+    }
+    .staticBox__inner {
+        margin-left: 0;
+        margin-right: 0;
+    }
+    .staticBox__item-main.staticBox__item {
+        width: 100%;
+    }
+    .staticMenu__btn {
+        display: block;
+    }
+    .staticSide__header {
+        display: block;
+    }
+    .staticSide__body {
+        border: none;
+        padding: 0;
+    }
+    .staticBox__item.staticBox__item-side {
+        width: 328px;
+    }
+    .staticSide__item:first-child {
+        .staticLink {
+            &::before {
+                display: none;
+            }
+        }
+    }
+    .staticSide {
+        position: fixed;
+        bottom: 0px;
+        left: 0;
+        top: 0;
+        width: 328px;
+        max-width: 100%;
+        background-color: #fff;
+        transform: translateX(-110%);
+        transition: .25s transform;
+        z-index: 102;
+        &.__active {
+            transform: translateX(0);
+        }
+    }
+    .extraForm__item.extraForm__item-min {
+        width: 100%;
+    }
+}
+@media (max-width: 998px) {
+    .formSide__title {
+        font-size: 24px;
+        line-height: 30px;
+    }
+    .formBottom__item.formBottom__item-side,
+    .formBottom__item.formBottom__item-main {
+        width: 100%;
+        max-width: 100%;
+    }
+    .formSide {
+        padding: 14px 15px 16px 65px;
+    }
+    .formSide__side {
+        width: 50px;
+    }
+    .formSide__img {
+        width: 40px;
+        height: 40px;
+    }
+}
+@media (max-width: 875px) {
+    .staticSide {
+        bottom: 57px;
+    }
+    .answerBtn__inner {
+        padding: 6px 0px 2px 15px;
+    }
+    .answerBtn__text {
+        margin-right: 14px;
+    }
+    .answerDropDown__inner {
+        padding: 6px 12px 2px 15px;
+    }
+    .staticBox {
+        margin-bottom: 20px;
+    }
+}
+@media (max-width: 576px) {
+    .extraForm__item {
+        padding-top: 12px;
+    }
+    .extraForm__inner {
+        margin-top: -12px;
+    }
+    .bottomForm {
+        padding: 17px 10px 16px;
+    }
+    
+}
