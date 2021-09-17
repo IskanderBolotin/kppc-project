@@ -342,6 +342,12 @@ a.plName {
     &.siteSection-tn {
         margin-top: 0px;
     }
+    &.siteSection-brand {
+        margin-bottom: 42px;
+        & + .siteSection {
+            margin-top: 42px;
+        }
+    }
 }
 .sliderArrow,
 .pagArrow {
@@ -556,12 +562,44 @@ a.plName {
 .innerSection.innerSection-about {
     padding-right: 50px;
 }
+.customText {
+    &::after {
+        content: "";
+        display: block;
+        clear: both;
+    }
+}
 .customText p, p {
     line-height: 22px;
     font-size: 16px;
     margin-bottom: 10px;
     &:last-child {
         margin-bottom: 0;
+    }
+    a {
+        color: $light-c;
+        font-weight: 500;
+        &:hover {
+            text-decoration: underline; 
+        }
+    }
+}
+.article-img {
+    float: left;
+    margin-top: 5px;
+    margin-right: 30px;
+    margin-bottom: 10px;
+    width: 160px;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: $extra-standart-c;
+    padding: 10px;
+    img {
+        display: block;
+        max-width: 100%;
+        max-height: 100%;
     }
 }
 .grubContent {
@@ -750,6 +788,7 @@ a.plName {
         }
     }
 }
+
 .videoBox__list:not(.slick-slider) {
     display: flex;
     overflow: hidden;
@@ -1709,6 +1748,87 @@ fieldset {
         margin-top: 20px;
     }
 }
+.leadRait__bot {
+    .raitMarks {
+        justify-content: center;
+        margin-left: 0;
+    }
+    .raitMarks__item {
+        width: 19px;
+        height: 18px;
+        margin: 0 3px;
+    }
+}
+.brandRow {
+    background-color: $extra-standart-c;
+    padding: 26px 0;
+    overflow: hidden;
+}
+.brandRow__inner {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 -15px;
+}
+.brandRow__img {
+    padding: 0 15px;
+    width: 292px;
+    max-width: 100%;
+}
+.brandRow__text {
+    padding: 0 15px;
+    max-width: calc(100% - 292px);
+}
+.brandPic {
+    padding: 10px;
+    height: 120px;
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    img {
+        display: block;
+        max-width: 100%;
+        max-height: 100%;
+    }
+}
+.serviceGrid__inner {
+    display: flex;
+    flex-wrap: wrap;
+    margin: -14px -7px 0;
+}
+.serviceGrid__item {
+    width: 33.33%;
+    padding: 14px 7px 0;
+    .provideEl__img {
+        height: 350px;
+        picture {
+            width: 100%;
+            height: 100%;
+        }
+        img {
+            object-fit: cover;
+            width: 100%;
+            height: 100%;
+        }
+    }
+}
+.mainCatalog__nav.mainCatalog__nav-big {
+    margin-top: 20px;
+}
+.decorateBox {
+    padding: 10px 10px 10px 0;
+    border-left: 10px solid $light-c;
+    background-color: $extra-standart-c;
+}
+.decorateBox__inner {
+    border: 2px solid $light-c;
+    border-left: none;
+    font-size: 18px;
+    line-height: 22px;
+    font-weight: 500;
+    padding: 19px 29px;
+}
 @media (max-width: 1670px) {
     .plName {
         font-size: 15px;
@@ -1769,6 +1889,12 @@ fieldset {
         &.siteSection-small {
             margin-top: 29px;
         }
+        &.siteSection-brand {
+            margin-bottom: 30px;
+            & + .siteSection {
+                margin-top: 30px;
+            }
+        }
     }
     .title-h2 {
         font-size: 32px;
@@ -1804,10 +1930,22 @@ fieldset {
     .fieldList__item.fieldList__item-small {
         width: 25%;
     }
+    .serviceGrid__item .provideEl__img {
+        height: 300px;
+    }
 }
 @media (max-width: 1300px) {
     .site-container {
         padding: 0 20px;
+    }
+    .staticArticle {
+        .customText p, .customText ul li, p {
+            line-height: 22px;
+            font-size: 16px;
+        }
+    }
+    .serviceGrid__item .provideEl__img {
+        height: 250px;
     }
     .orderMapInfo__img {
         height: auto;
@@ -1882,6 +2020,11 @@ fieldset {
     }
 }
 @media (max-width: 1230px) {
+    .leadRait__bot {
+        .raitMarks__item {
+            margin: 0 1.5px;
+        }
+    }
     .videoBox__arr {
         margin-top: 15px;
         display: flex;
@@ -1959,6 +2102,25 @@ fieldset {
     }
 }
 @media (max-width: 1150px) {
+    .brandRow__inner {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .serviceGrid__item .provideEl__img {
+        height: 190px;
+    }
+    .brandRow {
+        padding: 20px 0 16px;
+    }
+    .brandRow__img {
+        margin-bottom: 20px;
+    }
+    .brandRow__text {
+        padding: 0 15px;
+        max-width: 100%;
+        width: 100%;
+    }
     .catalog-overlay {
         display: none;
         &.catalog-overlay-adapt{
@@ -1986,12 +2148,32 @@ fieldset {
         &.siteSection-small {
             margin-top: 20px;
         }
+        &.siteSection-brand {
+            margin-bottom: 20px;
+            & + .siteSection {
+                margin-top: 20px;
+            }
+        }
     }
     .crumbsList {
         margin-right: -15px;
     }
 }
 @media (max-width: 998px) {
+    .brandRow__img {
+        width: 171px;
+    }
+    .decorateBox {
+        padding: 7px 8px 7px 0;
+        border-left-width: 6px;
+    }
+    .decorateBox__inner {
+        font-size: 16px;
+        padding: 10px 18px;
+    }
+    .brandPic {
+        height: 80px;
+    }
     .fieldList.fieldList-big,
     .fieldList {
         margin-left: -10px;
@@ -2088,6 +2270,19 @@ fieldset {
         .titleBar__arrow {
             justify-content: center;
         }
+    }
+    .serviceGrid__item {
+        .provideEl__name {
+            padding: 11px 17px;
+            min-height: auto;
+            max-height: none;
+        }
+    }
+    .mainCatalog__nav.mainCatalog__nav-big {
+        margin-top: 10px;
+    }
+    .serviceGrid__item {
+        width: 50%;
     }
     .labelBox__price {
         margin-left: auto;
@@ -2207,6 +2402,15 @@ fieldset {
 @media (max-width: 576px) {
     .titleBar__sup {
         margin-top: 0;
+    }
+    .article-img {
+        float: none;
+        margin-right: 0;
+        max-width: 100%;
+        margin-bottom: 13px;
+    }
+    .serviceGrid__item {
+        width: 100%;
     }
     .boxEmpty-404 .boxEmpty__inner {
         padding-top: 40px;
