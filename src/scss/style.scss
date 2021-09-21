@@ -16,6 +16,7 @@
 @import "./components/_compare.scss";
 @import "./components/_static.scss";
 @import "./components/_review.scss";
+@import "./components/_popup.scss";
 
 .site-container {
     width: 100%;
@@ -1464,6 +1465,12 @@ fieldset {
         box-shadow: rgba($color: $dark-c, $alpha: .8) 0 0 0 3px;
     }
 }
+.customInput[type="password"] {
+    font-size: 38px;
+    line-height: 1px;
+    height: 44px;
+    letter-spacing: -1.8px;
+}
 .customTextArea {
     resize: none;
     min-height: 100px;
@@ -1583,6 +1590,7 @@ fieldset {
     }
 }
 .labelBox {
+    background-color: #fff;
     border: 1px solid #CECECE;
     display: flex;
     flex-direction: column;

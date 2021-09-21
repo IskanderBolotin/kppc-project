@@ -12,3 +12,4 @@
 @@include('./_compare.js')
 @@include('./_static.js')
 @@include('./_review.js')
+@@include('./_popup.js')
