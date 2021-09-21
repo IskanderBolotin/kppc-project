@@ -1,0 +1,763 @@
+@@include('./_header-site.html', {
+    "title": "Отзывы"
+})
+@@include('./_header.html')
+<main class="siteContent">
+    <div class="breadcrumbBox">
+        <div class="site-container">
+            <ul class="crumbsList">
+                <li class="crumbsList__item">
+                    <a href="" class="crumbsItem">Главная</a>
+                </li>
+                <li class="crumbsList__item">
+                    <a href="" class="crumbsItem">О компании</a>
+                </li>
+                <li class="crumbsList__item">
+                    <span class="crumbsItem">Отзывы</span>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <section class="siteSection siteSection-small">
+        <div class="site-container">
+            <div class="titleBar titleBar-big">
+                <div class="titleBar__inner">
+                    <div class="titleBar__title">
+                        <h1 class="title-h1">
+                            Отзывы
+                        </h1>
+                    </div>
+                </div>
+            </div>
+            <div class="staticBox">
+                <div class="staticBox__inner">
+                    <div class="staticBox__item-side staticBox__item">
+                        <div class="staticMenu" data-side-menu>
+                            <div class="staticMenu__btn">
+                                <button class="staticBtn" data-side-open>
+                                    <span class="staticBtn__inner">
+                                        <div class="staticBtn__ico">
+                                            <svg><use xlink:href="./icons/stack/icons.svg#navigation"></use></svg>
+                                        </div>
+                                        <div class="staticBtn__text">О компании</div>
+                                        <div class="staticBtn__arrow">
+                                            <svg>
+                                                <use xlink:href="./icons/stack/icons.svg#dropdown"></use>
+                                            </svg>
+                                        </div>
+                                    </span>
+                                </button>
+                            </div>
+                            <div class="staticSide" data-side-fixed>
+                                <div class="staticSide__header">
+                                    <div class="adaptHead">
+                                        <div class="adaptHead__top">
+                                            <div class="adaptHead__bar">
+                                                <div class="adaptHead__name">О компании</div>
+                                                <div class="adaptHead__cls">
+                                                    <button class="ddCatCls" data-side-cls>
+                                                        <span class="ddCatCls__inner">
+                                                            <svg>
+                                                                <use xlink:href="./icons/stack/icons.svg#close"></use>
+                                                            </svg>
+                                                        </span>
+                                                    </button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="staticSide__body">
+                                    <div class="staticSide__item">
+                                        <a class="staticLink" href="">
+                                            <div class="staticLink__inner">
+                                                <div class="staticLink__title">
+                                                    <div class="staticLink__ico">
+                                                        <svg><use xlink:href="./icons/stack/icons.svg#help"></use></svg>
+                                                    </div>
+                                                    <div class="staticLink__text">
+                                                        Вопрос-ответ
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="staticSide__item">
+                                        <a class="staticLink" href="">
+                                            <div class="staticLink__inner">
+                                                <div class="staticLink__title">
+                                                    <div class="staticLink__ico">
+                                                        <svg><use xlink:href="./icons/stack/icons.svg#certificate"></use></svg>
+                                                    </div>
+                                                    <div class="staticLink__text">
+                                                        Сертификаты
+                                                    </div>
+                                                </div>
+                                                <div class="staticLink__quant">
+                                                    <span class="quantBox">3</span>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="staticSide__item">
+                                        <a class="staticLink __active" href="">
+                                            <div class="staticLink__inner">
+                                                <div class="staticLink__title">
+                                                    <div class="staticLink__ico">
+                                                        <svg><use xlink:href="./icons/stack/icons.svg#review"></use></svg>
+                                                    </div>
+                                                    <div class="staticLink__text">
+                                                        Отзывы
+                                                    </div>
+                                                </div>
+                                                <div class="staticLink__quant">
+                                                    <span class="quantBox">15</span>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="staticBox__item-main staticBox__item">
+                        <div class="reviewBox">
+                            <div class="reviewBox__top">
+                                <div class="reviewWrite">
+                                    <div class="createReview">
+                                        <div class="createReview__start">
+                                            <div class="reviewBar">
+                                                <div class="reviewBar__inner">
+                                                    <div class="reviewBar__text">
+                                                        Ваш отзыв поможет кому-то сделать выбор. Спасибо, что делитесь опытом!
+                                                    </div>
+                                                    <div class="reviewBar__btn">
+                                                        <button class="customBtn customBtn-light">
+                                                            <span class="customBtn__inner">
+                                                                <span class="customBtn__text">Написать отзыв</span>
+                                                            </span>
+                                                        </button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="createReview__form"></div>
+                                    </div>
+                                    <div class="review__hidden">
+                                        <div class="reviewForm">
+                                            <div class="reviewForm__title">Написать отзыв</div>
+                                            <div class="reviewForm__content">
+                                                <form action="">
+                                                    <div class="reviewForm__flex">
+                                                        <div class="reviewForm__item reviewForm__item-min">
+                                                            <label class="custom-label" for="e-1">
+                                                                Имя <span>*</span>
+                                                            </label>
+                                                            <input class="customInput" type="text" placeholder="Евгений" id="e-1">
+                                                        </div>
+                                                        <div class="reviewForm__item reviewForm__item-min">
+                                                            <label class="custom-label" for="e-2">
+                                                                Email <span>*</span>
+                                                            </label>
+                                                            <input class="customInput" type="email" placeholder="evginiybodrov@gmail.com" id="e-2">
+                                                        </div>
+                                                        <div  class="reviewForm__item"></div>
+                                                        <div  class="reviewForm__item">
+                                                            <label class="custom-label" for="e-3">
+                                                                Отзыв
+                                                            </label>
+                                                            <textarea class="customTextArea" id="e-3" placeholder="Введите комментарий"></textarea>
+                                                        </div>
+                                                        <div  class="reviewForm__item"></div>
+                                                    </div>
+                                                    <div class="agreeBtn">
+                                                        <div class="agreeBtn__inner">
+                                                            <div class="agreeBtn__item agreeBtn__btn">
+                                                                <button class="customBtn customBtn-light">
+                                                                    <span class="customBtn__inner">
+                                                                        <span class="customBtn__text">Отправить отзыв</span>
+                                                                    </span>
+                                                                </button>
+                                                            </div>
+                                                            <div class="agreeBtn__item agreeBtn__txt">
+                                                                <div class="ps-text">
+                                                                    <div class="ps-text__inner">
+                                                                        <div class="ps-text__inf">
+                                                                            Нажимая кнопку «Отправить», я принимаю условия <a href="">политики конфиденциальности</a> и <a href="">пользовательского соглашения</a>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </form>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="reviewBox__bottom">
+                                <div class="reviewList">
+                                    <div class="reviewList__item">
+                                        <div class="reviewRow">
+                                            <div class="reviewRow__inner">
+                                                <div class="reviewRow__side">
+                                                    <div class="reviewPerson">
+                                                        <div class="reviewPerson__ico">
+                                                            <div class="reviewAvatar">
+                                                                <svg width="22px" height="22px">
+                                                                    <use xlink:href="./icons/stack/icons.svg#login"></use>
+                                                                </svg>
+                                                            </div>
+                                                        </div>
+                                                        <div class="reviewPerson__info">
+                                                            <div class="reviewPerson__name">
+                                                                Дмитрий
+                                                            </div>
+                                                            <div class="reviewPerson__date">
+                                                                10 июня 2021
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="reviewRow__main">
+                                                    <div class="reviewMain">
+                                                        <div class="reviewMain__top">
+                                                            <div class="reviewMain__line">
+                                                                <div class="reviewMain__item reviewMain__star">
+                                                                    <div class="raitMarks">
+                                                                        <div class="raitMarks__item">
+                                                                            <div class="raitStar __fill-star" >
+                                                                                <div class="raitStar__item raitStar__gray">
+                                                                                    <svg>
+                                                                                        <use xlink:href="./icons/stack/icons.svg#star"></use>
+                                                                                    </svg>
+                                                                                </div>
+                                                                                <div class="raitStar__item raitStar__fill">
+                                                                                    <svg>
+                                                                                        <use xlink:href="./icons/stack/icons.svg#star"></use>
+                                                                                    </svg>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="raitMarks__item">
+                                                                            <div class="raitStar __fill-star" >
+                                                                                <div class="raitStar__item raitStar__gray">
+                                                                                    <svg>
+                                                                                        <use xlink:href="./icons/stack/icons.svg#star"></use>
+                                                                                    </svg>
+                                                                                </div>
+                                                                                <div class="raitStar__item raitStar__fill">
+                                                                                    <svg>
+                                                                                        <use xlink:href="./icons/stack/icons.svg#star"></use>
+                                                                                    </svg>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="raitMarks__item">
+                                                                            <div class="raitStar __fill-star" >
+                                                                                <div class="raitStar__item raitStar__gray">
+                                                                                    <svg>
+                                                                                        <use xlink:href="./icons/stack/icons.svg#star"></use>
+                                                                                    </svg>
+                                                                                </div>
+                                                                                <div class="raitStar__item raitStar__fill">
+                                                                                    <svg>
+                                                                                        <use xlink:href="./icons/stack/icons.svg#star"></use>
+                                                                                    </svg>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="raitMarks__item">
+                                                                            <div class="raitStar __fill-star" >
+                                                                                <div class="raitStar__item raitStar__gray">
+                                                                                    <svg>
+                                                                                        <use xlink:href="./icons/stack/icons.svg#star"></use>
+                                                                                    </svg>
+                                                                                </div>
+                                                                                <div class="raitStar__item raitStar__fill">
+                                                                                    <svg>
+                                                                                        <use xlink:href="./icons/stack/icons.svg#star"></use>
+                                                                                    </svg>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="raitMarks__item">
+                                                                            <div class="raitStar">
+                                                                                <div class="raitStar__item raitStar__gray">
+                                                                                    <svg>
+                                                                                        <use xlink:href="./icons/stack/icons.svg#star"></use>
+                                                                                    </svg>
+                                                                                </div>
+                                                                                <div class="raitStar__item raitStar__fill">
+                                                                                    <svg>
+                                                                                        <use xlink:href="./icons/stack/icons.svg#star"></use>
+                                                                                    </svg>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="reviewMain__item reviewMain__activity">
+                                                                    <div class="reviewLikes" data-toggle-mark>
+                                                                        <div class="reviewLikes__item">
+                                                                            <button class="likeBtn" data-toggle-like="like">
+                                                                                <span class="likeBtn__inner">
+                                                                                    <span class="likeBtn__ico">
+                                                                                        <svg width="22px" height="22px">
+                                                                                            <use xlink:href="./icons/stack/icons.svg#like"></use>
+                                                                                        </svg>
+                                                                                    </span>
+                                                                                    <span class="likeBtn__counter">2</span>
+                                                                                </span>
+                                                                            </button>
+                                                                        </div>
+                                                                        <div class="reviewLikes__item">
+                                                                            <button class="likeBtn likeBtn-dis" data-toggle-like="dislike">
+                                                                                <span class="likeBtn__inner">
+                                                                                    <span class="likeBtn__ico">
+                                                                                        <svg width="22px" height="22px">
+                                                                                            <use xlink:href="./icons/stack/icons.svg#like"></use>
+                                                                                        </svg>
+                                                                                    </span>
+                                                                                    <span class="likeBtn__counter">0</span>
+                                                                                </span>
+                                                                            </button>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="reviewMain__text">
+                                                                    Наличие подножки хоть и небольшой но все же плюс. Управление простое, все понятно подписано ошибиться при всем желании не получится. Экран большой считывать показания удобно.
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="reviewList__item">
+                                        <div class="reviewRow">
+                                            <div class="reviewRow__inner">
+                                                <div class="reviewRow__side">
+                                                    <div class="reviewPerson">
+                                                        <div class="reviewPerson__ico">
+                                                            <div class="reviewAvatar">
+                                                                <svg width="22px" height="22px">
+                                                                    <use xlink:href="./icons/stack/icons.svg#login"></use>
+                                                                </svg>
+                                                            </div>
+                                                        </div>
+                                                        <div class="reviewPerson__info">
+                                                            <div class="reviewPerson__name">
+                                                                Александр Светлов
+                                                            </div>
+                                                            <div class="reviewPerson__date">
+                                                                29 мая 2021
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="reviewRow__main">
+                                                    <div class="reviewMain">
+                                                        <div class="reviewMain__top">
+                                                            <div class="reviewMain__line">
+                                                                <div class="reviewMain__item reviewMain__star">
+                                                                    <div class="raitMarks">
+                                                                        <div class="raitMarks__item">
+                                                                            <div class="raitStar __fill-star" >
+                                                                                <div class="raitStar__item raitStar__gray">
+                                                                                    <svg>
+                                                                                        <use xlink:href="./icons/stack/icons.svg#star"></use>
+                                                                                    </svg>
+                                                                                </div>
+                                                                                <div class="raitStar__item raitStar__fill">
+                                                                                    <svg>
+                                                                                        <use xlink:href="./icons/stack/icons.svg#star"></use>
+                                                                                    </svg>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="raitMarks__item">
+                                                                            <div class="raitStar __fill-star" >
+                                                                                <div class="raitStar__item raitStar__gray">
+                                                                                    <svg>
+                                                                                        <use xlink:href="./icons/stack/icons.svg#star"></use>
+                                                                                    </svg>
+                                                                                </div>
+                                                                                <div class="raitStar__item raitStar__fill">
+                                                                                    <svg>
+                                                                                        <use xlink:href="./icons/stack/icons.svg#star"></use>
+                                                                                    </svg>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="raitMarks__item">
+                                                                            <div class="raitStar __fill-star" >
+                                                                                <div class="raitStar__item raitStar__gray">
+                                                                                    <svg>
+                                                                                        <use xlink:href="./icons/stack/icons.svg#star"></use>
+                                                                                    </svg>
+                                                                                </div>
+                                                                                <div class="raitStar__item raitStar__fill">
+                                                                                    <svg>
+                                                                                        <use xlink:href="./icons/stack/icons.svg#star"></use>
+                                                                                    </svg>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="raitMarks__item">
+                                                                            <div class="raitStar __fill-star" >
+                                                                                <div class="raitStar__item raitStar__gray">
+                                                                                    <svg>
+                                                                                        <use xlink:href="./icons/stack/icons.svg#star"></use>
+                                                                                    </svg>
+                                                                                </div>
+                                                                                <div class="raitStar__item raitStar__fill">
+                                                                                    <svg>
+                                                                                        <use xlink:href="./icons/stack/icons.svg#star"></use>
+                                                                                    </svg>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="raitMarks__item">
+                                                                            <div class="raitStar">
+                                                                                <div class="raitStar__item raitStar__gray">
+                                                                                    <svg>
+                                                                                        <use xlink:href="./icons/stack/icons.svg#star"></use>
+                                                                                    </svg>
+                                                                                </div>
+                                                                                <div class="raitStar__item raitStar__fill">
+                                                                                    <svg>
+                                                                                        <use xlink:href="./icons/stack/icons.svg#star"></use>
+                                                                                    </svg>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="reviewMain__item reviewMain__activity">
+                                                                    <div class="reviewLikes" data-toggle-mark>
+                                                                        <div class="reviewLikes__item">
+                                                                            <button class="likeBtn" data-toggle-like="like">
+                                                                                <span class="likeBtn__inner">
+                                                                                    <span class="likeBtn__ico">
+                                                                                        <svg width="22px" height="22px">
+                                                                                            <use xlink:href="./icons/stack/icons.svg#like"></use>
+                                                                                        </svg>
+                                                                                    </span>
+                                                                                    <span class="likeBtn__counter">2</span>
+                                                                                </span>
+                                                                            </button>
+                                                                        </div>
+                                                                        <div class="reviewLikes__item">
+                                                                            <button class="likeBtn likeBtn-dis" data-toggle-like="dislike">
+                                                                                <span class="likeBtn__inner">
+                                                                                    <span class="likeBtn__ico">
+                                                                                        <svg width="22px" height="22px">
+                                                                                            <use xlink:href="./icons/stack/icons.svg#like"></use>
+                                                                                        </svg>
+                                                                                    </span>
+                                                                                    <span class="likeBtn__counter">0</span>
+                                                                                </span>
+                                                                            </button>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="reviewMain__text">
+                                                                    Сколько лет работаю в сервисе, столько же со мной работает этот прибор, который стойко переносит любые испытания. Сколько раз он падал и куда он только не падал... и в жару и в стужу... был и в воде и в антифризе. Хотя, в этом наверное, больше заслуга резинового чехла, который шел комплектом. На постоянной основе меняется только аккумуляторная батарея и щупы. От времени и эксплуатации лишь облез немного, да поцарапался. Погрешностей в измерении не замечено, но в основном нужен для замера сопротивления и напряжения. Жаль нет подсветки экрана, иногда нужна в полутьме, чтоб значения рассмотреть.
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="reviewList__item">
+                                        <div class="reviewRow">
+                                            <div class="reviewRow__inner">
+                                                <div class="reviewRow__side">
+                                                    <div class="reviewPerson">
+                                                        <div class="reviewPerson__ico">
+                                                            <div class="reviewAvatar">
+                                                                <svg width="22px" height="22px">
+                                                                    <use xlink:href="./icons/stack/icons.svg#login"></use>
+                                                                </svg>
+                                                            </div>
+                                                        </div>
+                                                        <div class="reviewPerson__info">
+                                                            <div class="reviewPerson__name">
+                                                                Николай Р
+                                                            </div>
+                                                            <div class="reviewPerson__date">
+                                                                10 июня 2021
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="reviewRow__main">
+                                                    <div class="reviewMain">
+                                                        <div class="reviewMain__top">
+                                                            <div class="reviewMain__line">
+                                                                <div class="reviewMain__item reviewMain__star">
+                                                                    <div class="raitMarks">
+                                                                        <div class="raitMarks__item">
+                                                                            <div class="raitStar __fill-star" >
+                                                                                <div class="raitStar__item raitStar__gray">
+                                                                                    <svg>
+                                                                                        <use xlink:href="./icons/stack/icons.svg#star"></use>
+                                                                                    </svg>
+                                                                                </div>
+                                                                                <div class="raitStar__item raitStar__fill">
+                                                                                    <svg>
+                                                                                        <use xlink:href="./icons/stack/icons.svg#star"></use>
+                                                                                    </svg>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="raitMarks__item">
+                                                                            <div class="raitStar __fill-star" >
+                                                                                <div class="raitStar__item raitStar__gray">
+                                                                                    <svg>
+                                                                                        <use xlink:href="./icons/stack/icons.svg#star"></use>
+                                                                                    </svg>
+                                                                                </div>
+                                                                                <div class="raitStar__item raitStar__fill">
+                                                                                    <svg>
+                                                                                        <use xlink:href="./icons/stack/icons.svg#star"></use>
+                                                                                    </svg>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="raitMarks__item">
+                                                                            <div class="raitStar __fill-star" >
+                                                                                <div class="raitStar__item raitStar__gray">
+                                                                                    <svg>
+                                                                                        <use xlink:href="./icons/stack/icons.svg#star"></use>
+                                                                                    </svg>
+                                                                                </div>
+                                                                                <div class="raitStar__item raitStar__fill">
+                                                                                    <svg>
+                                                                                        <use xlink:href="./icons/stack/icons.svg#star"></use>
+                                                                                    </svg>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="raitMarks__item">
+                                                                            <div class="raitStar __fill-star" >
+                                                                                <div class="raitStar__item raitStar__gray">
+                                                                                    <svg>
+                                                                                        <use xlink:href="./icons/stack/icons.svg#star"></use>
+                                                                                    </svg>
+                                                                                </div>
+                                                                                <div class="raitStar__item raitStar__fill">
+                                                                                    <svg>
+                                                                                        <use xlink:href="./icons/stack/icons.svg#star"></use>
+                                                                                    </svg>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="raitMarks__item">
+                                                                            <div class="raitStar">
+                                                                                <div class="raitStar__item raitStar__gray">
+                                                                                    <svg>
+                                                                                        <use xlink:href="./icons/stack/icons.svg#star"></use>
+                                                                                    </svg>
+                                                                                </div>
+                                                                                <div class="raitStar__item raitStar__fill">
+                                                                                    <svg>
+                                                                                        <use xlink:href="./icons/stack/icons.svg#star"></use>
+                                                                                    </svg>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="reviewMain__item reviewMain__activity">
+                                                                    <div class="reviewLikes" data-toggle-mark>
+                                                                        <div class="reviewLikes__item">
+                                                                            <button class="likeBtn" data-toggle-like="like">
+                                                                                <span class="likeBtn__inner">
+                                                                                    <span class="likeBtn__ico">
+                                                                                        <svg width="22px" height="22px">
+                                                                                            <use xlink:href="./icons/stack/icons.svg#like"></use>
+                                                                                        </svg>
+                                                                                    </span>
+                                                                                    <span class="likeBtn__counter">2</span>
+                                                                                </span>
+                                                                            </button>
+                                                                        </div>
+                                                                        <div class="reviewLikes__item">
+                                                                            <button class="likeBtn likeBtn-dis" data-toggle-like="dislike">
+                                                                                <span class="likeBtn__inner">
+                                                                                    <span class="likeBtn__ico">
+                                                                                        <svg width="22px" height="22px">
+                                                                                            <use xlink:href="./icons/stack/icons.svg#like"></use>
+                                                                                        </svg>
+                                                                                    </span>
+                                                                                    <span class="likeBtn__counter">0</span>
+                                                                                </span>
+                                                                            </button>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="reviewMain__text">
+                                                                    Наличие подножки хоть и небольшой но все же плюс. Управление простое, все понятно подписано ошибиться при всем желании не получится. Экран большой считывать показания удобно.
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="reviewList__item">
+                                        <div class="reviewRow">
+                                            <div class="reviewRow__inner">
+                                                <div class="reviewRow__side">
+                                                    <div class="reviewPerson">
+                                                        <div class="reviewPerson__ico">
+                                                            <div class="reviewAvatar">
+                                                                <svg width="22px" height="22px">
+                                                                    <use xlink:href="./icons/stack/icons.svg#login"></use>
+                                                                </svg>
+                                                            </div>
+                                                        </div>
+                                                        <div class="reviewPerson__info">
+                                                            <div class="reviewPerson__name">
+                                                                Илья Морозов
+                                                            </div>
+                                                            <div class="reviewPerson__date">
+                                                                29 мая 2021
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="reviewRow__main">
+                                                    <div class="reviewMain">
+                                                        <div class="reviewMain__top">
+                                                            <div class="reviewMain__line">
+                                                                <div class="reviewMain__item reviewMain__star">
+                                                                    <div class="raitMarks">
+                                                                        <div class="raitMarks__item">
+                                                                            <div class="raitStar __fill-star" >
+                                                                                <div class="raitStar__item raitStar__gray">
+                                                                                    <svg>
+                                                                                        <use xlink:href="./icons/stack/icons.svg#star"></use>
+                                                                                    </svg>
+                                                                                </div>
+                                                                                <div class="raitStar__item raitStar__fill">
+                                                                                    <svg>
+                                                                                        <use xlink:href="./icons/stack/icons.svg#star"></use>
+                                                                                    </svg>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="raitMarks__item">
+                                                                            <div class="raitStar __fill-star" >
+                                                                                <div class="raitStar__item raitStar__gray">
+                                                                                    <svg>
+                                                                                        <use xlink:href="./icons/stack/icons.svg#star"></use>
+                                                                                    </svg>
+                                                                                </div>
+                                                                                <div class="raitStar__item raitStar__fill">
+                                                                                    <svg>
+                                                                                        <use xlink:href="./icons/stack/icons.svg#star"></use>
+                                                                                    </svg>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="raitMarks__item">
+                                                                            <div class="raitStar __fill-star" >
+                                                                                <div class="raitStar__item raitStar__gray">
+                                                                                    <svg>
+                                                                                        <use xlink:href="./icons/stack/icons.svg#star"></use>
+                                                                                    </svg>
+                                                                                </div>
+                                                                                <div class="raitStar__item raitStar__fill">
+                                                                                    <svg>
+                                                                                        <use xlink:href="./icons/stack/icons.svg#star"></use>
+                                                                                    </svg>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="raitMarks__item">
+                                                                            <div class="raitStar __fill-star" >
+                                                                                <div class="raitStar__item raitStar__gray">
+                                                                                    <svg>
+                                                                                        <use xlink:href="./icons/stack/icons.svg#star"></use>
+                                                                                    </svg>
+                                                                                </div>
+                                                                                <div class="raitStar__item raitStar__fill">
+                                                                                    <svg>
+                                                                                        <use xlink:href="./icons/stack/icons.svg#star"></use>
+                                                                                    </svg>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="raitMarks__item">
+                                                                            <div class="raitStar">
+                                                                                <div class="raitStar__item raitStar__gray">
+                                                                                    <svg>
+                                                                                        <use xlink:href="./icons/stack/icons.svg#star"></use>
+                                                                                    </svg>
+                                                                                </div>
+                                                                                <div class="raitStar__item raitStar__fill">
+                                                                                    <svg>
+                                                                                        <use xlink:href="./icons/stack/icons.svg#star"></use>
+                                                                                    </svg>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="reviewMain__item reviewMain__activity">
+                                                                    <div class="reviewLikes" data-toggle-mark>
+                                                                        <div class="reviewLikes__item">
+                                                                            <button class="likeBtn" data-toggle-like="like">
+                                                                                <span class="likeBtn__inner">
+                                                                                    <span class="likeBtn__ico">
+                                                                                        <svg width="22px" height="22px">
+                                                                                            <use xlink:href="./icons/stack/icons.svg#like"></use>
+                                                                                        </svg>
+                                                                                    </span>
+                                                                                    <span class="likeBtn__counter">2</span>
+                                                                                </span>
+                                                                            </button>
+                                                                        </div>
+                                                                        <div class="reviewLikes__item">
+                                                                            <button class="likeBtn likeBtn-dis" data-toggle-like="dislike">
+                                                                                <span class="likeBtn__inner">
+                                                                                    <span class="likeBtn__ico">
+                                                                                        <svg width="22px" height="22px">
+                                                                                            <use xlink:href="./icons/stack/icons.svg#like"></use>
+                                                                                        </svg>
+                                                                                    </span>
+                                                                                    <span class="likeBtn__counter">0</span>
+                                                                                </span>
+                                                                            </button>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="reviewMain__text">
+                                                                    Часто встречались дешевые варианты мультиметров mastech. В них чего-то отваливалось, припаивалось и т. д. Но вот решил, дурак, купить дорогую продукцию дешевого производителя. Лучше бы не делал! Так же, как и на дешевке, оказался плохо приделан основной разъем (омы, вольты). Считаю, что нужно покупать мультиметры либо дорогие, либо дешевые, среднего не дано.
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
+@@include('./_footer.html')
+@@include('./_footer-site.html')

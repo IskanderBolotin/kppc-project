@@ -15,6 +15,7 @@
 @import "./components/_personal.scss";
 @import "./components/_compare.scss";
 @import "./components/_static.scss";
+@import "./components/_review.scss";
 
 .site-container {
     width: 100%;
@@ -406,17 +407,26 @@ a.plName {
         }
     }
 }
+.title-h3 {
+    display: inline;
+    font-size: 24px;
+    line-height: 32px;
+    font-weight: bold;
+    word-break: break-word; 
+}
 .title-h2 {
     display: inline;
     font-size: 36px;
     line-height: 44px;
     font-weight: bold;
+    word-break: break-word;
 }
 .title-h1 {
     display: inline;
     font-size: 42px;
     line-height: 50px;
     font-weight: bold;
+    word-break: break-word;
 }
 .titleBar {
     margin-bottom: 15px;
@@ -654,6 +664,60 @@ a.plName {
         margin-bottom: 0;
     }
 }
+.customText ol {
+    &:not(.h-increment) {
+        margin-bottom: 10px;
+        counter-reset: custom;
+        list-style: none;
+        & > li {
+            display: flex;
+            line-height: 22px;
+            margin-bottom: 8px;
+            position: relative;
+            &:last-child {
+                margin-bottom: 0;
+            }
+            &::before {
+                content: counters(custom, ".")".";
+                counter-increment: custom;
+                line-height: 22px;
+                font-weight: bold;
+                color: $light-c;
+                margin-right: 10px;
+            }
+        }
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+    &.h-increment {
+        counter-reset: custom;
+        list-style: none;
+        & > li {
+            margin-bottom: 33px;
+            &:last-child {
+                margin-bottom: 0;
+            }
+            h1, h2, h3, h4, h5, h6 {
+                margin-bottom: 13px;
+                &:first-child {
+                    margin-bottom: 13px;
+                }
+                &::before {
+                    content: counters(custom, ".")".";
+                    counter-increment: custom;
+                }
+            }
+        }
+    }
+}
+.customText ol,
+.customText ul {
+    ol, ul {
+        margin-top: 7px;
+    }
+}
+
 .aboutBox__text {
     margin-bottom: 36px;
     &:last-child {
@@ -2383,6 +2447,22 @@ fieldset {
     }
     .labelBox.labelBox-big .labelBox__inner {
         min-height: auto;
+    }
+    .customText ol {
+        &.h-increment {
+            & > li {
+                h1, h2, h3, h4, h5, h6 {
+                    margin-bottom: 10px;
+                    &:first-child {
+                        margin-bottom: 10px;
+                        margin-top: -3px;
+                    }
+                }
+            }
+        }
+    }
+    .customText ol.h-increment>li {
+        margin-bottom: 15px;
     }
 }
 @media (max-width: 670px) {
