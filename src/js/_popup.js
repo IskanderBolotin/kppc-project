@@ -9,5 +9,13 @@ $(document).ready(function(){
         $(this).parents("[data-modal]").removeClass("__active");
         $(this).parents("[data-modal-el]").removeClass("__active");
     });
-    
+    $("body").on("click", "[data-modal-open]", function(e){
+        let this_id = $(this).attr("data-modal-open");
+        $("[data-modal]").each(function(){
+            if ($(this).attr("data-modal") == this_id) {
+                $(this).addClass("__active");
+                $(this).find("[data-modal-el]").addClass("__active");
+            }
+        });
+    });
 });

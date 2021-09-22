@@ -1053,6 +1053,8 @@
         width: 100%;
         left: 0;
         bottom: 0;
+        padding-bottom: constant(safe-area-inset-bottom);
+        padding-bottom: env(safe-area-inset-bottom);
         border-bottom: none;
         background-color: $extra-standart-c;
         border-top: 1px solid $extra-light-c;

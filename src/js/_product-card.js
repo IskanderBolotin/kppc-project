@@ -1,11 +1,12 @@
 $(document).ready(function(){
     $(".product-gallery").each(function(){
+        let _this = $(this)
         $(this).slick({
 			slidesToShow: 1,
 			slidesToScroll: 1,
 			swipeToSlide: true,
             arrows: false,
-            asNavFor: '.sideGallery-slider',
+            asNavFor: _this.parents(".productGallery__inner").find('.sideGallery-slider'),
             responsive: [
                 {
                     breakpoint: 1301,
@@ -18,18 +19,23 @@ $(document).ready(function(){
     });
     let arrowBtn_prev = '<button class="cmpExtraBtn cmpExtraBtn-prev"><span class="cmpExtraBtn__inner"><svg width="9px" height="6px"><use xlink:href="./icons/stack/icons.svg#dropdown"></use></svg></span></button>';
     let arrowBtn_next = '<button class="cmpExtraBtn cmpExtraBtn-next"><span class="cmpExtraBtn__inner"><svg width="9px" height="6px"><use xlink:href="./icons/stack/icons.svg#dropdown"></use></svg></span></button>'
-    $(".sideGallery-slider").slick({
-		slidesToShow: 4,
-		slidesToScroll: 1,
-		arrows: true,
-		vertical: true,
-		verticalSwiping: true,
-		focusOnSelect: true,
-		swipeToSlide: true,
-        prevArrow: arrowBtn_prev,
-        nextArrow:  arrowBtn_next,
-		asNavFor: '.product-gallery',
-	});
+    $(".sideGallery-slider").each(function(){
+        let _this = $(this)
+        let is_horizontal = !$(this).hasClass("sideGallery-horizontal");
+        $(this).slick({
+            slidesToShow: is_horizontal ? 4 : 5,
+            slidesToScroll: 1,
+            arrows: true,
+            vertical: is_horizontal,
+            verticalSwiping: is_horizontal,
+            focusOnSelect: true,
+            swipeToSlide: true,
+            prevArrow: arrowBtn_prev,
+            nextArrow:  arrowBtn_next,
+            asNavFor: _this.parents(".productGallery__inner").find('.product-gallery'),
+        });
+
+    })
     $('.sideGallery-slider').on('beforeChange', function (event, slick, currentSlide, nextSlide) {
 		if (slick.$slides.length <= slick.options.slidesToShow) {
 			$(this).find(".slick-track").addClass("stopSlider");
