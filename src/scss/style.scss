@@ -1465,12 +1465,6 @@ fieldset {
         box-shadow: rgba($color: $dark-c, $alpha: .8) 0 0 0 3px;
     }
 }
-.customInput[type="password"] {
-    font-size: 38px;
-    line-height: 1px;
-    height: 44px;
-    letter-spacing: -1.8px;
-}
 .customTextArea {
     resize: none;
     min-height: 100px;
@@ -1901,6 +1895,187 @@ fieldset {
     font-weight: 500;
     padding: 19px 29px;
 }
+.reviewRait__inner {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.reviewRait__label {
+    line-height: 22px;
+    margin-right: 8px;
+}
+.reviewRait {
+    padding: 10px 0 1px;
+}
+.starsInter {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    padding-bottom: 3px;
+}
+.starsInter__label {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    width: 19px;
+    cursor: pointer;
+    height: 18px;
+    margin-right: 3px;
+    background-image: url(../img/svg/star-fill.svg);
+    background-size: 19px 18px;
+    background-repeat: no-repeat;
+    background-position: left;
+}
+.starsInter__label:last-child {
+    margin-right: 0;
+}
+.starsInter__input:checked ~ .starsInter__label {
+    background-image: url(../img/svg/star-normal.svg);
+}
+.starsInter__input:checked + .starsInter__label {
+    background-image: url(../img/svg/star-fill.svg);
+}
+.starsInter:hover .starsInter__input ~ .starsInter__label {
+    background-image: url(../img/svg/star-fill.svg);
+}
+.starsInter:hover .starsInter__input:hover ~ .starsInter__label {
+    background-image: url(../img/svg/star-normal.svg);
+}
+.starsInter:hover .starsInter__input:hover + .starsInter__label {
+    background-image: url(../img/svg/star-fill.svg);
+}
+.loadLabel {
+    display: block;
+    cursor: pointer;
+    width: 100%;
+    &.highlight {
+        .loadLabel__field {
+            border-color: $light-c;
+            .loadLabel__ico svg {
+                fill: $light-c;
+            }
+        }
+    }
+}
+.loadLabel__field {
+    display: block;
+    border: 1px dashed $extra-dark-c;
+    padding: 19px 14px 17px;
+    transition: .25s border-color, .25s color, .25s opacity;
+}
+@media (min-width: 769px) {
+    .loadLabel__field:hover {
+        border-color: $light-c;
+        .loadLabel__text {
+            color: $light-c;
+        }
+        .loadLabel__ico svg {
+            fill: $light-c;
+        }
+    }
+}
+.reviewForm__content {
+    max-width: 1060px;
+}
+.loadLabel__flex {
+    display: flex;
+    align-items: center;
+}
+.loadLabel__ico {
+    display: block;
+    margin-right: 10px;
+    width: 22px;
+    min-width: 22px;
+    height: 22px;
+    svg {
+        display: block;
+        width: 100%;
+        height: 100%;
+        fill: $extra-dark-c;
+        transition: .25s fill;
+    }
+}
+.loadLabel__text {
+    color: $extra-dark-c;
+    font-size: 16px;
+    line-height: 22px;
+    transition: .25s color;
+}
+.loadFile__inner {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    margin: -10px -10px 0
+}
+.loadFile__item {
+    padding: 10px 10px 0;
+    &.loadFile__item-label {
+        width: 59.3%;
+    }
+    &.loadFile__item-text {
+        width: 40.7%;
+    }
+    &.loadFile__item-image {
+        width: 100%;
+    }
+}
+.loadImages {
+    display: flex;
+    flex-wrap: wrap;
+    margin: -10px -5px 0;
+}
+.loadImages__remove {
+    width: 16px;
+    height: 16px;
+    display: block;
+    background-color: #fff;
+    padding: 2px;
+    transition: .25s background-color;
+    border: none;
+    position: absolute;
+    top: 2px;
+    right: 2px;
+    cursor: pointer;
+    svg {
+        display: block;
+        width: 100%;
+        height: 100%;
+        fill: $dark-c;
+        transition: .25s fill;
+    }
+    &:hover {
+        background-color: $light-c;
+    }
+}
+.loadImages__item {
+    margin: 10px 5px 0;
+    width: 70px;
+    height: 70px;
+    position: relative;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.warnText {
+    font-size: 14px;
+    line-height: 18px;
+    color: $extra-dark-c;
+    display: flex;
+}
+.warnText__ico {
+    width: 14px;
+    min-width: 14px;
+    margin-right: 6px;
+    margin-top: 3px;
+    height: 13px;
+    svg {
+        display: block;
+        width: 100%;
+        height: 100%;
+        fill: $light-c;
+    }
+}
+
 @media (max-width: 1670px) {
     .plName {
         font-size: 15px;
@@ -2172,6 +2347,7 @@ fieldset {
         font-size: 30px;
         line-height: 36px
     }
+    
 }
 @media (max-width: 1150px) {
     .brandRow__inner {
@@ -2453,6 +2629,12 @@ fieldset {
     .fieldList__item.fieldList__item-mid {
         width: 100%;
     }
+    .loadLabel__field {
+        border-color: $light-c;
+    }
+    .loadLabel__ico svg {
+        fill: $light-c;
+    }
     .labelBox.labelBox-big .labelBox__inner {
         min-height: auto;
     }
@@ -2472,10 +2654,40 @@ fieldset {
     .customText ol.h-increment>li {
         margin-bottom: 15px;
     }
+    .loadLabel__text {
+        display: none;
+    }
+    .loadLabel {
+        width: 60px;
+        height: 60px;
+    }
+    .loadFile__item.loadFile__item-label {
+        width: 75px;
+    }
+    .loadFile__item.loadFile__item-text {
+        width: calc(100% - 75px);
+    }
+    .loadLabel__ico {
+        margin-right: auto;
+        margin-left: auto;
+    }
+    .loadFile__inner {
+        margin: -10px -7.5px 0;
+    }
+    .loadFile__item {
+        padding: 10px 7.5px 0;
+    }
+    .reviewForm__item.reviewForm__item-min {
+        width: 100%;
+    }
+    .loadImages__item {
+        width: 60px;
+        height: 60px;
+    }
 }
 @media (max-width: 670px) {
     .articleEl__info {
-        max-height: 88px;
+        max-height: 90px;
     }
     .customText table td {
         padding: 9px 10px 7px

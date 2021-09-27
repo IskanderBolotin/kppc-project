@@ -121,7 +121,7 @@
                         </div>
                     </div>
                     <div class="staticBox__item-main staticBox__item">
-                        <div class="reviewBox">
+                        <div class="reviewBox" data-parent-rev>
                             <div class="reviewBox__top">
                                 <div class="reviewWrite">
                                     <div class="createReview">
@@ -132,7 +132,7 @@
                                                         Ваш отзыв поможет кому-то сделать выбор. Спасибо, что делитесь опытом!
                                                     </div>
                                                     <div class="reviewBar__btn">
-                                                        <button class="customBtn customBtn-light">
+                                                        <button class="customBtn customBtn-light" data-open-rev>
                                                             <span class="customBtn__inner">
                                                                 <span class="customBtn__text">Написать отзыв</span>
                                                             </span>
@@ -141,10 +141,14 @@
                                                 </div>
                                             </div>
                                         </div>
-                                        <div class="createReview__form"></div>
                                     </div>
                                     <div class="review__hidden">
                                         <div class="reviewForm">
+                                            <button class="reviewFormCls" data-close-rev>
+                                                <svg>
+                                                    <use xlink:href="./icons/stack/icons.svg#close"></use>
+                                                </svg>
+                                            </button>
                                             <div class="reviewForm__title">Написать отзыв</div>
                                             <div class="reviewForm__content">
                                                 <form action="">
@@ -161,14 +165,68 @@
                                                             </label>
                                                             <input class="customInput" type="email" placeholder="evginiybodrov@gmail.com" id="e-2">
                                                         </div>
-                                                        <div  class="reviewForm__item"></div>
+                                                        <div  class="reviewForm__item">
+                                                            <div class="reviewRait">
+                                                                <div class="reviewRait__inner">
+                                                                    <div class="reviewRait__label">Оценка:</div>
+                                                                    <div class="reviewRait__stars">
+                                                                        <div class="starsInter">
+                                                                            <input class="starsInter__input visually-hidden" type="radio" name="marked-1" value="0" id="mar-0" checked="checked">
+                                                                            <input class="starsInter__input visually-hidden" type="radio" name="marked-1" value="1" id="mar-1">
+                                                                            <label class="starsInter__label" for="mar-1"></label>
+                                                                            <input class="starsInter__input visually-hidden" type="radio" name="marked-1" value="1" id="mar-2">
+                                                                            <label class="starsInter__label" for="mar-2"></label>
+                                                                            <input class="starsInter__input visually-hidden" type="radio" name="marked-1" value="1" id="mar-3">
+                                                                            <label class="starsInter__label" for="mar-3"></label>
+                                                                            <input class="starsInter__input visually-hidden" type="radio" name="marked-1" value="1" id="mar-4">
+                                                                            <label class="starsInter__label" for="mar-4"></label>
+                                                                            <input class="starsInter__input visually-hidden" type="radio" name="marked-1" value="1" id="mar-5">
+                                                                            <label class="starsInter__label" for="mar-5"></label>
+                                                                          </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
                                                         <div  class="reviewForm__item">
                                                             <label class="custom-label" for="e-3">
                                                                 Отзыв
                                                             </label>
                                                             <textarea class="customTextArea" id="e-3" placeholder="Введите комментарий"></textarea>
                                                         </div>
-                                                        <div  class="reviewForm__item"></div>
+                                                        <div  class="reviewForm__item">
+                                                            <div class="loadFile">
+                                                                <span class="custom-label">
+                                                                    Прикрепить фото
+                                                                </span>
+                                                                <div class="loadFile__inner" data-load-rel>
+                                                                    <div class="loadFile__item loadFile__item-label">
+                                                                        <label class="loadLabel" data-load-el>
+                                                                            <input class="visually-hidden" data-load-input type="file" accept="image/jpeg,image/png,image/gif" name="" id="" multiple>
+                                                                            <span class="loadLabel__field">
+                                                                                <span class="loadLabel__flex">
+                                                                                    <span class="loadLabel__ico">
+                                                                                        <svg width="22px" height="22px">
+                                                                                            <use xlink:href="./icons/stack/icons.svg#photo"></use>
+                                                                                        </svg>
+                                                                                    </span>
+                                                                                    <span class="loadLabel__text">Выберите фотографии или перетащите изображения в эту область</span>
+                                                                                </span>
+                                                                            </span>
+                                                                        </label>
+                                                                    </div>
+                                                                    <div class="loadFile__item loadFile__item-text">
+                                                                        <div class="warnText">
+                                                                            <div class="warnText__ico">
+                                                                                <svg>
+                                                                                    <use xlink:href="./icons/stack/icons.svg#warning"></use>
+                                                                                </svg>
+                                                                            </div>
+                                                                            <div class="warnText__text">Вы можете загрузить до 15 фото формата jpg или jpeg. Максимальный размер файла – 10 Мб.</div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>  
+                                                        </div>
                                                     </div>
                                                     <div class="agreeBtn">
                                                         <div class="agreeBtn__inner">

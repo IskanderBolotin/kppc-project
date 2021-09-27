@@ -360,6 +360,18 @@
 .basketDDScroll {
     overflow: auto;
     max-height: 320px;
+    .mCSB_scrollTools {
+        width: 10px;
+    }
+    .mCSB_inside>.mCSB_container {
+        margin-right: 10px;
+    }
+    .mCSB_scrollTools .mCSB_draggerContainer::before {
+        right: 5px;
+    }
+    .mCSB_scrollTools .mCSB_draggerRail {
+        margin: 0;
+    }
 }
 .basketDD__btn {
     padding: 5px 3px 3px;
@@ -843,6 +855,7 @@
         top: 0;
         left: 0;
         height: calc(100vh - 58px);
+        // height: -webkit-fill-available;
         width: 328px;
         padding-top: 0;
         z-index: 15;
@@ -1053,8 +1066,7 @@
         width: 100%;
         left: 0;
         bottom: 0;
-        padding-bottom: constant(safe-area-inset-bottom);
-        padding-bottom: env(safe-area-inset-bottom);
+        
         border-bottom: none;
         background-color: $extra-standart-c;
         border-top: 1px solid $extra-light-c;

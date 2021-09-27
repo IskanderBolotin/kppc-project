@@ -7,6 +7,7 @@
     background-color: rgba($color: $dark-c, $alpha: .5);
     z-index: 150;
     opacity: 0;
+    overflow: hidden;
     visibility: hidden;
     transition: .25s opacity, .25s visibility;
     &.__active {
@@ -192,7 +193,7 @@
     cursor: pointer;
 }
 .modalContent {
-    max-height: calc(100vh - 60px);
+    max-height: calc(90vh - 60px);
     overflow: auto;
 }
 .modalForm__text {
@@ -447,6 +448,45 @@
 .plLeft .plLeft__q {
     display: block;
 }
+.modalCart {
+    background-color: #fff;
+    padding: 5px 16px;
+    background-color: $extra-standart-c;
+    border-top: 1px solid $extra-light-c;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    transform: translateY(110%);
+    transition: .25s transform;
+    &.__active {
+        transform: translateY(0);
+    }
+}
+.modalCart__inner {
+    display: flex;
+    flex-wrap: wrap;
+    margin: -5px -5px 0;
+}
+.modalCart__item {
+    padding: 5px 5px 0;
+    .customBtn {
+        width: 100%;
+    }
+    &.modalCart__item-grow {
+        flex-grow: 1;
+        max-width: calc(100% - 120px);
+    }
+    &.modalCart__item-big {
+        width: 100%;
+    }
+    .counterBox__btn, .counterBox__field .counterBox__input {
+        height: 42px;
+    }
+    .counterBox {
+        width: 110px;
+    }
+}
 @media (max-width: 1300px) {
     .modalProd__item .zoomBox {
         display: none;
@@ -527,7 +567,7 @@
     .modalBox,
     .modalBox.modalBox-min,
     .modalBox.modalBox-product {
-        width: 288px;
+        width: 290px;
     }
     .modalTitle__text,
     .modalBox.modalBox-min .modalTitle__text {

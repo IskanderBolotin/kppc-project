@@ -1,7 +1,7 @@
 
 .reviewBar {
     background-color: $extra-standart-c;
-    padding: 15px 15px 20px 15px;
+    padding: 15px 15px 15px 15px;
 }
 .reviewBar__text {
     font-size: 18px;
@@ -13,6 +13,9 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
+}
+.reviewMain__image {
+    margin-top: 15px;
 }
 .reviewRow {
     padding: 25px 0 18px;
@@ -145,6 +148,7 @@
 .reviewForm {
     padding: 25px;
     background-color: $extra-standart-c;
+    position: relative;
 }
 .reviewForm__title {
     border-bottom: 1px solid $extra-light-c;
@@ -167,6 +171,41 @@
         width: 320px;
     }
 }
+.review__hidden {
+    display: none;
+}
+.reviewBox.__active {
+    .review__hidden {
+        display: block;
+    }
+    .createReview {
+        display: none;
+    }
+}
+.reviewFormCls {
+    background-color: transparent;
+    border: none;
+    width: 20px;
+    height: 20px;
+    display: block;
+    position: absolute;
+    z-index: 5;
+    top: 15px;
+    right: 15px;
+    svg {
+        width: 100%;
+        height: 100%;
+        display: block;
+        fill: $dark-c;
+    }
+}
+.raitElement__numrait {
+    margin-right: 14px;
+    .bold {
+        font-size: 22px;
+        font-weight: 700;
+    }
+}
 @media (max-width: 1300px) {
     .reviewPerson__ico {
         width: 40px;
@@ -178,6 +217,12 @@
     }
     .reviewPerson__info {
         margin-top: -4px;
+    }
+}
+@media (max-width: 1230px) {
+    .reviewForm__title {
+        font-size: 24px;
+        line-height: 30px;
     }
 }
 @media (max-width: 900px) {
@@ -193,14 +238,48 @@
         font-size: 16px;
     }
 }
+@media (max-width: 768px) {
+    
+}
 @media (max-width: 576px) {
+    .reviewMain__image {
+        margin-top: 10px;
+    }
+    .reviewBar__lb {
+        margin-bottom: 7px;
+    }
+    .reviewForm {
+        padding: 15px 10px;
+    }
     .reviewBar__inner {
         flex-direction: column;
+        .customBtn {
+            display: block;
+            width: 100%;
+        }
+    }
+    .reviewBar__btn {
+        width: 100%;
+    }
+    .reviewRait {
+        padding-top: 6px;
+    }
+    .reviewForm__flex {
+        margin-top: -12px;
+    }
+    .reviewForm__item {
+        padding-top: 12px;
+    }
+    .reviewForm__title {
+        margin-bottom: 18px;
     }
     .reviewBar__text {
         text-align: center;
         padding-right: 0;
         margin-bottom: 16px;
+    }
+    .reviewForm__item .customTextArea {
+        min-height: 240px;
     }
     .reviewMain__activity {
         order: 1;
@@ -217,5 +296,11 @@
     .reviewMain__text {
         font-size: 15px;
         line-height: 20px;
+    }
+    .reviewForm__content .agreeBtn__item {
+        .ps-text {
+            text-align: center;
+            margin-top: -8px;
+        }
     }
 }

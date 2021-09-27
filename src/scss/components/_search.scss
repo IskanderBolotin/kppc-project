@@ -160,6 +160,15 @@
 .searchScroll {
     overflow: auto;
     max-height: 320px;
+    .mCSB_scrollTools {
+        width: 10px;
+    }
+    .mCSB_scrollTools .mCSB_draggerContainer::before {
+        right: 5px;
+    }
+    .mCSB_scrollTools .mCSB_draggerRail {
+        margin: 0;
+    }
 }
 
 .searchDropLink {

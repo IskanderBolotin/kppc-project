@@ -71,12 +71,14 @@ $(document).ready(function() {
             $(this).parents("[data-toggle-rel]").removeClass("__active");
             if (supportsTouch) {
                 $("[data-catalog-overlay]").removeClass("__active");
+                $("body").removeClass("overflow-hidden");
             }
         }
         else {
             $(this).parents("[data-toggle-rel]").addClass("__active");
             if (supportsTouch) {
                 $("[data-catalog-overlay]").addClass("__active");
+                $("body").addClass("overflow-hidden");
             }
         }
     });
@@ -86,16 +88,19 @@ $(document).ready(function() {
             $(this).parents("[data-catalog-rel]").removeClass("__active");
             $(this).removeClass("__active");
             $("[data-catalog-overlay]").removeClass("__active");
+            $("body").removeClass("overflow-hidden");
         }
         else {
             $(this).parents("[data-catalog-rel]").addClass("__active");
             $(this).addClass("__active");
             $("[data-catalog-overlay]").addClass("__active");
+            $("body").addClass("overflow-hidden");
         }
     });
     $("body").on("click", "[data-rel-cls]", function(e) {
         $(this).parents("[data-toggle-rel]").removeClass("__active");
         $("[data-catalog-overlay]").removeClass("__active");
+        $("body").removeClass("overflow-hidden");
     });
     $("body").on("click", "[data-catalog-cls]", function(e) {
         $("[data-catalog-overlay]").removeClass("__active");
@@ -103,6 +108,7 @@ $(document).ready(function() {
         $("[data-catalog-btn]").removeClass("__active");
         $("[data-catalog-rel]").find("[data-catalog-deep]").removeClass("__active");
         $("[data-catalog-rel]").find("[data-catalog-point]").removeClass("__active");
+        $("body").removeClass("overflow-hidden");
     });
     $("body").on("mousedown", "[data-catalog-overlay]", function(e) {
         $("[data-toggle-rel]").removeClass("__active");
@@ -111,6 +117,7 @@ $(document).ready(function() {
         $("[data-catalog-btn]").removeClass("__active");
         $("[data-catalog-rel]").find("[data-catalog-deep]").removeClass("__active");
         $("[data-catalog-rel]").find("[data-catalog-point]").removeClass("__active");
+        $("body").removeClass("overflow-hidden");
     });
     let is_move = false;
     function movEl() {

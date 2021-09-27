@@ -85,11 +85,15 @@
     margin-bottom: 20px;
 }
 .bannerProduct__bi {
+    display: flex;
+    flex-direction: column;
     .customBtn {
         width: 100%;
+        flex-grow: 1;
     }
     .customBtn .customBtn__inner {
         min-height: 48px;
+        height: 100%;
     }
     &:not(:last-child) {
         margin-bottom: 10px;

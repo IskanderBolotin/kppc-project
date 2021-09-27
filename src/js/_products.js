@@ -134,6 +134,16 @@ $(document).ready(function(){
                 $(this).addClass("__in-cart");
             }
         });
+        if ($(window).outerWidth() <= 768) {
+            let this_id = $(this).attr("data-add-basket");
+            $("[data-modal]").each(function(){
+                if ($(this).attr("data-modal") == this_id) {
+                    $(this).addClass("__active");
+                    $(this).find("[data-modal-el]").addClass("__active");
+                    $("body").addClass("overflow-hidden");
+                }
+            });
+        }
     });
     $(".product-slider").each(function(){
         let _this = $(this);
