@@ -10,6 +10,12 @@ $(document).ready(function(){
             mobile_vers = true
         }
     }
+    $("body").on("change", "[data-check-all]", function() {
+        let check_status = $(this).prop("checked");
+        $("[data-check-prod]").each(function(){
+            $(this).prop("checked", check_status);
+        })
+    });
     $(window).on("resize", function(){
         if ($(window).outerWidth() <= 790) {
             if (!mobile_vers) {

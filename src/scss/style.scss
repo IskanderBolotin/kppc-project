@@ -185,6 +185,13 @@ a.plName {
         max-height: 100%;
         transition: .25s fill;
     }
+    &.socailList__link-inst {
+        &:hover {
+            svg {
+                fill: url(#Gradient);
+            }
+        }
+    }
     &:hover {
         background-color: #fff;
         svg {
@@ -882,6 +889,9 @@ a.plName {
     margin-left: 15px;
     margin-right: auto;
 }
+.titleBar__title.titleBar__title-right {
+    margin-right: auto;
+}
 .titleBar__inner-baseline {
     .titleBar__link,
     .titleBar__title {
@@ -1106,6 +1116,8 @@ a.plName {
     display: flex;
     list-style: none;
     overflow: auto;
+    padding-bottom: 10px;
+    margin-bottom: -10px;
 }
 .crumbsList__item {
     white-space: nowrap;

@@ -2,6 +2,7 @@
     position: relative;
     z-index: 101;
     width: 100%;
+    background-color: #fff;
     &.__sticky {
         top: 0;
         left: 0;
@@ -803,6 +804,16 @@
     }
     .headCatalog__dropdow {
         padding-top: 5px;
+    }
+}
+@media (min-width: 1151px) {
+    .personalDDlist__item:first-child .borderlink::after,
+    .personalDDlist__item:last-child .borderlink::before {
+        display: none;
+    }
+    .personalDDlist__item:first-child .borderlink:hover::after,
+    .personalDDlist__item:last-child .borderlink:hover::before {
+        display: block;
     }
 }
 @media (max-width: 1150px) {

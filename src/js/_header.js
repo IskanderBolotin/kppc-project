@@ -72,13 +72,18 @@ $(document).ready(function() {
             if (supportsTouch) {
                 $("[data-catalog-overlay]").removeClass("__active");
                 $("body").removeClass("overflow-hidden");
+                $("body").css("padding-right", "0");
+                $(".mainHeader.__sticky").css("padding-right", "0");
             }
         }
         else {
             $(this).parents("[data-toggle-rel]").addClass("__active");
             if (supportsTouch) {
                 $("[data-catalog-overlay]").addClass("__active");
+                let pad_right = window.innerWidth - document.documentElement.clientWidth;
                 $("body").addClass("overflow-hidden");
+                $("body").css("padding-right", pad_right + "px");
+                $(".mainHeader.__sticky").css("padding-right", pad_right + "px");
             }
         }
     });
@@ -89,18 +94,25 @@ $(document).ready(function() {
             $(this).removeClass("__active");
             $("[data-catalog-overlay]").removeClass("__active");
             $("body").removeClass("overflow-hidden");
+            $("body").css("padding-right", "0");
+            $(".mainHeader.__sticky").css("padding-right", "0");
         }
         else {
             $(this).parents("[data-catalog-rel]").addClass("__active");
             $(this).addClass("__active");
             $("[data-catalog-overlay]").addClass("__active");
+            let pad_right = window.innerWidth - document.documentElement.clientWidth;
             $("body").addClass("overflow-hidden");
+            $("body").css("padding-right", pad_right + "px");
+            $(".mainHeader.__sticky").css("padding-right", pad_right + "px");
         }
     });
     $("body").on("click", "[data-rel-cls]", function(e) {
         $(this).parents("[data-toggle-rel]").removeClass("__active");
         $("[data-catalog-overlay]").removeClass("__active");
         $("body").removeClass("overflow-hidden");
+        $("body").css("padding-right", "0");
+        $(".mainHeader.__sticky").css("padding-right", "0");
     });
     $("body").on("click", "[data-catalog-cls]", function(e) {
         $("[data-catalog-overlay]").removeClass("__active");
@@ -109,6 +121,8 @@ $(document).ready(function() {
         $("[data-catalog-rel]").find("[data-catalog-deep]").removeClass("__active");
         $("[data-catalog-rel]").find("[data-catalog-point]").removeClass("__active");
         $("body").removeClass("overflow-hidden");
+        $("body").css("padding-right", "0");
+        $(".mainHeader.__sticky").css("padding-right", "0");
     });
     $("body").on("mousedown", "[data-catalog-overlay]", function(e) {
         $("[data-toggle-rel]").removeClass("__active");
@@ -118,6 +132,8 @@ $(document).ready(function() {
         $("[data-catalog-rel]").find("[data-catalog-deep]").removeClass("__active");
         $("[data-catalog-rel]").find("[data-catalog-point]").removeClass("__active");
         $("body").removeClass("overflow-hidden");
+        $("body").css("padding-right", "0");
+        $(".mainHeader.__sticky").css("padding-right", "0");
     });
     let is_move = false;
     function movEl() {

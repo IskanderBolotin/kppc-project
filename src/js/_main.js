@@ -123,11 +123,15 @@ $(document).ready(function(){
 		$(this).parents("[data-element]").removeClass("__active");
 		$("[data-overlay]").removeClass("__active");
 		$("body").removeClass("overflow-hidden");
+		$("body").css("padding-right", "0");
+		$(".mainHeader.__sticky").css("padding-right", "0");
 	});
 	$("body").on("mousedown touchend", "[data-overlay]", function(){
 		$(this).removeClass("__active");
 		$("[data-element]").removeClass("__active");
 		$("body").removeClass("overflow-hidden");
+		$("body").css("padding-right", "0");
+		$(".mainHeader.__sticky").css("padding-right", "0");
 	});
 	$("body").on("keydown", function(e) {
 		if ($("[data-overlay]").hasClass("__active")) {
@@ -135,6 +139,8 @@ $(document).ready(function(){
 				$("[data-overlay]").removeClass("__active");
 				$("[data-element]").removeClass("__active");
 				$("body").removeClass("overflow-hidden");
+				$("body").css("padding-right", "0");
+				$(".mainHeader.__sticky").css("padding-right", "0");
 			}
 		}
 	});

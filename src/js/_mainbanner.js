@@ -122,12 +122,18 @@ window.onload = function() {
             control.addEventListener("touchstart", function(e) {
                 control_area.addEventListener("touchmove", dragZone);
                 document.body.addEventListener("touchend", removeMouseMove);
+                let pad_right = window.innerWidth - document.documentElement.clientWidth;
                 document.body.classList.add("overflow-hidden");
+                document.body.style.paddingRight = pad_right + "px";
+                document.querySelector(".mainHeader.__sticky").style.paddingRight = pad_right + "px";
             });
             control.addEventListener("touchend", function(){
                 control_area.removeEventListener("touchmove", dragZone);
                 document.body.removeEventListener("touchend", removeMouseMove);
                 document.body.classList.remove("overflow-hidden");
+                document.body.style.paddingRight = "0";
+                document.querySelector(".mainHeader.__sticky").style.paddingRight = "0";
+
             });
         }
         else {

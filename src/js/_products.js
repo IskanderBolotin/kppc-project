@@ -76,24 +76,25 @@ $(document).ready(function(){
     
     if ($(window).outerWidth() >= 1230) {
         $("body").on("mouseenter", "[data-product-hover]", function() {
-            console.log('mouseenter', product__hover)
             if (product__hover) {
-                let _this = $(this);
-                let this_id = $(this).attr("data-product-id");
-                $(this).addClass("__hover");
-                let el = $(this).find("[data-product-fixed]");
-                let pos_top = $(this).offset().top + $(this).outerHeight();
-                let pos_left = $(this).offset().left;
-                let el_width = $(this).outerWidth();
-                el.attr("data-id-chain", this_id)
-                el.css({
-                    'top' : pos_top + "px", 
-                    'width': el_width + "px", 
-                    'left': pos_left + "px"
-                });
-                el.addClass("__active");
-                el.appendTo("body");
-                product__hover = false;
+                if (($(this).parents(".slick-track").css("transition") == "all 0s ease 0s") || ($(this).parents(".slick-track").length == 0)) {
+                    let _this = $(this);
+                    let this_id = $(this).attr("data-product-id");
+                    $(this).addClass("__hover");
+                    let el = $(this).find("[data-product-fixed]");
+                    let pos_top = $(this).offset().top + $(this).outerHeight();
+                    let pos_left = $(this).offset().left;
+                    let el_width = $(this).outerWidth();
+                    el.attr("data-id-chain", this_id)
+                    el.css({
+                        'top' : pos_top + "px", 
+                        'width': el_width + "px", 
+                        'left': pos_left + "px"
+                    });
+                    el.addClass("__active");
+                    el.appendTo("body");
+                    product__hover = false;
+                }
             }
         });
         $("body").on("mouseleave", "[data-product-hover]", function(e) {
@@ -140,7 +141,10 @@ $(document).ready(function(){
                 if ($(this).attr("data-modal") == this_id) {
                     $(this).addClass("__active");
                     $(this).find("[data-modal-el]").addClass("__active");
+                    let pad_right = window.innerWidth - document.documentElement.clientWidth;
                     $("body").addClass("overflow-hidden");
+                    $("body").css("padding-right", pad_right + "px");
+                    $(".mainHeader.__sticky").css("padding-right", pad_right + "px");
                 }
             });
         }
@@ -209,11 +213,9 @@ $(document).ready(function(){
         });
         $(this).on('beforeChange', function (event, slick, currentSlide, nextSlide) {
             product__hover = false;
-            console.log('beforeChange', product__hover)
         });
         $(this).on('afterChange', function (event, slick, currentSlide, nextSlide) {
             product__hover = true;
-            console.log('afterChange', product__hover)
         });
     });
     let labels_adapt = false;
@@ -305,11 +307,9 @@ $(document).ready(function(){
         });
         $(this).on('beforeChange', function (event, slick, currentSlide, nextSlide) {
             product__hover = false;
-            console.log('beforeChange', product__hover)
         });
         $(this).on('afterChange', function (event, slick, currentSlide, nextSlide) {
             product__hover = true;
-            console.log('afterChange', product__hover)
         });
     });
 });

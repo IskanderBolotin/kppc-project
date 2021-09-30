@@ -699,6 +699,10 @@
     font-size: 15px;
     line-height: 16px;
     padding: 4px 7px;
+    &:hover {
+        border-color: $dark-c;
+        background-color: #fff;
+    }
     .productLabel {
         padding: 0;
         color: $dark-c;
@@ -710,6 +714,14 @@
         border: 1px solid #CECECE;
         background-color: #CECECE;
         color: $dark-c;
+        &:hover {
+            background-color: $dark-c;
+            border-color: $dark-c;
+            color: #fff;
+            .choiceLabel__ico svg {
+                fill: #fff;
+            }
+        }
     }
     .choiceLabel__inner {
         display: flex;

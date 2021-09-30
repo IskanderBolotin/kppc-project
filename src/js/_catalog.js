@@ -154,7 +154,10 @@ $(document).ready(function(){
     $("body").on("click", "[data-open-filer]", function(){
         $("#catalog-filter").addClass("__active");
         $("[data-overlay^='site']").addClass("__active");
+        let pad_right = window.innerWidth - document.documentElement.clientWidth;
         $("body").addClass("overflow-hidden");
+        $("body").css("padding-right", pad_right + "px");
+        $(".mainHeader.__sticky").css("padding-right", pad_right + "px");
     });
 
     // открытие сортировки адаптив

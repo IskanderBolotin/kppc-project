@@ -856,7 +856,7 @@
 .provideList {
     display: flex;
     align-items: center;
-    margin: 0 -7px;
+    margin: 0 -8px;
 }
 .provideList__item {
     padding: 0 7px;
@@ -1623,6 +1623,15 @@
     }
 }
 @media (max-width: 576px) {
+    .productLabels__item:not(:first-child) {
+        width: 100%;
+        .productLabel {
+            display: inline-block;
+        }
+    }
+    .productLabels__item.productLabels__item-btn {
+        width: auto;
+    }
     .productView {
         height: 134px;
     }
