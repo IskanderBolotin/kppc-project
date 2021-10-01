@@ -50,6 +50,7 @@ let svgo = require('gulp-svgo');
 let ttf2woff = require('gulp-ttf2woff');
 let ttf2woff2 = require('gulp-ttf2woff2');
 let cheerio = require('gulp-cheerio');
+let sourcemaps = require('gulp-sourcemaps');
 
 function browserSync() {
     browsersync.init({
@@ -78,6 +79,7 @@ function css_libs() {
 
 function js() {
     return src(path.src.js)
+        .pipe(sourcemaps.init())
         .pipe(fileinclude())
         .pipe(babel({
             presets: ['@babel/env']
@@ -89,11 +91,13 @@ function js() {
                 extname: ".min.js"
             })
         )
+        .pipe(sourcemaps.write())
         .pipe(dest(path.build.js))
         .pipe(browsersync.stream());
 }
 function css() {
     return src(path.src.css)
+        .pipe(sourcemaps.init())
         .pipe(
             scss({
                 outputStyle: "expanded"
@@ -120,6 +124,7 @@ function css() {
                 extname: ".min.css"
             })
         )
+        .pipe(sourcemaps.write())
         .pipe(dest(path.build.css))
         .pipe(browsersync.stream());
 }

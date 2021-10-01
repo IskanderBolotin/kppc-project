@@ -76,6 +76,7 @@ $(document).ready(function(){
     
     if ($(window).outerWidth() >= 1230) {
         $("body").on("mouseenter", "[data-product-hover]", function() {
+            console.log("mouseenter");
             if (product__hover) {
                 if (($(this).parents(".slick-track").css("transition") == "all 0s ease 0s") || ($(this).parents(".slick-track").length == 0)) {
                     let _this = $(this);
