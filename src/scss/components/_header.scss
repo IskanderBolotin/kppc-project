@@ -820,6 +820,19 @@
     .catalogMenu__header {
         display: block;
     }
+    .personalDDlist__link {
+        &.borderlink::after, 
+        &.borderlink::before {
+            right: 0;
+            left: 0;
+        }
+    }
+    .personalDDlist__link {
+        &.borderlink.__active, 
+        &.borderlink:hover {
+            background-color: #fff;
+        }
+    }
     .catalogMenuPoint__img {
         width: 40px;
         min-width: 40px;
@@ -865,11 +878,21 @@
         position: fixed;
         top: 0;
         left: 0;
-        height: calc(100vh - 58px);
+        height: calc(100% - 58px);
         // height: -webkit-fill-available;
         width: 328px;
         padding-top: 0;
         z-index: 15;
+    }
+    .cataloDropdown,
+    .cataloDropdown__inner,
+    .cataloDropdown__item,
+    .catalogMenu,
+    .personalDD {
+        height: 100%;
+    }
+    .cataloDropdown__inner {
+        flex-wrap: nowrap;
     }
     .cataloDropdown__item {
         width: 100%;
@@ -912,7 +935,7 @@
         top: 0;
         position: fixed;
         z-index: 15;
-        height: 100vh;
+        height: 100%;
         height: -webkit-fill-available;
         background-color: #fff;
         padding-top: 0;
@@ -922,8 +945,8 @@
     }
     .personalDD__body {
         border: none;
-        max-height: calc(100vh - 86px);
-        height: calc(100vh - 86px);
+        max-height: calc(100% - 86px);
+        height: calc(100% - 86px);
         padding: 10px 20px;
         background-color: #fff;
     }
@@ -1003,7 +1026,7 @@
 }
 @media (max-width: 875px) {
     .activityBox__dd.activityBox__dd-pa {
-        height: calc(100vh - 57px);
+        height: calc(100% - 57px);
     }
     .mainHeader {
         &.__sticky {
@@ -1015,15 +1038,15 @@
     .personalDD__body {
         border: none;
         overflow: auto;
-        max-height: calc(100vh - 143px);
-        height: calc(100vh - 143px);
+        max-height: calc(100% - 86px);
+        height: calc(100% - 86px);
     }
     .mainLogo {
         width: 90px;
     }
     .catalogMenu__scroll {
-        height: calc(100vh - 143px);
-        max-height: calc(100vh - 143px);
+        height: calc(100% - 86px);
+        max-height: calc(100% - 86px);
     }
     .activityItem__rect {
         top: 2px;
@@ -1168,7 +1191,7 @@
         left: 0;
         width: 100%;
         height: 100vh;
-        height: -webkit-fill-available;
+        height: 100%;
         overflow: auto;
         padding-bottom: 70px;
         transform: translateY(-110%);
