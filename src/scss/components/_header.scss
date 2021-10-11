@@ -878,8 +878,7 @@
         position: fixed;
         top: 0;
         left: 0;
-        height: calc(100% - 58px);
-        // height: -webkit-fill-available;
+        height: 100%;
         width: 328px;
         padding-top: 0;
         z-index: 15;
@@ -975,7 +974,7 @@
     }
     .headCatalog__dropdow {
         display: block;
-        transform: translateX(-110%);
+        transform: translateX(-310%);
         transition: .25s transform;
     }
 }
@@ -1026,6 +1025,9 @@
 }
 @media (max-width: 875px) {
     .activityBox__dd.activityBox__dd-pa {
+        height: calc(100% - 57px);
+    }
+    .headCatalog__dropdow {
         height: calc(100% - 57px);
     }
     .mainHeader {

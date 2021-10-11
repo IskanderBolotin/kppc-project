@@ -79,7 +79,7 @@ function css_libs() {
 
 function js() {
     return src(path.src.js)
-        .pipe(sourcemaps.init())
+        // .pipe(sourcemaps.init())
         .pipe(fileinclude())
         .pipe(babel({
             presets: ['@babel/env']
@@ -91,13 +91,13 @@ function js() {
                 extname: ".min.js"
             })
         )
-        .pipe(sourcemaps.write())
+        // .pipe(sourcemaps.write())
         .pipe(dest(path.build.js))
         .pipe(browsersync.stream());
 }
 function css() {
     return src(path.src.css)
-        .pipe(sourcemaps.init())
+        // .pipe(sourcemaps.init())
         .pipe(
             scss({
                 outputStyle: "expanded"
@@ -124,7 +124,7 @@ function css() {
                 extname: ".min.css"
             })
         )
-        .pipe(sourcemaps.write())
+        // .pipe(sourcemaps.write())
         .pipe(dest(path.build.css))
         .pipe(browsersync.stream());
 }

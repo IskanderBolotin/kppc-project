@@ -121,19 +121,22 @@ window.onload = function() {
         if (supportsTouch) {
             control.addEventListener("touchstart", function(e) {
                 control_area.addEventListener("touchmove", dragZone);
-                document.body.addEventListener("touchend", removeMouseMove);
+                document.body.addEventListener("touchend", removeTouchMove);
                 let pad_right = window.innerWidth - document.documentElement.clientWidth;
                 document.body.classList.add("overflow-hidden");
                 document.body.style.paddingRight = pad_right + "px";
-                document.querySelector(".mainHeader.__sticky").style.paddingRight = pad_right + "px";
+                if (document.querySelector(".mainHeader.__sticky")) {
+                    document.querySelector(".mainHeader.__sticky").style.paddingRight = pad_right + "px";
+                }
             });
             control.addEventListener("touchend", function(){
                 control_area.removeEventListener("touchmove", dragZone);
-                document.body.removeEventListener("touchend", removeMouseMove);
+                document.body.removeEventListener("touchend", removeTouchMove);
                 document.body.classList.remove("overflow-hidden");
                 document.body.style.paddingRight = "0";
-                document.querySelector(".mainHeader.__sticky").style.paddingRight = "0";
-
+                if (document.querySelector(".mainHeader.__sticky")) {
+                    document.querySelector(".mainHeader.__sticky").style.paddingRight = "0";
+                }
             });
         }
         else {
@@ -150,6 +153,10 @@ window.onload = function() {
         function removeMouseMove(e) {
             control_area.removeEventListener("mousemove", dragZone);
             document.body.removeEventListener("mouseup", removeMouseMove);
+        }
+        function removeTouchMove(e) {
+            control_area.removeEventListener("touchmove", dragZone);
+            document.body.removeEventListener("touchend", removeTouchMove);
         }
         function dragZone(e){
             let x_new = (window.pageXOffset !== undefined)
