@@ -265,6 +265,11 @@
     .basketMain__bottom {
         margin-top: 10px;
     }
+    .basketProd__view {
+        width: 60px;
+        min-width: 60px;
+        height: 60px;
+    }
 }
 @media (max-width: 576px) {
     .basketBox__item.basketBox__item-side,

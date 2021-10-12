@@ -574,6 +574,10 @@
         min-width: 100%;
     }
 }
+.flatpickr-day.selected.startRange + .endRange:not(:nth-child(7n+1)), .flatpickr-day.startRange.startRange + .endRange:not(:nth-child(7n+1)), .flatpickr-day.endRange.startRange + .endRange:not(:nth-child(7n+1)) {
+    -webkit-box-shadow: -10px 0 0 $light-c;
+    box-shadow: -10px 0 0 $light-c;
+}
 .flatpickr-calendar {
     border-radius: 0px;
     border-color: $light-c;
@@ -759,9 +763,22 @@ span.flatpickr-weekday {
         width: 20%;
     }
 }
+.orderInfoSide {
+    .personalTitle {
+        margin-bottom: 0px;
+    }
+}
+.editArea__fixed .personalAct__item {
+    &.personalAct__item-big {
+        width: 100%;
+    }
+}
 @media (max-width: 1500px) {
     .personalMain__item.personalMain__item-min {
         width: 100%;
+    }
+    .orderInfoSide__item:not(:last-child) {
+        margin-bottom: 10px;
     }
     .productCur__link {
         width: 57px;

@@ -650,6 +650,9 @@
             background-color: $dark-c;
             color: $light-c;
         }
+        .brandPoint__Top {
+            border-color: $dark-c;
+        }
     }
 }
 .brandPoint__Top {
@@ -659,6 +662,9 @@
     align-items: center;
     justify-content: center;
     padding: 10px;
+    border: 2px solid transparent;
+    border-bottom: none;
+    transition: .25s border-color;
     img {
         display: block;
         max-width: 100%;
@@ -933,6 +939,8 @@
     .staticSide__body {
         border: none;
         padding: 0;
+        overflow: auto;
+        max-height: calc(100% - 46px);
     }
     .staticBox__item.staticBox__item-side {
         width: 328px;
@@ -1055,7 +1063,12 @@
     .staticWin__top {
         margin-bottom: 13px;
     }
-    
+    .staticExtra {
+        margin-top: 14px;
+    }
+    .brandPoint__Top {
+        height: 80px;
+    }
 }
 @media (max-width: 576px) {
     .contactMap .order-map {

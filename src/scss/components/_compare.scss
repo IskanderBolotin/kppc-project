@@ -161,6 +161,9 @@
             width: 33.3%;
         }
     }
+    .compareSlider.slick-slider .sliderArrow.sliderArrow-prev {
+        left: -1px;
+    }
 }
 @media (max-width: 1230px) {
     .compareProduct__top {
@@ -175,6 +178,9 @@
     }
     .compareSlider.slick-slider .sliderArrow {
         top: 150px;
+    }
+    .compareSlider.slick-slider .sliderArrow.sliderArrow-prev {
+        left: 0px;
     }
 }
 @media (max-width: 998px) {

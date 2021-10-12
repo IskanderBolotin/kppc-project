@@ -1629,6 +1629,12 @@
             display: inline-block;
         }
     }
+    
+    .productCard {
+        .productLabels__item {
+            width: auto;
+        }
+    }
     .productLabels__item.productLabels__item-btn {
         width: auto;
     }

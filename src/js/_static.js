@@ -79,7 +79,7 @@ $(document).ready(function(){
     $(".servSlider__list-slider").each(function(){
         let _this = $(this);
         $(this).slick({
-            infinite: true,
+            infinite: false,
             arrows: true,
             slidesToShow: 3,
             slidesToScroll: 1,

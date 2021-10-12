@@ -65,4 +65,7 @@ $(document).ready(function(){
             }
         });
     });
+    $(".bigProductGallery").lightGallery({
+		selector: ".bigProduct",
+	})
 });

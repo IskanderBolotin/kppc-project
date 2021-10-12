@@ -99,7 +99,8 @@ $(document).ready(function(){
 		if (!$(this).hasClass("__active")) {
 			$(this).addClass("__active");
 			$(this).parents("[data-ct-area]").find("[data-ct]").addClass("__active");
-			window.scrollTo(0, start_offset_top);
+			// window.scrollTo(0, start_offset_top);
+			document.documentElement.scrollTop = start_offset_top;
 		}
 		else {
 			$(this).removeClass("__active");
@@ -332,5 +333,27 @@ window.addEventListener("load", function() {
 		}
 		this_inp.val(text);
 	});
-	$("[type='tel']").inputmask("+7 (999) 999 99 99");
+	$("[type='tel']").inputmask("+7 (999) 999 99 99", { 
+		"clearIncomplete": true,
+		"onincomplete": function(){
+			if (this.value == "") {
+				this.setAttribute("placeholder", "+7 (950) 375 22 98");
+			}
+		}
+	});
+	$("[type='tel']").attr("placeholder", "+7 (950) 375 22 98");
+
+	// пример для тестирования, можно удалить
+	if (document.querySelector("[data-example-input]")) {
+		document.querySelector("[data-example-input]").addEventListener("click", function() {
+			this.closest("[data-example-city]").classList.add("__active");
+			console.log('focus')
+		})
+		document.body.addEventListener("click", function(e) {
+			if (!e.target.closest("[data-example-city]")) {
+				console.log('blur')
+				document.querySelector("[data-example-city]").classList.remove("__active");
+			}
+		})
+	}
 })

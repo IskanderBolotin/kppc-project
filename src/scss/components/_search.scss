@@ -31,16 +31,7 @@
             }
         }
     }
-    &:hover {
-        .searchInput {
-            border-color: $extra-dark-c;
-        }
-        .positonSearchBtn {
-            border-top: 1px solid $extra-dark-c;
-            border-bottom: 1px solid $extra-dark-c;
-            border-left: 1px solid $extra-dark-c;
-        }
-    }
+    
     &.__active {
         .searchInput {
             border-color: $light-c;
@@ -56,10 +47,26 @@
         }
     }
 }
+.searchMainRight {
+    &:hover {
+        .searchInput {
+            border-color: $extra-dark-c;
+        }
+        .positonSearchBtn {
+            border-top: 1px solid $extra-dark-c;
+            border-bottom: 1px solid $extra-dark-c;
+            border-left: 1px solid $extra-dark-c;
+        }
+    }
+}
 .searchMain__inner {
     display: flex;
 }
 .searchMain__item.searchMain__item-grow {
+    flex-grow: 1;
+}
+.searchMainRight {
+    display: flex;
     flex-grow: 1;
 }
 .searchMain__item.searchMain__item-btn {

@@ -206,7 +206,7 @@
 }
 .ddLabel__list {
     max-height: 250px;
-    overflow: auto;
+    overflow: hidden;
     .mCSB_inside>.mCSB_container {
         margin-right: 25px;
     }

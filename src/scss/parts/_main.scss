@@ -11,10 +11,13 @@ form,
 main, section,
 aside,
 header, footer,
-article {
+article,
+legend {
     display: block;
 }
-
+legend {
+    border-bottom: 1px solid transparent;
+}
 button,
 input[type=button],
 input[type=reset],
@@ -91,7 +94,12 @@ input::-webkit-inner-spin-button {
 input[type=number] {
     -moz-appearance: textfield;
 }
-
+input::-webkit-credentials-auto-fill-button {
+    visibility: hidden;
+    pointer-events: none;
+    position: absolute;
+    right: 0;
+}
 *::-moz-selection {
     background-color: $light-c;
     color: #fff;
